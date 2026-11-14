@@ -101,11 +101,15 @@ class Handler(SimpleHTTPRequestHandler):
             ident=path.split('/')[3]
             if not ident.isdigit():return self.reply(400,{'error':'ID inválido.'})
             try:
-                items=bridge.collect(ident,kind='detail',timeout=100)
+                known=next((i for i in catalog.export()['items'] if i['id']==ident),{})
+                items=bridge.collect(ident,kind='detail',timeout=100,title=known.get('title',''))
                 item=next((x for x in items if x['id']==ident),None)
                 if not item:raise RuntimeError('A fonte não forneceu detalhes deste produto.')
                 return self.reply(200,{'item':catalog.save_detail(item)})
             except RuntimeError as exc:return self.reply(503,{'error':str(exc)})
+        if path == '/api/catalog/deep':
+            try:return self.reply(202,catalog.start_deep())
+            except RuntimeError as exc:return self.reply(409,{'error':str(exc)})
         if path == '/api/catalog/collect':
             try:
                 category_id=parse_qs(urlsplit(self.path).query).get('category',[None])[0]
@@ -162,7 +166,7 @@ class Handler(SimpleHTTPRequestHandler):
         parsed = urlsplit(self.path)
         if parsed.path == '/api/bridge/job':
             if not secrets.compare_digest(self.headers.get('X-Alpha-Bridge',''),bridge.KEY):return self.reply(403,{'error':'Conexão não autorizada.'})
-            return self.reply(200,{'job':bridge.poll()})
+            return self.reply(200,{'job':bridge.poll(self.headers.get('X-Alpha-Version'))})
         if parsed.path.startswith('/api/') and not self.local_request():
             return self.reply(403, {'error':'Origem não permitida.'})
         if parsed.path == '/api/health':

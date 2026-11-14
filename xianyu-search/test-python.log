@@ -1,0 +1,49 @@
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/search?q=busy HTTP/1.1" 429 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/search?q=test HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/search?q=test&min=10&max=40&sort=desc&page=2 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/search?q=old HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/search?q=test HTTP/1.1" 403 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "POST /api/session/open HTTP/1.1" 403 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/search?q=test HTTP/1.1" 403 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "POST /api/session/open HTTP/1.1" 403 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/search?q=test HTTP/1.1" 403 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "POST /api/session/open HTTP/1.1" 403 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/search?q=empty HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/search?q=blocked HTTP/1.1" 503 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/search?q=first HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/search?q=second HTTP/1.1" 429 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "POST /api/session/open HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "POST /api/session/open HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/search?q=test HTTP/1.1" 409 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "POST /api/session/finish HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "POST /api/session/open HTTP/1.1" 409 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /app.css HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /assets/base.css HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] code 404, message File not found
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /server.py HTTP/1.1" 404 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] code 404, message File not found
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /scraper.py HTTP/1.1" 404 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] code 404, message File not found
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /.browser-profile/ HTTP/1.1" 404 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] code 404, message File not found
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /../server.py HTTP/1.1" 404 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/search?q=failed HTTP/1.1" 502 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/nope HTTP/1.1" 404 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "POST /api/nope HTTP/1.1" 404 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/search? HTTP/1.1" 400 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/search?q= HTTP/1.1" 400 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/search?q=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx HTTP/1.1" 400 -
+127.0.0.1 - - [14/Nov/2026 07:20:23] "GET /api/search?q=a&min=nan HTTP/1.1" 400 -
+127.0.0.1 - - [14/Nov/2026 07:20:24] "GET /api/search?q=a&max=inf HTTP/1.1" 400 -
+127.0.0.1 - - [14/Nov/2026 07:20:24] "GET /api/search?q=a&min=9&max=2 HTTP/1.1" 400 -
+127.0.0.1 - - [14/Nov/2026 07:20:24] "GET /api/search?q=a&page=0 HTTP/1.1" 400 -
+127.0.0.1 - - [14/Nov/2026 07:20:24] "GET /api/search?q=a&page=1.5 HTTP/1.1" 400 -
+127.0.0.1 - - [14/Nov/2026 07:20:24] "GET /api/search?q=a&sort=wrong HTTP/1.1" 400 -
+----------------------------------------------------------------------
+Ran 35 tests in 1.855s
+
+OK

@@ -39,12 +39,87 @@ def read(category_id):
     return {**category,'items':[],'updatedAt':None,'source':'goofish','coverage':'not_collected'}
 
 def save(category_id,items):
-    rows=bridge.normalize_products(items)
+    unique={}
+    for offset in range(0,len(items),200):
+        for item in bridge.normalize_products(items[offset:offset+200]):unique[item['id']]=item
+    rows=list(unique.values())
     payload={**BY_ID[category_id],'items':rows,'count':len(rows),'updatedAt':stamp(),'source':'goofish','coverage':'partial','method':'rendered_cards','note':'Amostra dos resultados carregados na sessão; não representa todo o catálogo.'}
     ROOT.mkdir(exist_ok=True)
     path=ROOT/(category_id+'.json');tmp=path.with_suffix('.tmp')
     tmp.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8');tmp.replace(path)
     return payload
+
+
+def save_page(category_id,items,page,query=None):
+    old=read(category_id)
+    result=save(category_id,[*old['items'],*items])
+    result['scanPage']=old.get('scanPage',0) if query else page
+    result['scanPages']={**old.get('scanPages',{})}
+    if query:result['scanPages'][query]=page
+    path=ROOT/(category_id+'.json');tmp=path.with_suffix('.tmp')
+    tmp.write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8');tmp.replace(path)
+    export()
+    return result
+
+
+PRIORITY=['moda','esportes','eletronicos']
+SEARCH_VARIETY={
+    'moda':['男装','女装','运动鞋','外套','牛仔裤'],
+    'esportes':['跑步鞋','运动服','健身器材','篮球','羽毛球'],
+}
+
+
+def start_deep(target=1000):
+    if not bridge.status()['connected']:raise RuntimeError('Ative a conexão no Chrome com sua sessão do Goofish.')
+    if bridge.status().get('version')!='0.3.1':raise RuntimeError('Recarregue a extensão para a versão 0.3.1 antes da coleta paginada.')
+    with LOCK:
+        if STATE['running']:raise RuntimeError('Uma coleta já está em andamento.')
+        STATE.update(running=True,current=None,completed=0,total=len(PRIORITY),errors=[],startedAt=stamp(),target=target)
+    threading.Thread(target=_deep,args=(target,),daemon=True).start()
+    return index()
+
+
+def _deep(target):
+    try:
+        for category_id in PRIORITY:
+            category=BY_ID[category_id];old=read(category_id)
+            if category_id in SEARCH_VARIETY:
+                _collect_variety(category_id,target)
+                with LOCK:STATE['completed']+=1
+                continue
+            for page in range(old.get('scanPage',0)+1,51):
+                if len(read(category_id)['items'])>=target:break
+                with LOCK:STATE['current']=f"{category['label']} · página {page} · {len(read(category_id)['items'])}/{target}"
+                items=bridge.collect(category['query'],kind='category',page=page,timeout=130)
+                if not items:break
+                before=len(read(category_id)['items'])
+                result=save_page(category_id,items,page)
+                if result['count']==before and page>1:
+                    raise RuntimeError('A página não trouxe novos IDs. Coleta interrompida para evitar duplicação.')
+                time.sleep(4)
+            with LOCK:STATE['completed']+=1
+    except Exception as exc:
+        with LOCK:STATE['errors'].append({'category':category_id,'error':str(exc)})
+    finally:
+        with LOCK:STATE.update(running=False,current=None)
+
+
+def _collect_variety(category_id,target):
+    """Collect diverse search terms with independent resumable checkpoints."""
+    queries=SEARCH_VARIETY[category_id]
+    # First give each term seven pages, then expand if deduplication leaves a gap.
+    for last_page in (7,15,30,50):
+        for query in queries:
+            old=read(category_id)
+            for page in range(old.get('scanPages',{}).get(query,0)+1,last_page+1):
+                before=len(read(category_id)['items'])
+                if before>=target:return
+                with LOCK:STATE['current']=f"{BY_ID[category_id]['label']} · {query} · página {page} · {before}/{target}"
+                items=bridge.collect(query,kind='category',page=page,timeout=130)
+                if not items:break
+                result=save_page(category_id,items,page,query=query)
+                if result['count']==before and page>1:break
+                time.sleep(4)
 
 def index():
     categories=[]
@@ -129,10 +204,11 @@ def export():
 
 def save_live(items):
     """Persist new live results so they remain available without the bridge."""
+    items=bridge.normalize_products(items)
     path=BASE/'live-results.json'
     with LOCK:
         data=json.loads(path.read_text(encoding='utf-8')) if path.exists() else {}
-        for item in bridge.normalize_products(items):
+        for item in items:
             data[item['id']]={**item,'collectedAt':stamp()}
         temp=path.with_suffix('.tmp');temp.write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8');temp.replace(path)
     payload=export();ids={i['id'] for i in items}
@@ -148,3 +224,4 @@ def save_detail(item):
     save_live([item])
     payload=export()
     return next((x for x in payload['items'] if x['id']==item['id']),item)
+

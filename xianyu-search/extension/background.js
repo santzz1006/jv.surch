@@ -1,9 +1,34 @@
 importScripts('config.js');
-let running=false,pollTimer=null;
+let running=false,pollTimer=null,categoryTab=null,categoryQuery=null,categoryPage=1;
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
-async function local(path,body){const r=await fetch('http://127.0.0.1:8081/api/bridge/'+path,{method:body?'POST':'GET',headers:{'X-Alpha-Bridge':ALPHA_BRIDGE_KEY,'Content-Type':'application/json'},body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(10000)});if(!r.ok)throw new Error('API local: '+r.status);return r.json();}
+async function local(path,body){const r=await fetch('http://127.0.0.1:8081/api/bridge/'+path,{method:body?'POST':'GET',headers:{'X-Alpha-Bridge':ALPHA_BRIDGE_KEY,'X-Alpha-Version':'0.3.1','Content-Type':'application/json'},body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(10000)});if(!r.ok)throw new Error('API local: '+r.status);return r.json();}
 // Runs in an isolated world. Reads rendered public cards, never browser cookies/storage.
-async function readCards(){
+async function readCards(targetPage=1,previousPage=1){
+  if(targetPage>1){
+    const before=[...document.querySelectorAll('a[href*="/item?"]')].map(a=>a.href).join('|');
+    const pager=document.querySelector('[class*="pagination" i]');
+    if(!pager)return {error:'Paginação não encontrada. A coleta parou sem repetir a primeira página.'};
+    const number=[...pager.querySelectorAll('*')].find(n=>n.children.length===0&&n.textContent.trim()===String(targetPage));
+    if(number){number.scrollIntoView({block:'center'});number.click();}
+    else{
+      const container=pager.parentElement||pager;
+      const input=[...container.querySelectorAll('input')].find(n=>n.type!=='hidden'&&!n.disabled);
+      const confirm=[...container.querySelectorAll('button,[role="button"],span,div')].find(n=>n.children.length===0&&n.textContent.trim()==='确定');
+      if(input&&confirm){
+        input.scrollIntoView({block:'center'});
+        Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set.call(input,String(targetPage));
+        input.dispatchEvent(new Event('input',{bubbles:true}));input.dispatchEvent(new Event('change',{bubbles:true}));
+        await new Promise(r=>setTimeout(r,200));confirm.click();
+      }else{
+        const next=container.querySelector('[class*="next" i],[aria-label*="下一"],[title*="下一"],[class*="arrow-right" i]');
+        if(previousPage!==targetPage-1||!next||next.disabled||next.getAttribute('aria-disabled')==='true')return {error:'A página '+targetPage+' não está disponível nos controles do Goofish.'};
+        next.scrollIntoView({block:'center'});next.click();
+      }
+    }
+    let changed=false;
+    for(let wait=0;wait<30;wait++){await new Promise(r=>setTimeout(r,700));const after=[...document.querySelectorAll('a[href*="/item?"]')].map(a=>a.href).join('|');if(after&&after!==before){changed=true;break;}}
+    if(!changed)return {error:'O Goofish não carregou a próxima página. Nenhum anúncio duplicado foi acrescentado.'};
+  }
   const collected=new Map();let stable=0,lastCount=0;
   let preloaded=false;
   for(let attempt=0;attempt<22;attempt++){
@@ -41,15 +66,15 @@ async function readCards(){
   }
   return collected.size?{items:[...collected.values()]}:{error:'Nenhum cartão reconhecível. A página pode estar bloqueada ou os seletores precisam de ajuste.'};
 }
-async function readProduct(){
+async function readProduct(knownTitle=''){
   for(let attempt=0;attempt<20;attempt++){
     const text=document.body.innerText;
     if(/安全验证|滑块验证|人机验证/.test(text))return {error:'Goofish pediu verificação. Conclua no Chrome.'};
-    const description=document.querySelector('[class*="desc" i]');
+    const description=[...document.querySelectorAll('article,[class*="desc" i]')].filter(n=>!n.querySelector('a[href*="/item?"]')&&n.innerText?.trim().length>35&&n.innerText.length<12000).sort((a,b)=>b.innerText.length-a.innerText.length)[0];
     const images=[...document.querySelectorAll('img')].filter(i=>i.width>=180&&i.height>=120&&!i.closest('a[href*="/item?"]')).map(i=>i.currentSrc||i.src).filter(s=>/^https?:/.test(s)&&!/-tps-2-2\./.test(s));
-    const unique=[...new Set(images.map(s=>s.replace(/_\d+x\d+.*$/,'')))].slice(0,12);
+    const unique=[...new Set(images.map(s=>s.replace(/(\.(?:jpe?g|png|webp))_.*$/i,'$1')))].slice(0,12);
     const meta=document.querySelector('meta[property="og:title"]')?.content;
-    const title=document.querySelector('[class*="title" i]')?.innerText||meta||description?.innerText?.split('\n')[0];
+    const title=knownTitle||meta||description?.innerText?.split('\n')[0];
     const price=text.match(/[¥￥]\s*(\d+)(?:\s*\.\s*(\d+))?\s*(万)?/);
     if(attempt>2&&title&&unique.length){
       const seller=document.querySelector('[class*="seller" i]');
@@ -70,20 +95,20 @@ async function tick(){
     try{
       if(job.kind==='detail'&&!/^\d+$/.test(job.query))throw new Error('ID inválido.');
       const url=job.kind==='detail'?'https://www.goofish.com/item?id='+job.query:job.kind==='recommendations'?'https://www.goofish.com/':'https://www.goofish.com/search?q='+encodeURIComponent(job.query);
-      tab=await chrome.tabs.create({url,active:true});
+      if(job.kind==='category'&&categoryTab&&categoryQuery===job.query){try{tab=await chrome.tabs.get(categoryTab);}catch{categoryTab=null;}}
+      if(!tab){tab=await chrome.tabs.create({url,active:true});if(job.kind==='category'){categoryTab=tab.id;categoryQuery=job.query;categoryPage=1;}}
       let ready=false;
       for(let i=0;i<30;i++){await sleep(1000);const state=await chrome.tabs.get(tab.id);if(state.status==='complete'&&/^https:\/\/(www\.)?goofish\.com\//.test(state.url||'')){ready=true;break;}}
       if(!ready)throw new Error('A aba não carregou uma página Goofish autorizada. Confira se houve redirecionamento ou login.');
-      // Zoom is cosmetic: its failure must never prevent a permitted DOM read.
-      await chrome.tabs.setZoom(tab.id,.67).catch(()=>{});
       let results;
-      try{results=await chrome.scripting.executeScript({target:{tabId:tab.id},func:job.kind==='detail'?readProduct:readCards});}
-      catch(e){throw new Error('Leitura dos anúncios (v0.2.0): '+e.message);}
+      try{results=await chrome.scripting.executeScript({target:{tabId:tab.id},func:job.kind==='detail'?readProduct:readCards,args:job.kind==='detail'?[job.title||'']:[job.page||1,categoryPage]});}
+      catch(e){throw new Error('Leitura dos anúncios (v0.3.1): '+e.message);}
       const result=results[0]?.result||{error:'Não foi possível ler a página.'};
+      if(!result.error&&job.kind==='category')categoryPage=job.page||1;
       await local('result',{id:job.id,...result});
       await chrome.storage.local.set({lastStatus:result.error||`${result.items.length} anúncios enviados.`});
       // Preserve the tab on a challenge so the user can complete it themselves.
-      if(!result.error){await chrome.tabs.remove(tab.id);tab=null;}
+      if(!result.error&&job.kind!=='category'){await chrome.tabs.remove(tab.id);tab=null;}
     }catch(e){await local('result',{id:job.id,error:'Falha ao ler a página: '+e.message}).catch(()=>{});}
   }catch(e){await chrome.storage.local.set({lastStatus:'API desconectada. Inicie o servidor local.'});}
   finally{running=false;pollTimer=setTimeout(tick,5000);}
@@ -92,3 +117,4 @@ chrome.runtime.onInstalled.addListener(async()=>{chrome.alarms.create('alpha-pol
 chrome.runtime.onStartup.addListener(()=>chrome.alarms.create('alpha-poll',{periodInMinutes:.5}));
 chrome.alarms.onAlarm.addListener(a=>{if(a.name==='alpha-poll')tick();});
 chrome.runtime.onMessage.addListener((m)=>{if(m.type==='poll')tick();});
+

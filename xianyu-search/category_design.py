@@ -1,0 +1,39 @@
+"""Editorial direction for the 29 category pages; assets are generated separately."""
+DESIGNS = {
+ 'celulares':('Seu próximo celular está por aqui.','Smartphones, acessórios e opções para renovar o que vai com você.','Compare antes de trocar.','#fff08a'),
+ 'eletronicos':('Dê espaço para novas possibilidades.','Câmeras, fones e eletrônicos para fazer parte da sua rotina.','Encontre o detalhe que faltava.','#dfe9e7'),
+ 'computadores':('Monte seu próximo setup.','Notebooks, PCs e peças para trabalhar, estudar ou jogar.','Seu setup começa pela escolha.','#e2e4f2'),
+ 'moda':('Seu estilo, seus achados.','Roupas, tênis, casacos e jeans para combinar do seu jeito.','Monte uma lista com a sua cara.','#f3dfd1'),
+ 'bolsas':('Leve seus planos com você.','Bolsas, mochilas e malas para o dia a dia e a próxima viagem.','Escolha a companhia da próxima viagem.','#eadfcf'),
+ 'esportes':('Encontre seu próximo movimento.','Tênis, roupas esportivas e equipamentos para entrar no seu ritmo.','Tudo pronto para o próximo treino.','#deebc3'),
+ 'servicos':('Uma ajuda para tirar ideias do papel.','Explore os serviços anunciados e confira as condições na origem.','Veja o que cada serviço oferece.','#d7e8e6'),
+ 'cupons':('Vale a pena olhar de perto.','Cupons e cartões: confira validade, região e regras antes de escolher.','Um bom desconto começa pelas condições.','#fff0b1'),
+ 'colecionaveis':('Falta uma peça na sua coleção?','Figuras, miniaturas e itens que merecem um lugar na estante.','Guarde aquele achado difícil de repetir.','#e4dff0'),
+ 'bebe':('Pequenos achados para grandes dias.','Itens para bebê e maternidade, com atenção ao estado e à segurança.','Cada detalhe merece uma boa escolha.','#f3e5cf'),
+ 'beleza':('Renove seu ritual de beleza.','Explore maquiagem, perfumes e acessórios. Confira origem e validade.','Compare seus próximos favoritos de beleza.','#f0dce2'),
+ 'cuidados':('Um tempo para cuidar de você.','Acessórios e itens de cuidado pessoal para a sua rotina.','Escolha o que combina com seu cuidado.','#dce9df'),
+ 'moveis':('Um novo canto na sua casa.','Cadeiras, mesas e móveis para transformar seus espaços.','Meça o espaço. Imagine a mudança.','#ece3d2'),
+ 'eletrodomesticos':('Mais praticidade dentro de casa.','Eletrodomésticos e pequenos aparelhos. Compare medidas e voltagem.','Confira os detalhes que fazem funcionar.','#dbe5e8'),
+ 'decoracao':('Sua casa, do seu jeito.','Luminárias, objetos e detalhes que mudam o ambiente.','Encontre uma nova ideia para seu espaço.','#e7e4d0'),
+ 'antiguidades':('Objetos com outras histórias.','Arte, peças antigas e achados para observar com calma.','Olhe de perto cada detalhe da peça.','#e5d9c7'),
+ 'joias':('Pequenos detalhes, grandes escolhas.','Joias e acessórios. Confira materiais, medidas e informações do vendedor.','Compare o brilho de cada escolha.','#ede5c5'),
+ 'presentes':('Uma boa ideia para surpreender.','Explore achados para presentear alguém — ou você mesmo.','Salve uma ideia para a próxima ocasião.','#f1dfcc'),
+ 'pets':('Achados para o seu melhor amigo.','Acessórios e objetos para a rotina de quem tem companhia em casa.','Escolha pensando no conforto do seu pet.','#e5ebd6'),
+ 'plantas':('Abra espaço para mais verde.','Vasos, acessórios e itens de jardinagem para cultivar suas ideias.','Um novo começo para seu cantinho verde.','#dbe8ce'),
+ 'livros':('Sua próxima descoberta pode estar aqui.','Livros para aprender, explorar e acrescentar à estante.','Dê uma chance à próxima leitura.','#eee4cd'),
+ 'games':('Prepare a próxima partida.','Consoles, controles e jogos para continuar a diversão.','Escolha o próximo upgrade da jogatina.','#e0e1ed'),
+ 'musica':('Encontre um novo som.','Discos, equipamentos e itens de áudio e vídeo para sua coleção.','Deixe sua lista entrar no ritmo.','#e6ded7'),
+ 'carros':('Achados para quem gosta de estrada.','Explore anúncios automotivos e confira as condições na origem.','A próxima escolha pede atenção aos detalhes.','#dfe5e6'),
+ 'eletricos':('Outros caminhos para se mover.','Bicicletas, scooters e veículos elétricos. Confira bateria e autonomia.','Compare o que acompanha seu trajeto.','#e1e9cd'),
+ 'imoveis':('Explore um novo lugar.','Anúncios de aluguel na origem. Confira endereço e condições diretamente.','Conheça o anúncio antes de fazer planos.','#e9e1d1'),
+ 'ferramentas':('Ideias boas pedem boas ferramentas.','Ferramentas para reparos, projetos e o seu próximo trabalho.','Separe o que falta na sua bancada.','#eee3b9'),
+ 'equipamentos':('O próximo passo do seu trabalho.','Equipamentos e máquinas. Confira especificações, estado e transporte.','Compare os recursos de cada equipamento.','#dee4e3'),
+ 'campo':('Achados para colocar a mão na terra.','Equipamentos, ferramentas e itens para atividades no campo.','Escolha o que ajuda na próxima tarefa.','#e1e7c8'),
+}
+
+def design(category):
+    title,description,secondary,color=DESIGNS[category['id']]
+    icon_name = category.get('icon', 'tech')
+    return {'title':title,'description':description,'secondary':secondary,'color':color,
+            'image':f"assets/icon-{icon_name}.png",
+            'badge':f"assets/categories/{category['id']}.png"}

@@ -14,6 +14,7 @@ KEY = KEY_PATH.read_text(encoding='utf-8').strip()
 LOCK = threading.Lock()
 JOB = None
 LAST_SEEN = 0
+CLIENT_VERSION = None
 FEED = []
 FEED_TIME = None
 
@@ -40,15 +41,16 @@ def normalize_products(rows):
     return result
 
 def status():
-    with LOCK:return {'connected':time.monotonic()-LAST_SEEN<50,'busy':JOB is not None,'count':len(FEED),'updatedAt':FEED_TIME}
+    with LOCK:return {'connected':time.monotonic()-LAST_SEEN<50,'busy':JOB is not None,'count':len(FEED),'updatedAt':FEED_TIME,'version':CLIENT_VERSION}
 
-def poll():
-    global LAST_SEEN
+def poll(version=None):
+    global LAST_SEEN,CLIENT_VERSION
     with LOCK:
         LAST_SEEN=time.monotonic()
+        CLIENT_VERSION=version
         if JOB and not JOB['claimed']:
             JOB['claimed']=True
-            return {k:JOB[k] for k in ('id','kind','query')}
+            return {k:JOB[k] for k in ('id','kind','query','page','title')}
         return None
 
 def submit(payload):
@@ -64,12 +66,12 @@ def submit(payload):
                 (ROOT/'recommendations.json').write_text(json.dumps({'items':FEED,'updatedAt':FEED_TIME},ensure_ascii=False),encoding='utf-8')
         JOB['event'].set()
 
-def collect(query='',kind='search',timeout=75):
+def collect(query='',kind='search',timeout=75,page=1,title=''):
     global JOB
     with LOCK:
         if time.monotonic()-LAST_SEEN>=50:raise RuntimeError('Conecte a extensão Alpha Busca no Chrome que está logado no Goofish.')
         if JOB:raise RuntimeError('Já existe uma consulta no Chrome. Aguarde.')
-        job={'id':secrets.token_hex(16),'kind':kind,'query':query,'claimed':False,'event':threading.Event()}
+        job={'id':secrets.token_hex(16),'kind':kind,'query':query,'page':page,'title':title,'claimed':False,'event':threading.Event()}
         JOB=job
     try:
         if not job['event'].wait(timeout):raise RuntimeError('O Chrome não respondeu a tempo. Confira a extensão e a sessão do Goofish.')

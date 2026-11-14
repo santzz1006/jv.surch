@@ -1,0 +1,26 @@
+{
+  "moda": {
+    "uniqueProducts": 1012,
+    "withPhoto": 983,
+    "translatedTitles": 88,
+    "completedSearchPages": {
+      "男装": 7,
+      "女装": 7,
+      "运动鞋": 7,
+      "外套": 7,
+      "牛仔裤": 5
+    }
+  },
+  "esportes": {
+    "uniqueProducts": 1017,
+    "withPhoto": 1017,
+    "translatedTitles": 85,
+    "completedSearchPages": {
+      "跑步鞋": 7,
+      "运动服": 7,
+      "健身器材": 7,
+      "篮球": 7,
+      "羽毛球": 5
+    }
+  }
+}
