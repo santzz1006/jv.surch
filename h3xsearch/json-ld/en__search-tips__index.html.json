@@ -1,0 +1,65 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://h3xsearch.com/en/search-tips/#page",
+        "url": "https://h3xsearch.com/en/search-tips/",
+        "name": "How to search Xianyu: model codes and useful Chinese terms",
+        "description": "Find more on Xianyu: when to search the exact model code, when to translate, and a list of useful Chinese terms by category and from listings.",
+        "inLanguage": "en",
+        "dateModified": "2026-11-13",
+        "isPartOf": {
+          "@id": "https://h3xsearch.com/#website"
+        },
+        "publisher": {
+          "@id": "https://h3xsearch.com/#org"
+        },
+        "breadcrumb": {
+          "@id": "https://h3xsearch.com/en/search-tips/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://h3xsearch.com/en/search-tips/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://h3xsearch.com/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Search tips",
+            "item": "https://h3xsearch.com/en/search-tips/"
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://h3xsearch.com/#website",
+        "name": "H3X Search",
+        "url": "https://h3xsearch.com/"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://h3xsearch.com/#org",
+        "name": "H3xCN",
+        "url": "https://h3xsearch.com/sobre/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://h3xsearch.com/brand/h3xcn-logo.png",
+          "width": 192,
+          "height": 192
+        },
+        "sameAs": [
+          "https://discord.gg/h3xcn"
+        ],
+        "description": "Comunidade brasileira no Discord sobre compras da China; faz o H3X Search."
+      }
+    ]
+  }
+]

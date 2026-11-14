@@ -1,0 +1,15 @@
+{
+  "meta": null,
+  "content": [
+    {
+      "type": "text",
+      "text": "Error executing code: Communication error with Blender: {\"exception_type\": \"ReferenceError\", \"message\": \"StructRNA of type Object has been removed\", \"traceback\": \"Traceback (most recent call last):\\n  File \\\"C:/Users/neila/.codex/tools/blender-mcp/Lib/site-packages/blender_mcp/bundled/addon.py\\\", line 2387, in execute_code\\n    exec(code, namespace)\\n  File \\\"<string>\\\", line 1, in <module>\\n  File \\\"blender_assets.py\\\", line 45, in build_map\\n  File \\\"blender_assets.py\\\", line 45, in <listcomp>\\nReferenceError: StructRNA of type Object has been removed\\n\"}",
+      "annotations": null,
+      "meta": null
+    }
+  ],
+  "structuredContent": {
+    "result": "Error executing code: Communication error with Blender: {\"exception_type\": \"ReferenceError\", \"message\": \"StructRNA of type Object has been removed\", \"traceback\": \"Traceback (most recent call last):\\n  File \\\"C:/Users/neila/.codex/tools/blender-mcp/Lib/site-packages/blender_mcp/bundled/addon.py\\\", line 2387, in execute_code\\n    exec(code, namespace)\\n  File \\\"<string>\\\", line 1, in <module>\\n  File \\\"blender_assets.py\\\", line 45, in build_map\\n  File \\\"blender_assets.py\\\", line 45, in <listcomp>\\nReferenceError: StructRNA of type Object has been removed\\n\"}"
+  },
+  "isError": false
+}

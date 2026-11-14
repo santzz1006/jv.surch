@@ -1,0 +1,870 @@
+{
+  "Id": "Ponte",
+  "Name": "Ponte",
+  "Theme": "sky",
+  "Parts": [
+    {
+      "name": "Court",
+      "size": [
+        88,
+        2,
+        76
+      ],
+      "pos": [
+        0,
+        -12,
+        0
+      ],
+      "color": "#457da5",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideWall",
+      "size": [
+        2,
+        14,
+        80
+      ],
+      "pos": [
+        -45,
+        6,
+        0
+      ],
+      "color": "#bfd9ed",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideWall",
+      "size": [
+        2,
+        14,
+        80
+      ],
+      "pos": [
+        45,
+        6,
+        0
+      ],
+      "color": "#bfd9ed",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "EndWall",
+      "size": [
+        92,
+        14,
+        2
+      ],
+      "pos": [
+        0,
+        6,
+        -39
+      ],
+      "color": "#bfd9ed",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "EndWall",
+      "size": [
+        92,
+        14,
+        2
+      ],
+      "pos": [
+        0,
+        6,
+        39
+      ],
+      "color": "#bfd9ed",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SpawnStripe",
+      "size": [
+        16,
+        0.12,
+        6
+      ],
+      "pos": [
+        0,
+        0.08,
+        -31
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "SpawnStripe",
+      "size": [
+        16,
+        0.12,
+        6
+      ],
+      "pos": [
+        0,
+        0.08,
+        31
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Bridge",
+      "size": [
+        20,
+        2,
+        64
+      ],
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "color": "#d9e6f6",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Island",
+      "size": [
+        80,
+        2,
+        20
+      ],
+      "pos": [
+        0,
+        0,
+        -29
+      ],
+      "color": "#8db9db",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Island",
+      "size": [
+        80,
+        2,
+        20
+      ],
+      "pos": [
+        0,
+        0,
+        29
+      ],
+      "color": "#8db9db",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "RicochetPylon-1",
+      "size": [
+        5,
+        9,
+        7
+      ],
+      "pos": [
+        -6,
+        5,
+        -13
+      ],
+      "color": "#8064e8",
+      "shape": "Box",
+      "yaw": 180,
+      "decor": false
+    },
+    {
+      "name": "RicochetPylon1",
+      "size": [
+        5,
+        9,
+        7
+      ],
+      "pos": [
+        6,
+        5,
+        13
+      ],
+      "color": "#8064e8",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Ramp-1",
+      "size": [
+        9,
+        5,
+        15
+      ],
+      "pos": [
+        20,
+        2.5,
+        -24
+      ],
+      "color": "#ebbc4d",
+      "shape": "Wedge",
+      "yaw": 270,
+      "decor": false
+    },
+    {
+      "name": "Ramp1",
+      "size": [
+        9,
+        5,
+        15
+      ],
+      "pos": [
+        -20,
+        2.5,
+        24
+      ],
+      "color": "#ebbc4d",
+      "shape": "Wedge",
+      "yaw": 90,
+      "decor": false
+    },
+    {
+      "name": "V3_EndTrim",
+      "size": [
+        87,
+        0.45,
+        0.4
+      ],
+      "pos": [
+        0,
+        9,
+        -37.8
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SpawnBoard",
+      "size": [
+        13,
+        3,
+        0.4
+      ],
+      "pos": [
+        0,
+        6,
+        -37.6
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        -35,
+        7,
+        -38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        -35,
+        14.5,
+        -38
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        35,
+        7,
+        -38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        35,
+        14.5,
+        -38
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        -43,
+        10,
+        -19
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        43,
+        10,
+        -19
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_EndTrim",
+      "size": [
+        87,
+        0.45,
+        0.4
+      ],
+      "pos": [
+        0,
+        9,
+        37.8
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SpawnBoard",
+      "size": [
+        13,
+        3,
+        0.4
+      ],
+      "pos": [
+        0,
+        6,
+        37.6
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        -35,
+        7,
+        38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        -35,
+        14.5,
+        38
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        35,
+        7,
+        38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        35,
+        14.5,
+        38
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        -43,
+        10,
+        19
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        43,
+        10,
+        19
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_BridgePost",
+      "size": [
+        0.7,
+        3,
+        0.7
+      ],
+      "pos": [
+        -10,
+        2.5,
+        -20
+      ],
+      "color": "#17213a",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_BridgePost",
+      "size": [
+        0.7,
+        3,
+        0.7
+      ],
+      "pos": [
+        -10,
+        2.5,
+        -10
+      ],
+      "color": "#17213a",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_BridgePost",
+      "size": [
+        0.7,
+        3,
+        0.7
+      ],
+      "pos": [
+        -10,
+        2.5,
+        0
+      ],
+      "color": "#17213a",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_BridgePost",
+      "size": [
+        0.7,
+        3,
+        0.7
+      ],
+      "pos": [
+        -10,
+        2.5,
+        10
+      ],
+      "color": "#17213a",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_BridgePost",
+      "size": [
+        0.7,
+        3,
+        0.7
+      ],
+      "pos": [
+        -10,
+        2.5,
+        20
+      ],
+      "color": "#17213a",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_BridgeRail",
+      "size": [
+        0.6,
+        0.6,
+        44
+      ],
+      "pos": [
+        -10,
+        3.9,
+        0
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_BridgePost",
+      "size": [
+        0.7,
+        3,
+        0.7
+      ],
+      "pos": [
+        10,
+        2.5,
+        -20
+      ],
+      "color": "#17213a",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_BridgePost",
+      "size": [
+        0.7,
+        3,
+        0.7
+      ],
+      "pos": [
+        10,
+        2.5,
+        -10
+      ],
+      "color": "#17213a",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_BridgePost",
+      "size": [
+        0.7,
+        3,
+        0.7
+      ],
+      "pos": [
+        10,
+        2.5,
+        0
+      ],
+      "color": "#17213a",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_BridgePost",
+      "size": [
+        0.7,
+        3,
+        0.7
+      ],
+      "pos": [
+        10,
+        2.5,
+        10
+      ],
+      "color": "#17213a",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_BridgePost",
+      "size": [
+        0.7,
+        3,
+        0.7
+      ],
+      "pos": [
+        10,
+        2.5,
+        20
+      ],
+      "color": "#17213a",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_BridgeRail",
+      "size": [
+        0.6,
+        0.6,
+        44
+      ],
+      "pos": [
+        10,
+        3.9,
+        0
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_ExpansionJoint",
+      "size": [
+        18,
+        0.04,
+        0.15
+      ],
+      "pos": [
+        0,
+        1.02,
+        -22
+      ],
+      "color": "#879ab8",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_ExpansionJoint",
+      "size": [
+        18,
+        0.04,
+        0.15
+      ],
+      "pos": [
+        0,
+        1.02,
+        -16
+      ],
+      "color": "#879ab8",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_ExpansionJoint",
+      "size": [
+        18,
+        0.04,
+        0.15
+      ],
+      "pos": [
+        0,
+        1.02,
+        -10
+      ],
+      "color": "#879ab8",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_ExpansionJoint",
+      "size": [
+        18,
+        0.04,
+        0.15
+      ],
+      "pos": [
+        0,
+        1.02,
+        -4
+      ],
+      "color": "#879ab8",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_ExpansionJoint",
+      "size": [
+        18,
+        0.04,
+        0.15
+      ],
+      "pos": [
+        0,
+        1.02,
+        2
+      ],
+      "color": "#879ab8",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_ExpansionJoint",
+      "size": [
+        18,
+        0.04,
+        0.15
+      ],
+      "pos": [
+        0,
+        1.02,
+        8
+      ],
+      "color": "#879ab8",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_ExpansionJoint",
+      "size": [
+        18,
+        0.04,
+        0.15
+      ],
+      "pos": [
+        0,
+        1.02,
+        14
+      ],
+      "color": "#879ab8",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_ExpansionJoint",
+      "size": [
+        18,
+        0.04,
+        0.15
+      ],
+      "pos": [
+        0,
+        1.02,
+        20
+      ],
+      "color": "#879ab8",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    }
+  ],
+  "Spawns": [
+    [
+      0,
+      4,
+      -28
+    ],
+    [
+      0,
+      4,
+      28
+    ]
+  ],
+  "KillY": -8
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://h3xsearch.com/o-que-e-xianyu/#page",
+        "url": "https://h3xsearch.com/o-que-e-xianyu/",
+        "name": "O que é o Xianyu (Goofish)? O mercado de usados do Alibaba",
+        "description": "O Xianyu (闲鱼), também chamado de Goofish, é o mercado de usados do grupo Alibaba. Veja como funciona, a diferença para o Taobao e como comprar do Brasil.",
+        "inLanguage": "pt-BR",
+        "dateModified": "2026-11-13",
+        "isPartOf": {
+          "@id": "https://h3xsearch.com/#website"
+        },
+        "publisher": {
+          "@id": "https://h3xsearch.com/#org"
+        },
+        "breadcrumb": {
+          "@id": "https://h3xsearch.com/o-que-e-xianyu/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://h3xsearch.com/o-que-e-xianyu/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://h3xsearch.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "O que é o Xianyu",
+            "item": "https://h3xsearch.com/o-que-e-xianyu/"
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://h3xsearch.com/#website",
+        "name": "H3X Search",
+        "url": "https://h3xsearch.com/"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://h3xsearch.com/#org",
+        "name": "H3xCN",
+        "url": "https://h3xsearch.com/sobre/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://h3xsearch.com/brand/h3xcn-logo.png",
+          "width": 192,
+          "height": 192
+        },
+        "sameAs": [
+          "https://discord.gg/h3xcn"
+        ],
+        "description": "Comunidade brasileira no Discord sobre compras da China; faz o H3X Search."
+      }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+2026-11-12 18:17:11,408 - BlenderMCPServer - INFO - BlenderMCP server starting up
+2026-11-12 18:17:11,467 - BlenderMCPServer - WARNING - MCP for Blender addon not found in any Blender addons folder. Run `uvx mcp-for-blender install-addon` to install it.
+2026-11-12 18:17:11,476 - blender-mcp-telemetry - WARNING - Telemetry disabled via environment variable
+2026-11-12 18:17:11,625 - BlenderMCPServer - INFO - Connected to Blender at localhost:9877
+2026-11-12 18:17:11,626 - BlenderMCPServer - INFO - Created new persistent connection to Blender
+2026-11-12 18:17:11,626 - BlenderMCPServer - INFO - Sending command: get_addon_info with params: None
+2026-11-12 18:17:11,626 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 18:17:12,541 - BlenderMCPServer - INFO - Received complete response (465 bytes)
+2026-11-12 18:17:12,541 - BlenderMCPServer - INFO - Received 465 bytes of data
+2026-11-12 18:17:12,541 - BlenderMCPServer - INFO - Response parsed, status: success
+2026-11-12 18:17:12,541 - BlenderMCPServer - INFO - Blender addon up to date (protocol 15, addon [1, 8], Blender 5.0.1)
+2026-11-12 18:17:12,541 - BlenderMCPServer - INFO - Successfully connected to Blender on startup
+2026-11-12 18:17:12,657 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 18:17:12,657 - BlenderMCPServer - INFO - MCP client mcp 0.1.0: extensions=[], apps=False, openai_forms=False
+2026-11-12 18:17:12,667 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "exec(compile(open('C:/Users/neila/OneDrive/Desktop/roblox/tools/blender_paddles_v3.py',encoding='utf-8').read(),'blender_paddles_v3.py','exec')); bpy.app.driver_namespace['pb_paddle_v3']('Classic')"}
+2026-11-12 18:17:12,668 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 18:17:48,684 - BlenderMCPServer - INFO - Received complete response (1198 bytes)
+2026-11-12 18:17:48,684 - BlenderMCPServer - INFO - Received 1198 bytes of data
+2026-11-12 18:17:48,684 - BlenderMCPServer - INFO - Response parsed, status: success
+2026-11-12 18:17:48,685 - BlenderMCPServer - INFO - Sending command: get_telemetry_consent with params: None
+2026-11-12 18:17:48,686 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 18:17:48,922 - BlenderMCPServer - INFO - Received complete response (51 bytes)
+2026-11-12 18:17:48,923 - BlenderMCPServer - INFO - Received 51 bytes of data
+2026-11-12 18:17:48,923 - BlenderMCPServer - INFO - Response parsed, status: success
+2026-11-12 18:17:48,963 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+{
+  "meta": null,
+  "content": [
+    {
+      "type": "text",
+      "text": "Code executed successfully: 18:17:20 | INFO: Starting glTF 2.0 export\n18:17:21 | INFO: Extracting primitive: OuterRim\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: MaplePly\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: RimLip\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: FrontRubber\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: BackRubber\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: WoodHandle\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: HandleInlay\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: HandleButt\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: Neck\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Finished glTF 2.0 export in 2.9663774967193604 s\n\n\nFBX export starting... 'C:\\\\Users\\\\neila\\\\OneDrive\\\\Desktop\\\\roblox\\\\assets\\\\models\\\\v3\\\\Classic.fbx'\nexport finished in 0.5042 sec.\nInfo: Saved as \"Classic.blend\"\nPADDLE_V3_READY Classic\n",
+      "annotations": null,
+      "meta": null
+    }
+  ],
+  "structuredContent": {
+    "result": "Code executed successfully: 18:17:20 | INFO: Starting glTF 2.0 export\n18:17:21 | INFO: Extracting primitive: OuterRim\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: MaplePly\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: RimLip\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: FrontRubber\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: BackRubber\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: WoodHandle\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: HandleInlay\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: HandleButt\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: Neck\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Finished glTF 2.0 export in 2.9663774967193604 s\n\n\nFBX export starting... 'C:\\\\Users\\\\neila\\\\OneDrive\\\\Desktop\\\\roblox\\\\assets\\\\models\\\\v3\\\\Classic.fbx'\nexport finished in 0.5042 sec.\nInfo: Saved as \"Classic.blend\"\nPADDLE_V3_READY Classic\n"
+  },
+  "isError": false
+}
+2026-11-12 18:17:49,035 - BlenderMCPServer - INFO - Disconnecting from Blender on shutdown
+2026-11-12 18:17:49,035 - BlenderMCPServer - INFO - BlenderMCP server shut down

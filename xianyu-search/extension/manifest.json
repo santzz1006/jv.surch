@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Alpha Busca — conexão local",
+  "version": "0.2.0",
+  "description": "Lê anúncios visíveis no seu Goofish e envia somente produtos para sua Alpha Busca local.",
+  "permissions": ["scripting", "alarms", "storage"],
+  "host_permissions": ["https://www.goofish.com/*", "https://goofish.com/*", "http://127.0.0.1:8081/*"],
+  "background": {"service_worker": "background.js"},
+  "action": {"default_popup": "popup.html"}
+}

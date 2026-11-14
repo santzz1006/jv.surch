@@ -1,0 +1,581 @@
+{
+  "Id": "Portao",
+  "Name": "Port\u00e3o",
+  "Theme": "portal",
+  "Parts": [
+    {
+      "name": "Court",
+      "size": [
+        88,
+        2,
+        76
+      ],
+      "pos": [
+        0,
+        -1,
+        0
+      ],
+      "color": "#83bca5",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideWall",
+      "size": [
+        2,
+        14,
+        80
+      ],
+      "pos": [
+        -45,
+        6,
+        0
+      ],
+      "color": "#a8d8c0",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideWall",
+      "size": [
+        2,
+        14,
+        80
+      ],
+      "pos": [
+        45,
+        6,
+        0
+      ],
+      "color": "#a8d8c0",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "EndWall",
+      "size": [
+        92,
+        14,
+        2
+      ],
+      "pos": [
+        0,
+        6,
+        -39
+      ],
+      "color": "#a8d8c0",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "EndWall",
+      "size": [
+        92,
+        14,
+        2
+      ],
+      "pos": [
+        0,
+        6,
+        39
+      ],
+      "color": "#a8d8c0",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SpawnStripe",
+      "size": [
+        16,
+        0.12,
+        6
+      ],
+      "pos": [
+        0,
+        0.08,
+        -31
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "SpawnStripe",
+      "size": [
+        16,
+        0.12,
+        6
+      ],
+      "pos": [
+        0,
+        0.08,
+        31
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "PortalPillar",
+      "size": [
+        6,
+        17,
+        8
+      ],
+      "pos": [
+        -12,
+        8.5,
+        0
+      ],
+      "color": "#6a62a8",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "PortalPillar",
+      "size": [
+        6,
+        17,
+        8
+      ],
+      "pos": [
+        12,
+        8.5,
+        0
+      ],
+      "color": "#6a62a8",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "PortalLintel",
+      "size": [
+        30,
+        4,
+        8
+      ],
+      "pos": [
+        0,
+        16,
+        0
+      ],
+      "color": "#9c86d9",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Ramp-1",
+      "size": [
+        14,
+        5,
+        16
+      ],
+      "pos": [
+        -24,
+        2.5,
+        -15
+      ],
+      "color": "#accbb8",
+      "shape": "Wedge",
+      "yaw": 180,
+      "decor": false
+    },
+    {
+      "name": "Ramp1",
+      "size": [
+        14,
+        5,
+        16
+      ],
+      "pos": [
+        24,
+        2.5,
+        15
+      ],
+      "color": "#accbb8",
+      "shape": "Wedge",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Cover-1",
+      "size": [
+        9,
+        5,
+        6
+      ],
+      "pos": [
+        -13,
+        2.5,
+        -23
+      ],
+      "color": "#d8e9ca",
+      "shape": "Box",
+      "yaw": 180,
+      "decor": false
+    },
+    {
+      "name": "Cover1",
+      "size": [
+        9,
+        5,
+        6
+      ],
+      "pos": [
+        13,
+        2.5,
+        23
+      ],
+      "color": "#d8e9ca",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "V3_EndTrim",
+      "size": [
+        87,
+        0.45,
+        0.4
+      ],
+      "pos": [
+        0,
+        9,
+        -37.8
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SpawnBoard",
+      "size": [
+        13,
+        3,
+        0.4
+      ],
+      "pos": [
+        0,
+        6,
+        -37.6
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        -35,
+        7,
+        -38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        -35,
+        14.5,
+        -38
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        35,
+        7,
+        -38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        35,
+        14.5,
+        -38
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        -43,
+        10,
+        -19
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        43,
+        10,
+        -19
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_EndTrim",
+      "size": [
+        87,
+        0.45,
+        0.4
+      ],
+      "pos": [
+        0,
+        9,
+        37.8
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SpawnBoard",
+      "size": [
+        13,
+        3,
+        0.4
+      ],
+      "pos": [
+        0,
+        6,
+        37.6
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        -35,
+        7,
+        38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        -35,
+        14.5,
+        38
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        35,
+        7,
+        38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        35,
+        14.5,
+        38
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        -43,
+        10,
+        19
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        43,
+        10,
+        19
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_PortalLight",
+      "size": [
+        0.45,
+        13,
+        8.3
+      ],
+      "pos": [
+        -12,
+        8,
+        0
+      ],
+      "color": "#00d9ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_PortalLight",
+      "size": [
+        0.45,
+        13,
+        8.3
+      ],
+      "pos": [
+        12,
+        8,
+        0
+      ],
+      "color": "#00d9ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_PortalEnergyLintel",
+      "size": [
+        20,
+        0.4,
+        8.2
+      ],
+      "pos": [
+        0,
+        13.8,
+        0
+      ],
+      "color": "#00d9ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    }
+  ],
+  "Spawns": [
+    [
+      0,
+      4,
+      -28
+    ],
+    [
+      0,
+      4,
+      28
+    ]
+  ],
+  "KillY": -18
+}

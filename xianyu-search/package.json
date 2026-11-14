@@ -1,0 +1,14 @@
+{
+  "name": "alpha-busca",
+  "private": true,
+  "version": "0.2.0",
+  "dependencies": {
+    "gsap": "3.15.1"
+  },
+  "scripts": {
+    "test": "node --test test_extension.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "29.1.1"
+  }
+}

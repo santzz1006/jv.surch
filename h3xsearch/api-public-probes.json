@@ -1,0 +1,50 @@
+[
+  {
+    "url": "https://h3xsearch.com/api/config",
+    "method": "GET",
+    "status": "200",
+    "response": {
+      "siteName": "H3X Search",
+      "signupUrl": "https://www.hubbuy.com/signUp?utm_source=website&utm_medium=ambassador&utm_campaign=linksharing&inviteCode=YlRJm8mz",
+      "communityUrl": "https://discord.gg/h3xcn",
+      "turnstileSiteKey": "0x4AAAAAAF_OiL0Gy2xiikkB",
+      "perPage": 20
+    },
+    "error": ""
+  },
+  {
+    "url": "https://h3xsearch.com/api/search?q=rtx%203060&page=1&lang=pt",
+    "method": "GET",
+    "status": "401",
+    "response": {
+      "error": {
+        "code": "UNAUTHORIZED",
+        "message": "Sessão inválida ou expirada. Recarregue a página e tente de novo."
+      }
+    },
+    "error": ""
+  },
+  {
+    "url": "https://h3xsearch.com/api/session",
+    "method": "POST",
+    "status": "401",
+    "response": {
+      "error": {
+        "code": "UNAUTHORIZED",
+        "message": "Não conseguimos confirmar que você é humano. Recarregue a página e tente de novo."
+      }
+    },
+    "error": ""
+  },
+  {
+    "url": "https://www.goofish.com/search?q=rtx%203060",
+    "method": "GET",
+    "status": "200",
+    "response": {
+      "htmlBytes": 11495,
+      "hasProductLinks": false,
+      "hasLoginText": true
+    },
+    "error": ""
+  }
+]

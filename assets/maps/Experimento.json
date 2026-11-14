@@ -1,0 +1,666 @@
+{
+  "Id": "Experimento",
+  "Name": "\u00c1rea de Experimenta\u00e7\u00e3o",
+  "Theme": "lab",
+  "Parts": [
+    {
+      "name": "Court",
+      "size": [
+        88,
+        2,
+        76
+      ],
+      "pos": [
+        0,
+        -1,
+        0
+      ],
+      "color": "#64768c",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideWall",
+      "size": [
+        2,
+        14,
+        80
+      ],
+      "pos": [
+        -45,
+        6,
+        0
+      ],
+      "color": "#ccd8e4",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideWall",
+      "size": [
+        2,
+        14,
+        80
+      ],
+      "pos": [
+        45,
+        6,
+        0
+      ],
+      "color": "#ccd8e4",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "EndWall",
+      "size": [
+        92,
+        14,
+        2
+      ],
+      "pos": [
+        0,
+        6,
+        -39
+      ],
+      "color": "#ccd8e4",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "EndWall",
+      "size": [
+        92,
+        14,
+        2
+      ],
+      "pos": [
+        0,
+        6,
+        39
+      ],
+      "color": "#ccd8e4",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SpawnStripe",
+      "size": [
+        16,
+        0.12,
+        6
+      ],
+      "pos": [
+        0,
+        0.08,
+        -31
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "SpawnStripe",
+      "size": [
+        16,
+        0.12,
+        6
+      ],
+      "pos": [
+        0,
+        0.08,
+        31
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "BounceWall-1",
+      "size": [
+        2,
+        11,
+        24
+      ],
+      "pos": [
+        -18,
+        5.5,
+        -3
+      ],
+      "color": "#d3e1ec",
+      "shape": "Box",
+      "yaw": 205,
+      "decor": false
+    },
+    {
+      "name": "BounceWall1",
+      "size": [
+        2,
+        11,
+        24
+      ],
+      "pos": [
+        18,
+        5.5,
+        3
+      ],
+      "color": "#d3e1ec",
+      "shape": "Box",
+      "yaw": 25,
+      "decor": false
+    },
+    {
+      "name": "Pad-1",
+      "size": [
+        13,
+        3,
+        9
+      ],
+      "pos": [
+        -8,
+        1.5,
+        -22
+      ],
+      "color": "#5dc8cb",
+      "shape": "Box",
+      "yaw": 180,
+      "decor": false
+    },
+    {
+      "name": "Pad1",
+      "size": [
+        13,
+        3,
+        9
+      ],
+      "pos": [
+        8,
+        1.5,
+        22
+      ],
+      "color": "#5dc8cb",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "LabRamp-1",
+      "size": [
+        12,
+        6,
+        14
+      ],
+      "pos": [
+        -29,
+        3,
+        -10
+      ],
+      "color": "#9c87df",
+      "shape": "Wedge",
+      "yaw": 270,
+      "decor": false
+    },
+    {
+      "name": "LabRamp1",
+      "size": [
+        12,
+        6,
+        14
+      ],
+      "pos": [
+        29,
+        3,
+        10
+      ],
+      "color": "#9c87df",
+      "shape": "Wedge",
+      "yaw": 90,
+      "decor": false
+    },
+    {
+      "name": "TestOrb",
+      "size": [
+        4,
+        4,
+        4
+      ],
+      "pos": [
+        -30,
+        9,
+        0
+      ],
+      "color": "#ffd75b",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "TestOrb",
+      "size": [
+        4,
+        4,
+        4
+      ],
+      "pos": [
+        0,
+        9,
+        0
+      ],
+      "color": "#ffd75b",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "TestOrb",
+      "size": [
+        4,
+        4,
+        4
+      ],
+      "pos": [
+        30,
+        9,
+        0
+      ],
+      "color": "#ffd75b",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_EndTrim",
+      "size": [
+        87,
+        0.45,
+        0.4
+      ],
+      "pos": [
+        0,
+        9,
+        -37.8
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SpawnBoard",
+      "size": [
+        13,
+        3,
+        0.4
+      ],
+      "pos": [
+        0,
+        6,
+        -37.6
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        -35,
+        7,
+        -38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        -35,
+        14.5,
+        -38
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        35,
+        7,
+        -38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        35,
+        14.5,
+        -38
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        -43,
+        10,
+        -19
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        43,
+        10,
+        -19
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_EndTrim",
+      "size": [
+        87,
+        0.45,
+        0.4
+      ],
+      "pos": [
+        0,
+        9,
+        37.8
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SpawnBoard",
+      "size": [
+        13,
+        3,
+        0.4
+      ],
+      "pos": [
+        0,
+        6,
+        37.6
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        -35,
+        7,
+        38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        -35,
+        14.5,
+        38
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        35,
+        7,
+        38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        35,
+        14.5,
+        38
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        -43,
+        10,
+        19
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        43,
+        10,
+        19
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_ObservationScreen",
+      "size": [
+        12,
+        6,
+        0.5
+      ],
+      "pos": [
+        -22,
+        8,
+        -37.7
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_ScreenGlow",
+      "size": [
+        10,
+        0.4,
+        0.6
+      ],
+      "pos": [
+        -22,
+        9,
+        -37.3
+      ],
+      "color": "#00d9ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_ObservationScreen",
+      "size": [
+        12,
+        6,
+        0.5
+      ],
+      "pos": [
+        22,
+        8,
+        37.7
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_ScreenGlow",
+      "size": [
+        10,
+        0.4,
+        0.6
+      ],
+      "pos": [
+        22,
+        9,
+        37.3
+      ],
+      "color": "#00d9ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_TestLine",
+      "size": [
+        75,
+        0.08,
+        0.3
+      ],
+      "pos": [
+        0,
+        0.05,
+        -19
+      ],
+      "color": "#ffc928",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_TestLine",
+      "size": [
+        75,
+        0.08,
+        0.3
+      ],
+      "pos": [
+        0,
+        0.05,
+        19
+      ],
+      "color": "#ffc928",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    }
+  ],
+  "Spawns": [
+    [
+      0,
+      4,
+      -28
+    ],
+    [
+      0,
+      4,
+      28
+    ]
+  ],
+  "KillY": -18
+}

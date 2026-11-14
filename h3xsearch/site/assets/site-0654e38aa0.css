@@ -1,0 +1,325 @@
+/* Static pages (content pages + the crawlable parts of the home landings).
+   Loaded after the app stylesheet, so every token, font and component (.top, .search, .band, .foot)
+   comes from src/styles.css; this file only adds what the static pages need. */
+
+/* ---------- home prerender (see src/prerender.tsx and scripts/site/pre.js) ---------- */
+
+/* The prerendered app frame sits in a wrapper that does not create a box, so it lays out exactly
+   like the tree React renders over it. */
+.pre {
+  display: contents;
+}
+/* pre.js sets these before first paint: a ?q= view or a different UI language would show the wrong
+   frame for a moment, so those visitors get the empty shell, as before. */
+.pre-q .pre,
+.pre-lang .pre,
+.pre-lang .home-more {
+  display: none;
+}
+
+/* On narrow screens the app's header links (.nav) take a second row, but React renders them only
+   after /api/config answers, which pushed the headline and search down (CLS ~0.06 at 375px).
+   Reserve that row up front: logo row 44px + gap 12px + links row 44px. */
+@media (max-width: 720px) {
+  #root .bar {
+    min-height: 100px;
+    align-content: flex-start;
+  }
+}
+
+/* ---------- home: FAQ teaser + guide links (static, outside #root) ---------- */
+
+.home-more {
+  border-top: 1px solid var(--line);
+}
+.home-more .wrap {
+  padding-block: 36px 28px;
+}
+.home-more h2 {
+  font: 800 26px/1.15 var(--display);
+  letter-spacing: -0.025em;
+  margin: 0 0 18px;
+}
+.qa {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 40px;
+  margin: 0 0 20px;
+}
+.qa h3 {
+  font: 700 17px/1.3 var(--body);
+  margin: 0 0 4px;
+}
+.qa p {
+  margin: 0;
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+.more-link {
+  font-weight: 700;
+}
+
+/* ---------- link row (every static page) ---------- */
+
+.site-links {
+  border-top: 1px solid var(--line);
+}
+.site-links .wrap {
+  padding-block: 16px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 18px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.site-links ul {
+  display: contents;
+  list-style: none;
+}
+.site-links li {
+  display: contents;
+}
+.site-links a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--ink);
+  font-weight: 600;
+}
+.site-links .label {
+  font-weight: 600;
+}
+
+/* ---------- content pages ---------- */
+
+.langs a {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 10px;
+  border-radius: 999px;
+  color: var(--on-yellow);
+  font: 700 14px/1 var(--body);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s;
+}
+.langs a:hover {
+  background: rgba(23, 21, 15, 0.1);
+}
+.langs a[aria-current="true"] {
+  background: var(--on-yellow);
+  color: var(--yellow);
+}
+.page-strip .strip-inner {
+  padding-bottom: 18px;
+}
+.page {
+  padding-block: 28px 56px;
+}
+.crumbs ol {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.crumbs li + li::before {
+  content: "/";
+  margin-right: 4px;
+  color: var(--line);
+}
+.crumbs a {
+  color: var(--ink-soft);
+}
+.prose {
+  max-width: 72ch;
+}
+.prose h1 {
+  font: 800 clamp(30px, 4.4vw, 46px)/1.06 var(--display);
+  letter-spacing: -0.035em;
+  margin: 0 0 16px;
+  max-width: 22ch;
+}
+.prose .lead {
+  font-size: 19px;
+  line-height: 1.55;
+  margin: 0 0 10px;
+}
+.prose .updated {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+}
+.prose h2 {
+  font: 800 25px/1.2 var(--display);
+  letter-spacing: -0.02em;
+  margin: 40px 0 10px;
+  scroll-margin-top: 16px;
+}
+.prose h3 {
+  font: 700 18px/1.3 var(--body);
+  margin: 26px 0 8px;
+}
+.prose p,
+.prose li {
+  line-height: 1.65;
+}
+.prose p {
+  margin: 0 0 14px;
+}
+.prose ul,
+.prose ol {
+  padding-left: 1.3em;
+  margin: 0 0 16px;
+  display: grid;
+  gap: 6px;
+}
+.prose a {
+  font-weight: 600;
+  text-decoration-thickness: 1.5px;
+}
+.prose q {
+  font-weight: 600;
+}
+.zh,
+.prose [lang="zh-CN"] {
+  font-family: var(--cjk), var(--body);
+}
+.table-wrap {
+  overflow-x: auto;
+  margin: 0 0 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.prose table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 15px;
+}
+.prose th,
+.prose td {
+  text-align: left;
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.prose tr:last-child td {
+  border-bottom: 0;
+}
+.prose th {
+  background: var(--chip);
+  font-weight: 700;
+}
+.prose td.zh {
+  font-size: 17px;
+  white-space: nowrap;
+}
+
+/* FAQ: every question is a visible h2 with its answer right under it */
+.faq-item h2 {
+  font-size: 21px;
+  margin-top: 30px;
+}
+
+/* step-by-step guide */
+.steps {
+  list-style: none;
+  padding: 0 !important;
+  margin: 26px 0 8px !important;
+  counter-reset: step;
+  gap: 0 !important;
+}
+.steps > li {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 0 16px;
+  padding-bottom: 6px;
+}
+.steps .step-n {
+  font: 800 40px/1 var(--display);
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  -webkit-text-stroke: 0;
+}
+.steps h2 {
+  margin: 4px 0 6px;
+  font-size: 21px;
+}
+
+/* related reading */
+.related {
+  margin-top: 44px;
+  max-width: 72ch;
+}
+.related h2 {
+  font: 800 21px/1.2 var(--display);
+  margin: 0 0 12px;
+}
+.related ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.related a {
+  display: block;
+  height: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1.3;
+  transition: border-color 0.15s;
+}
+.related a:hover {
+  border-color: var(--ink);
+}
+.band .note {
+  margin-top: 10px;
+  font-size: 13.5px;
+}
+
+@media (max-width: 720px) {
+  .qa {
+    grid-template-columns: 1fr;
+  }
+  .related ul {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .prose .lead {
+    font-size: 17.5px;
+  }
+  .steps > li {
+    grid-template-columns: 34px 1fr;
+    gap: 0 10px;
+  }
+  .steps .step-n {
+    font-size: 30px;
+  }
+  .prose td.zh {
+    white-space: normal;
+  }
+}
+
+/* Pinyin is a pronunciation aid; on phones the term tables need the room for the words. */
+@media (max-width: 560px) {
+  .prose .py {
+    display: none;
+  }
+  .prose th,
+  .prose td {
+    padding: 8px 10px;
+  }
+}

@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "C:/Users/neila/.codex/tools/blender-mcp/Lib/site-packages/blender_mcp/bundled/addon.py", line 2387, in execute_code
+    exec(code, namespace)
+  File "<string>", line 1, in <module>
+  File "blender_assets.py", line 45, in build_map
+  File "blender_assets.py", line 45, in <listcomp>
+ReferenceError: StructRNA of type Object has been removed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/neila/.codex/tools/blender-mcp/Lib/site-packages/blender_mcp/bundled/addon.py", line 1716, in _execute_command_internal
+    result = handler(**params)
+             ^^^^^^^^^^^^^^^^^
+  File "C:/Users/neila/.codex/tools/blender-mcp/Lib/site-packages/blender_mcp/bundled/addon.py", line 2397, in execute_code
+    raise Exception(
+Exception: {"exception_type": "ReferenceError", "message": "StructRNA of type Object has been removed", "traceback": "Traceback (most recent call last):\n  File \"C:/Users/neila/.codex/tools/blender-mcp/Lib/site-packages/blender_mcp/bundled/addon.py\", line 2387, in execute_code\n    exec(code, namespace)\n  File \"<string>\", line 1, in <module>\n  File \"blender_assets.py\", line 45, in build_map\n  File \"blender_assets.py\", line 45, in <listcomp>\nReferenceError: StructRNA of type Object has been removed\n"}

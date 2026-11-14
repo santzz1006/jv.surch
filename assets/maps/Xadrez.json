@@ -1,0 +1,1941 @@
+{
+  "Id": "Xadrez",
+  "Name": "Xadrez",
+  "Theme": "chess",
+  "Parts": [
+    {
+      "name": "Court",
+      "size": [
+        88,
+        2,
+        76
+      ],
+      "pos": [
+        0,
+        -1,
+        0
+      ],
+      "color": "#cbd7ee",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideWall",
+      "size": [
+        2,
+        14,
+        80
+      ],
+      "pos": [
+        -45,
+        6,
+        0
+      ],
+      "color": "#7986ac",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideWall",
+      "size": [
+        2,
+        14,
+        80
+      ],
+      "pos": [
+        45,
+        6,
+        0
+      ],
+      "color": "#7986ac",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "EndWall",
+      "size": [
+        92,
+        14,
+        2
+      ],
+      "pos": [
+        0,
+        6,
+        -39
+      ],
+      "color": "#7986ac",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "EndWall",
+      "size": [
+        92,
+        14,
+        2
+      ],
+      "pos": [
+        0,
+        6,
+        39
+      ],
+      "color": "#7986ac",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SpawnStripe",
+      "size": [
+        16,
+        0.12,
+        6
+      ],
+      "pos": [
+        0,
+        0.08,
+        -31
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "SpawnStripe",
+      "size": [
+        16,
+        0.12,
+        6
+      ],
+      "pos": [
+        0,
+        0.08,
+        31
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -31.5,
+        0.06,
+        -28
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -31.5,
+        0.06,
+        -20
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -31.5,
+        0.06,
+        -12
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -31.5,
+        0.06,
+        -4
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -31.5,
+        0.06,
+        4
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -31.5,
+        0.06,
+        12
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -31.5,
+        0.06,
+        20
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -31.5,
+        0.06,
+        28
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -22.5,
+        0.06,
+        -28
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -22.5,
+        0.06,
+        -20
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -22.5,
+        0.06,
+        -12
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -22.5,
+        0.06,
+        -4
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -22.5,
+        0.06,
+        4
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -22.5,
+        0.06,
+        12
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -22.5,
+        0.06,
+        20
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -22.5,
+        0.06,
+        28
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -13.5,
+        0.06,
+        -28
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -13.5,
+        0.06,
+        -20
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -13.5,
+        0.06,
+        -12
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -13.5,
+        0.06,
+        -4
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -13.5,
+        0.06,
+        4
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -13.5,
+        0.06,
+        12
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -13.5,
+        0.06,
+        20
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -13.5,
+        0.06,
+        28
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -4.5,
+        0.06,
+        -28
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -4.5,
+        0.06,
+        -20
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -4.5,
+        0.06,
+        -12
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -4.5,
+        0.06,
+        -4
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -4.5,
+        0.06,
+        4
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -4.5,
+        0.06,
+        12
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -4.5,
+        0.06,
+        20
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        -4.5,
+        0.06,
+        28
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        4.5,
+        0.06,
+        -28
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        4.5,
+        0.06,
+        -20
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        4.5,
+        0.06,
+        -12
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        4.5,
+        0.06,
+        -4
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        4.5,
+        0.06,
+        4
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        4.5,
+        0.06,
+        12
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        4.5,
+        0.06,
+        20
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        4.5,
+        0.06,
+        28
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        13.5,
+        0.06,
+        -28
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        13.5,
+        0.06,
+        -20
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        13.5,
+        0.06,
+        -12
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        13.5,
+        0.06,
+        -4
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        13.5,
+        0.06,
+        4
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        13.5,
+        0.06,
+        12
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        13.5,
+        0.06,
+        20
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        13.5,
+        0.06,
+        28
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        22.5,
+        0.06,
+        -28
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        22.5,
+        0.06,
+        -20
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        22.5,
+        0.06,
+        -12
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        22.5,
+        0.06,
+        -4
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        22.5,
+        0.06,
+        4
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        22.5,
+        0.06,
+        12
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        22.5,
+        0.06,
+        20
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        22.5,
+        0.06,
+        28
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        31.5,
+        0.06,
+        -28
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        31.5,
+        0.06,
+        -20
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        31.5,
+        0.06,
+        -12
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        31.5,
+        0.06,
+        -4
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        31.5,
+        0.06,
+        4
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        31.5,
+        0.06,
+        12
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        31.5,
+        0.06,
+        20
+      ],
+      "color": "#eaf0fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tile",
+      "size": [
+        9,
+        0.1,
+        8
+      ],
+      "pos": [
+        31.5,
+        0.06,
+        28
+      ],
+      "color": "#5b658e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "RookBase",
+      "size": [
+        9,
+        2,
+        9
+      ],
+      "pos": [
+        -24,
+        1,
+        -14
+      ],
+      "color": "#adb6d9",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Rook",
+      "size": [
+        6,
+        9,
+        6
+      ],
+      "pos": [
+        -24,
+        6,
+        -14
+      ],
+      "color": "#e9e8fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "RookBattlement",
+      "size": [
+        2,
+        2,
+        7
+      ],
+      "pos": [
+        -26,
+        11.5,
+        -14
+      ],
+      "color": "#e9e8fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "RookBattlement",
+      "size": [
+        2,
+        2,
+        7
+      ],
+      "pos": [
+        -22,
+        11.5,
+        -14
+      ],
+      "color": "#e9e8fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "RookBase",
+      "size": [
+        9,
+        2,
+        9
+      ],
+      "pos": [
+        -24,
+        1,
+        14
+      ],
+      "color": "#adb6d9",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Rook",
+      "size": [
+        6,
+        9,
+        6
+      ],
+      "pos": [
+        -24,
+        6,
+        14
+      ],
+      "color": "#e9e8fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "RookBattlement",
+      "size": [
+        2,
+        2,
+        7
+      ],
+      "pos": [
+        -26,
+        11.5,
+        14
+      ],
+      "color": "#e9e8fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "RookBattlement",
+      "size": [
+        2,
+        2,
+        7
+      ],
+      "pos": [
+        -22,
+        11.5,
+        14
+      ],
+      "color": "#e9e8fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "RookBase",
+      "size": [
+        9,
+        2,
+        9
+      ],
+      "pos": [
+        24,
+        1,
+        -14
+      ],
+      "color": "#adb6d9",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Rook",
+      "size": [
+        6,
+        9,
+        6
+      ],
+      "pos": [
+        24,
+        6,
+        -14
+      ],
+      "color": "#e9e8fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "RookBattlement",
+      "size": [
+        2,
+        2,
+        7
+      ],
+      "pos": [
+        22,
+        11.5,
+        -14
+      ],
+      "color": "#e9e8fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "RookBattlement",
+      "size": [
+        2,
+        2,
+        7
+      ],
+      "pos": [
+        26,
+        11.5,
+        -14
+      ],
+      "color": "#e9e8fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "RookBase",
+      "size": [
+        9,
+        2,
+        9
+      ],
+      "pos": [
+        24,
+        1,
+        14
+      ],
+      "color": "#adb6d9",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Rook",
+      "size": [
+        6,
+        9,
+        6
+      ],
+      "pos": [
+        24,
+        6,
+        14
+      ],
+      "color": "#e9e8fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "RookBattlement",
+      "size": [
+        2,
+        2,
+        7
+      ],
+      "pos": [
+        22,
+        11.5,
+        14
+      ],
+      "color": "#e9e8fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "RookBattlement",
+      "size": [
+        2,
+        2,
+        7
+      ],
+      "pos": [
+        26,
+        11.5,
+        14
+      ],
+      "color": "#e9e8fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Pawn-1",
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "pos": [
+        -10,
+        2.5,
+        0
+      ],
+      "color": "#b9a0eb",
+      "shape": "Ball",
+      "yaw": 180,
+      "decor": false
+    },
+    {
+      "name": "Pawn1",
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "pos": [
+        10,
+        2.5,
+        0
+      ],
+      "color": "#b9a0eb",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "V3_EndTrim",
+      "size": [
+        87,
+        0.45,
+        0.4
+      ],
+      "pos": [
+        0,
+        9,
+        -37.8
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SpawnBoard",
+      "size": [
+        13,
+        3,
+        0.4
+      ],
+      "pos": [
+        0,
+        6,
+        -37.6
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        -35,
+        7,
+        -38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        -35,
+        14.5,
+        -38
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        35,
+        7,
+        -38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        35,
+        14.5,
+        -38
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        -43,
+        10,
+        -19
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        43,
+        10,
+        -19
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_EndTrim",
+      "size": [
+        87,
+        0.45,
+        0.4
+      ],
+      "pos": [
+        0,
+        9,
+        37.8
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SpawnBoard",
+      "size": [
+        13,
+        3,
+        0.4
+      ],
+      "pos": [
+        0,
+        6,
+        37.6
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        -35,
+        7,
+        38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        -35,
+        14.5,
+        38
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        35,
+        7,
+        38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        35,
+        14.5,
+        38
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        -43,
+        10,
+        19
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        43,
+        10,
+        19
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_RookFoot",
+      "size": [
+        10,
+        0.6,
+        10
+      ],
+      "pos": [
+        -24,
+        1.1,
+        -14
+      ],
+      "color": "#273354",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_RookCollar",
+      "size": [
+        7,
+        0.7,
+        7
+      ],
+      "pos": [
+        -24,
+        8,
+        -14
+      ],
+      "color": "#273354",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_RookFoot",
+      "size": [
+        10,
+        0.6,
+        10
+      ],
+      "pos": [
+        -24,
+        1.1,
+        14
+      ],
+      "color": "#273354",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_RookCollar",
+      "size": [
+        7,
+        0.7,
+        7
+      ],
+      "pos": [
+        -24,
+        8,
+        14
+      ],
+      "color": "#273354",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_RookFoot",
+      "size": [
+        10,
+        0.6,
+        10
+      ],
+      "pos": [
+        24,
+        1.1,
+        -14
+      ],
+      "color": "#273354",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_RookCollar",
+      "size": [
+        7,
+        0.7,
+        7
+      ],
+      "pos": [
+        24,
+        8,
+        -14
+      ],
+      "color": "#273354",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_RookFoot",
+      "size": [
+        10,
+        0.6,
+        10
+      ],
+      "pos": [
+        24,
+        1.1,
+        14
+      ],
+      "color": "#273354",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_RookCollar",
+      "size": [
+        7,
+        0.7,
+        7
+      ],
+      "pos": [
+        24,
+        8,
+        14
+      ],
+      "color": "#273354",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    }
+  ],
+  "Spawns": [
+    [
+      0,
+      4,
+      -28
+    ],
+    [
+      0,
+      4,
+      28
+    ]
+  ],
+  "KillY": -18
+}

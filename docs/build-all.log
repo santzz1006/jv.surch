@@ -1,0 +1,97 @@
+2026-11-12 17:10:22,284 - BlenderMCPServer - INFO - BlenderMCP server starting up
+2026-11-12 17:10:22,416 - BlenderMCPServer - WARNING - MCP for Blender addon not found in any Blender addons folder. Run `uvx mcp-for-blender install-addon` to install it.
+2026-11-12 17:10:22,421 - blender-mcp-telemetry - WARNING - Telemetry disabled via environment variable
+2026-11-12 17:10:22,469 - BlenderMCPServer - INFO - Connected to Blender at localhost:9877
+2026-11-12 17:10:22,469 - BlenderMCPServer - INFO - Created new persistent connection to Blender
+2026-11-12 17:10:22,469 - BlenderMCPServer - INFO - Sending command: get_addon_info with params: None
+2026-11-12 17:10:22,469 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:10:23,509 - BlenderMCPServer - INFO - Received complete response (465 bytes)
+2026-11-12 17:10:23,509 - BlenderMCPServer - INFO - Received 465 bytes of data
+2026-11-12 17:10:23,509 - BlenderMCPServer - INFO - Response parsed, status: success
+2026-11-12 17:10:23,509 - BlenderMCPServer - INFO - Blender addon up to date (protocol 15, addon [1, 8], Blender 5.0.1)
+2026-11-12 17:10:23,509 - BlenderMCPServer - INFO - Successfully connected to Blender on startup
+2026-11-12 17:10:23,603 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:10:23,603 - BlenderMCPServer - INFO - MCP client mcp 0.1.0: extensions=[], apps=False, openai_forms=False
+2026-11-12 17:10:23,609 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "exec(compile(open('C:/Users/neila/OneDrive/Desktop/roblox/tools/blender_assets.py',encoding='utf-8').read(),'blender_assets.py','exec'))"}
+2026-11-12 17:10:23,609 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:10:24,223 - BlenderMCPServer - INFO - Received complete response (87 bytes)
+2026-11-12 17:10:24,223 - BlenderMCPServer - INFO - Received 87 bytes of data
+2026-11-12 17:10:24,224 - BlenderMCPServer - INFO - Response parsed, status: success
+2026-11-12 17:10:24,224 - BlenderMCPServer - INFO - Sending command: get_telemetry_consent with params: None
+2026-11-12 17:10:24,224 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:10:24,229 - BlenderMCPServer - INFO - Received complete response (51 bytes)
+2026-11-12 17:10:24,229 - BlenderMCPServer - INFO - Received 51 bytes of data
+2026-11-12 17:10:24,229 - BlenderMCPServer - INFO - Response parsed, status: success
+2026-11-12 17:10:24,260 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-11-12 17:10:24,273 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:10:24,273 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy; bpy.app.driver_namespace['pb_build_map']('Arena')"}
+2026-11-12 17:10:24,273 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:10:51,841 - BlenderMCPServer - INFO - Received complete response (1538 bytes)
+2026-11-12 17:10:51,841 - BlenderMCPServer - INFO - Received 1538 bytes of data
+2026-11-12 17:10:51,841 - BlenderMCPServer - INFO - Response parsed, status: success
+Arena False
+2026-11-12 17:10:51,969 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:10:51,969 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy; bpy.app.driver_namespace['pb_build_map']('Ponte')"}
+2026-11-12 17:10:51,970 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:11:00,950 - BlenderMCPServer - INFO - Received complete response (1208 bytes)
+Ponte False
+2026-11-12 17:11:00,950 - BlenderMCPServer - INFO - Received 1208 bytes of data
+2026-11-12 17:11:00,950 - BlenderMCPServer - INFO - Response parsed, status: success
+2026-11-12 17:11:00,962 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:11:00,962 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy; bpy.app.driver_namespace['pb_build_map']('Westown')"}
+2026-11-12 17:11:00,963 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:11:05,893 - BlenderMCPServer - INFO - Received complete response (1545 bytes)
+2026-11-12 17:11:05,893 - BlenderMCPServer - INFO - Received 1545 bytes of data
+2026-11-12 17:11:05,893 - BlenderMCPServer - INFO - Response parsed, status: success
+Westown False
+2026-11-12 17:11:05,909 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:11:05,910 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy; bpy.app.driver_namespace['pb_build_map']('Cemiterio')"}
+2026-11-12 17:11:05,910 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:11:11,151 - BlenderMCPServer - INFO - Received complete response (1100 bytes)
+2026-11-12 17:11:11,151 - BlenderMCPServer - INFO - Received 1100 bytes of data
+2026-11-12 17:11:11,151 - BlenderMCPServer - INFO - Response parsed, status: success
+Cemiterio False
+2026-11-12 17:11:11,167 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:11:11,167 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy; bpy.app.driver_namespace['pb_build_map']('Backrooms')"}
+2026-11-12 17:11:11,168 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:11:16,591 - BlenderMCPServer - INFO - Received complete response (1191 bytes)
+2026-11-12 17:11:16,591 - BlenderMCPServer - INFO - Received 1191 bytes of data
+2026-11-12 17:11:16,591 - BlenderMCPServer - INFO - Response parsed, status: success
+Backrooms False
+2026-11-12 17:11:16,605 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:11:16,605 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy; bpy.app.driver_namespace['pb_build_map']('Campo')"}
+2026-11-12 17:11:16,606 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:11:21,378 - BlenderMCPServer - INFO - Received complete response (1543 bytes)
+2026-11-12 17:11:21,378 - BlenderMCPServer - INFO - Received 1543 bytes of data
+2026-11-12 17:11:21,378 - BlenderMCPServer - INFO - Response parsed, status: success
+Campo False
+2026-11-12 17:11:21,391 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:11:21,391 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy; bpy.app.driver_namespace['pb_build_map']('Xadrez')"}
+2026-11-12 17:11:21,392 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:11:26,706 - BlenderMCPServer - INFO - Received complete response (1273 bytes)
+2026-11-12 17:11:26,706 - BlenderMCPServer - INFO - Received 1273 bytes of data
+2026-11-12 17:11:26,706 - BlenderMCPServer - INFO - Response parsed, status: success
+Xadrez False
+2026-11-12 17:11:26,720 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:11:26,721 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy; bpy.app.driver_namespace['pb_build_map']('Portao')"}
+2026-11-12 17:11:26,721 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:11:31,137 - BlenderMCPServer - INFO - Received complete response (1215 bytes)
+2026-11-12 17:11:31,137 - BlenderMCPServer - INFO - Received 1215 bytes of data
+2026-11-12 17:11:31,137 - BlenderMCPServer - INFO - Response parsed, status: success
+Portao False
+2026-11-12 17:11:31,151 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:11:31,152 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy; bpy.app.driver_namespace['pb_build_map']('Parquinho')"}
+2026-11-12 17:11:31,153 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:11:38,954 - BlenderMCPServer - INFO - Received complete response (1637 bytes)
+2026-11-12 17:11:38,956 - BlenderMCPServer - INFO - Received 1637 bytes of data
+2026-11-12 17:11:38,956 - BlenderMCPServer - INFO - Response parsed, status: success
+Parquinho False
+2026-11-12 17:11:38,978 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:11:38,980 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy; bpy.app.driver_namespace['pb_build_map']('Experimento')"}
+2026-11-12 17:11:38,980 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:11:47,292 - BlenderMCPServer - INFO - Received complete response (1200 bytes)
+2026-11-12 17:11:47,293 - BlenderMCPServer - INFO - Received 1200 bytes of data
+2026-11-12 17:11:47,293 - BlenderMCPServer - INFO - Response parsed, status: success
+Experimento False
+2026-11-12 17:11:47,337 - BlenderMCPServer - INFO - Disconnecting from Blender on shutdown
+2026-11-12 17:11:47,339 - BlenderMCPServer - INFO - BlenderMCP server shut down

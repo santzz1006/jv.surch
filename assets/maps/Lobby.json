@@ -1,0 +1,2717 @@
+{
+  "Id": "Lobby",
+  "Name": "Paddle Plaza",
+  "Parts": [
+    {
+      "name": "Foundation",
+      "size": [
+        160,
+        4,
+        144
+      ],
+      "pos": [
+        0,
+        -2,
+        0
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Plaza",
+      "size": [
+        154,
+        0.4,
+        138
+      ],
+      "pos": [
+        0,
+        0.2,
+        0
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "OctagonalDais",
+      "size": [
+        48,
+        1,
+        48
+      ],
+      "pos": [
+        0,
+        0.5,
+        30
+      ],
+      "color": "#18213d",
+      "shape": "Octagon",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "OctagonalDais",
+      "size": [
+        46,
+        0.25,
+        46
+      ],
+      "pos": [
+        0,
+        1.1,
+        30
+      ],
+      "color": "#00d9ff",
+      "shape": "Octagon",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "OctagonalDais",
+      "size": [
+        43.6,
+        0.3,
+        43.6
+      ],
+      "pos": [
+        0,
+        1.4,
+        30
+      ],
+      "color": "#087bff",
+      "shape": "Octagon",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "OctagonalDais",
+      "size": [
+        40,
+        0.25,
+        40
+      ],
+      "pos": [
+        0,
+        1.7,
+        30
+      ],
+      "color": "#d9e4fa",
+      "shape": "Octagon",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "PortalRunwayLight",
+      "size": [
+        0.5,
+        0.15,
+        51
+      ],
+      "pos": [
+        -14,
+        0.5,
+        -11
+      ],
+      "color": "#00d9ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "PortalRunwayLight",
+      "size": [
+        0.5,
+        0.15,
+        51
+      ],
+      "pos": [
+        14,
+        0.5,
+        -11
+      ],
+      "color": "#00d9ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Runway",
+      "size": [
+        27,
+        0.12,
+        52
+      ],
+      "pos": [
+        0,
+        0.43,
+        -11
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "WalkwayTile",
+      "size": [
+        25,
+        0.13,
+        6
+      ],
+      "pos": [
+        0,
+        0.54,
+        -35
+      ],
+      "color": "#a5b9df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "WalkwayTile",
+      "size": [
+        25,
+        0.13,
+        6
+      ],
+      "pos": [
+        0,
+        0.54,
+        -27
+      ],
+      "color": "#a5b9df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "WalkwayTile",
+      "size": [
+        25,
+        0.13,
+        6
+      ],
+      "pos": [
+        0,
+        0.54,
+        -19
+      ],
+      "color": "#a5b9df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "WalkwayTile",
+      "size": [
+        25,
+        0.13,
+        6
+      ],
+      "pos": [
+        0,
+        0.54,
+        -11
+      ],
+      "color": "#a5b9df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "WalkwayTile",
+      "size": [
+        25,
+        0.13,
+        6
+      ],
+      "pos": [
+        0,
+        0.54,
+        -3
+      ],
+      "color": "#a5b9df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "WalkwayTile",
+      "size": [
+        25,
+        0.13,
+        6
+      ],
+      "pos": [
+        0,
+        0.54,
+        5
+      ],
+      "color": "#a5b9df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "WalkwayTile",
+      "size": [
+        25,
+        0.13,
+        6
+      ],
+      "pos": [
+        0,
+        0.54,
+        13
+      ],
+      "color": "#a5b9df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "StadiumWall",
+      "size": [
+        51,
+        28,
+        5
+      ],
+      "pos": [
+        -48,
+        14,
+        -62
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "WallFace",
+      "size": [
+        47,
+        24,
+        1
+      ],
+      "pos": [
+        -48,
+        13,
+        -58.8
+      ],
+      "color": "#687cae",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "GrandstandStep",
+      "size": [
+        31,
+        1.8,
+        5
+      ],
+      "pos": [
+        -57,
+        0.9,
+        -23
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SeatRow",
+      "size": [
+        28,
+        1,
+        1.8
+      ],
+      "pos": [
+        -57,
+        2.6,
+        -23
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "GrandstandStep",
+      "size": [
+        31,
+        3.4000000000000004,
+        5
+      ],
+      "pos": [
+        -57,
+        1.7000000000000002,
+        -28
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SeatRow",
+      "size": [
+        28,
+        1,
+        1.8
+      ],
+      "pos": [
+        -57,
+        4.2,
+        -28
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "GrandstandStep",
+      "size": [
+        31,
+        5.0,
+        5
+      ],
+      "pos": [
+        -57,
+        2.5,
+        -33
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SeatRow",
+      "size": [
+        28,
+        1,
+        1.8
+      ],
+      "pos": [
+        -57,
+        5.800000000000001,
+        -33
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "GrandstandStep",
+      "size": [
+        31,
+        6.6000000000000005,
+        5
+      ],
+      "pos": [
+        -57,
+        3.3000000000000003,
+        -38
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SeatRow",
+      "size": [
+        28,
+        1,
+        1.8
+      ],
+      "pos": [
+        -57,
+        7.4,
+        -38
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "GrandstandStep",
+      "size": [
+        31,
+        8.200000000000001,
+        5
+      ],
+      "pos": [
+        -57,
+        4.1000000000000005,
+        -43
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SeatRow",
+      "size": [
+        28,
+        1,
+        1.8
+      ],
+      "pos": [
+        -57,
+        9.0,
+        -43
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Buttress",
+      "size": [
+        5,
+        32,
+        7
+      ],
+      "pos": [
+        -31,
+        16,
+        -61
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "ButtressBand",
+      "size": [
+        5.3,
+        1.5,
+        7.3
+      ],
+      "pos": [
+        -31,
+        23,
+        -61
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Buttress",
+      "size": [
+        5,
+        32,
+        7
+      ],
+      "pos": [
+        -75,
+        16,
+        -61
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "ButtressBand",
+      "size": [
+        5.3,
+        1.5,
+        7.3
+      ],
+      "pos": [
+        -75,
+        23,
+        -61
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TreePlanter",
+      "size": [
+        12,
+        3,
+        12
+      ],
+      "pos": [
+        -68,
+        1.5,
+        -48
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "PlanterCap",
+      "size": [
+        12.5,
+        0.6,
+        12.5
+      ],
+      "pos": [
+        -68,
+        3,
+        -48
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Trunk",
+      "size": [
+        2.8,
+        11,
+        2.8
+      ],
+      "pos": [
+        -68,
+        8,
+        -48
+      ],
+      "color": "#97603d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "BlockFoliage",
+      "size": [
+        16,
+        10,
+        13
+      ],
+      "pos": [
+        -68,
+        16,
+        -48
+      ],
+      "color": "#32bf53",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "CrownFoliage",
+      "size": [
+        12,
+        5,
+        11
+      ],
+      "pos": [
+        -70,
+        23,
+        -48
+      ],
+      "color": "#68e65b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "LeafCluster",
+      "size": [
+        9,
+        7,
+        10
+      ],
+      "pos": [
+        -63,
+        17,
+        -45
+      ],
+      "color": "#14933b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TreePlanter",
+      "size": [
+        12,
+        3,
+        12
+      ],
+      "pos": [
+        -68,
+        1.5,
+        48
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "PlanterCap",
+      "size": [
+        12.5,
+        0.6,
+        12.5
+      ],
+      "pos": [
+        -68,
+        3,
+        48
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Trunk",
+      "size": [
+        2.8,
+        11,
+        2.8
+      ],
+      "pos": [
+        -68,
+        8,
+        48
+      ],
+      "color": "#97603d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "BlockFoliage",
+      "size": [
+        16,
+        10,
+        13
+      ],
+      "pos": [
+        -68,
+        16,
+        48
+      ],
+      "color": "#32bf53",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "CrownFoliage",
+      "size": [
+        12,
+        5,
+        11
+      ],
+      "pos": [
+        -70,
+        23,
+        48
+      ],
+      "color": "#68e65b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "LeafCluster",
+      "size": [
+        9,
+        7,
+        10
+      ],
+      "pos": [
+        -63,
+        17,
+        51
+      ],
+      "color": "#14933b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "FloodlightPole",
+      "size": [
+        1.4,
+        32,
+        1.4
+      ],
+      "pos": [
+        -73,
+        16,
+        -35
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "FloodlightFrame",
+      "size": [
+        11,
+        8,
+        2
+      ],
+      "pos": [
+        -73,
+        32,
+        -35
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        -76.4,
+        30.3,
+        -33.7
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        -76.4,
+        33.7,
+        -33.7
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        -73,
+        30.3,
+        -33.7
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        -73,
+        33.7,
+        -33.7
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        -69.6,
+        30.3,
+        -33.7
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        -69.6,
+        33.7,
+        -33.7
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "FloodlightPole",
+      "size": [
+        1.4,
+        32,
+        1.4
+      ],
+      "pos": [
+        -73,
+        16,
+        35
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "FloodlightFrame",
+      "size": [
+        11,
+        8,
+        2
+      ],
+      "pos": [
+        -73,
+        32,
+        35
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        -76.4,
+        30.3,
+        36.3
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        -76.4,
+        33.7,
+        36.3
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        -73,
+        30.3,
+        36.3
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        -73,
+        33.7,
+        36.3
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        -69.6,
+        30.3,
+        36.3
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        -69.6,
+        33.7,
+        36.3
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "StadiumWall",
+      "size": [
+        51,
+        28,
+        5
+      ],
+      "pos": [
+        48,
+        14,
+        -62
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "WallFace",
+      "size": [
+        47,
+        24,
+        1
+      ],
+      "pos": [
+        48,
+        13,
+        -58.8
+      ],
+      "color": "#687cae",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "GrandstandStep",
+      "size": [
+        31,
+        1.8,
+        5
+      ],
+      "pos": [
+        57,
+        0.9,
+        -23
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SeatRow",
+      "size": [
+        28,
+        1,
+        1.8
+      ],
+      "pos": [
+        57,
+        2.6,
+        -23
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "GrandstandStep",
+      "size": [
+        31,
+        3.4000000000000004,
+        5
+      ],
+      "pos": [
+        57,
+        1.7000000000000002,
+        -28
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SeatRow",
+      "size": [
+        28,
+        1,
+        1.8
+      ],
+      "pos": [
+        57,
+        4.2,
+        -28
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "GrandstandStep",
+      "size": [
+        31,
+        5.0,
+        5
+      ],
+      "pos": [
+        57,
+        2.5,
+        -33
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SeatRow",
+      "size": [
+        28,
+        1,
+        1.8
+      ],
+      "pos": [
+        57,
+        5.800000000000001,
+        -33
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "GrandstandStep",
+      "size": [
+        31,
+        6.6000000000000005,
+        5
+      ],
+      "pos": [
+        57,
+        3.3000000000000003,
+        -38
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SeatRow",
+      "size": [
+        28,
+        1,
+        1.8
+      ],
+      "pos": [
+        57,
+        7.4,
+        -38
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "GrandstandStep",
+      "size": [
+        31,
+        8.200000000000001,
+        5
+      ],
+      "pos": [
+        57,
+        4.1000000000000005,
+        -43
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SeatRow",
+      "size": [
+        28,
+        1,
+        1.8
+      ],
+      "pos": [
+        57,
+        9.0,
+        -43
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Buttress",
+      "size": [
+        5,
+        32,
+        7
+      ],
+      "pos": [
+        31,
+        16,
+        -61
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "ButtressBand",
+      "size": [
+        5.3,
+        1.5,
+        7.3
+      ],
+      "pos": [
+        31,
+        23,
+        -61
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Buttress",
+      "size": [
+        5,
+        32,
+        7
+      ],
+      "pos": [
+        75,
+        16,
+        -61
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "ButtressBand",
+      "size": [
+        5.3,
+        1.5,
+        7.3
+      ],
+      "pos": [
+        75,
+        23,
+        -61
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TreePlanter",
+      "size": [
+        12,
+        3,
+        12
+      ],
+      "pos": [
+        68,
+        1.5,
+        -48
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "PlanterCap",
+      "size": [
+        12.5,
+        0.6,
+        12.5
+      ],
+      "pos": [
+        68,
+        3,
+        -48
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Trunk",
+      "size": [
+        2.8,
+        11,
+        2.8
+      ],
+      "pos": [
+        68,
+        8,
+        -48
+      ],
+      "color": "#97603d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "BlockFoliage",
+      "size": [
+        16,
+        10,
+        13
+      ],
+      "pos": [
+        68,
+        16,
+        -48
+      ],
+      "color": "#32bf53",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "CrownFoliage",
+      "size": [
+        12,
+        5,
+        11
+      ],
+      "pos": [
+        66,
+        23,
+        -48
+      ],
+      "color": "#68e65b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "LeafCluster",
+      "size": [
+        9,
+        7,
+        10
+      ],
+      "pos": [
+        73,
+        17,
+        -45
+      ],
+      "color": "#14933b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TreePlanter",
+      "size": [
+        12,
+        3,
+        12
+      ],
+      "pos": [
+        68,
+        1.5,
+        48
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "PlanterCap",
+      "size": [
+        12.5,
+        0.6,
+        12.5
+      ],
+      "pos": [
+        68,
+        3,
+        48
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Trunk",
+      "size": [
+        2.8,
+        11,
+        2.8
+      ],
+      "pos": [
+        68,
+        8,
+        48
+      ],
+      "color": "#97603d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "BlockFoliage",
+      "size": [
+        16,
+        10,
+        13
+      ],
+      "pos": [
+        68,
+        16,
+        48
+      ],
+      "color": "#32bf53",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "CrownFoliage",
+      "size": [
+        12,
+        5,
+        11
+      ],
+      "pos": [
+        66,
+        23,
+        48
+      ],
+      "color": "#68e65b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "LeafCluster",
+      "size": [
+        9,
+        7,
+        10
+      ],
+      "pos": [
+        73,
+        17,
+        51
+      ],
+      "color": "#14933b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "FloodlightPole",
+      "size": [
+        1.4,
+        32,
+        1.4
+      ],
+      "pos": [
+        73,
+        16,
+        -35
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "FloodlightFrame",
+      "size": [
+        11,
+        8,
+        2
+      ],
+      "pos": [
+        73,
+        32,
+        -35
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        69.6,
+        30.3,
+        -33.7
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        69.6,
+        33.7,
+        -33.7
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        73,
+        30.3,
+        -33.7
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        73,
+        33.7,
+        -33.7
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        76.4,
+        30.3,
+        -33.7
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        76.4,
+        33.7,
+        -33.7
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "FloodlightPole",
+      "size": [
+        1.4,
+        32,
+        1.4
+      ],
+      "pos": [
+        73,
+        16,
+        35
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "FloodlightFrame",
+      "size": [
+        11,
+        8,
+        2
+      ],
+      "pos": [
+        73,
+        32,
+        35
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        69.6,
+        30.3,
+        36.3
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        69.6,
+        33.7,
+        36.3
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        73,
+        30.3,
+        36.3
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        73,
+        33.7,
+        36.3
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        76.4,
+        30.3,
+        36.3
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LightPanel",
+      "size": [
+        2.6,
+        2.6,
+        0.4
+      ],
+      "pos": [
+        76.4,
+        33.7,
+        36.3
+      ],
+      "color": "#fff8d7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "PortalOuter",
+      "size": [
+        7,
+        28,
+        8
+      ],
+      "pos": [
+        -20,
+        14,
+        -45
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "PortalInner",
+      "size": [
+        1,
+        24,
+        1
+      ],
+      "pos": [
+        -17,
+        13,
+        -40.7
+      ],
+      "color": "#00d9ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "PortalFoot",
+      "size": [
+        12,
+        3,
+        14
+      ],
+      "pos": [
+        -20,
+        1.5,
+        -44
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "PortalOuter",
+      "size": [
+        7,
+        28,
+        8
+      ],
+      "pos": [
+        20,
+        14,
+        -45
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "PortalInner",
+      "size": [
+        1,
+        24,
+        1
+      ],
+      "pos": [
+        17,
+        13,
+        -40.7
+      ],
+      "color": "#00d9ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "PortalFoot",
+      "size": [
+        12,
+        3,
+        14
+      ],
+      "pos": [
+        20,
+        1.5,
+        -44
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "PortalLintel",
+      "size": [
+        47,
+        8,
+        8
+      ],
+      "pos": [
+        0,
+        29,
+        -45
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "PortalLight",
+      "size": [
+        35,
+        1,
+        1
+      ],
+      "pos": [
+        0,
+        25,
+        -40.5
+      ],
+      "color": "#00d9ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "PortalCeiling",
+      "size": [
+        32,
+        1,
+        21
+      ],
+      "pos": [
+        0,
+        24,
+        -52
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "PortalBack",
+      "size": [
+        32,
+        24,
+        1
+      ],
+      "pos": [
+        0,
+        12,
+        -61
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "PortalInnerGlow",
+      "size": [
+        0.45,
+        18,
+        0.6
+      ],
+      "pos": [
+        -12,
+        12,
+        -60
+      ],
+      "color": "#00d9ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "PortalInnerGlow",
+      "size": [
+        0.45,
+        18,
+        0.6
+      ],
+      "pos": [
+        12,
+        12,
+        -60
+      ],
+      "color": "#00d9ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "PortalInnerTop",
+      "size": [
+        24,
+        0.45,
+        0.6
+      ],
+      "pos": [
+        0,
+        21,
+        -60
+      ],
+      "color": "#00d9ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "LogoBacking",
+      "size": [
+        48,
+        13,
+        4
+      ],
+      "pos": [
+        0,
+        39,
+        -47
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "LogoUnderline",
+      "size": [
+        41,
+        1.2,
+        5
+      ],
+      "pos": [
+        0,
+        31.5,
+        -46
+      ],
+      "color": "#00d9ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "ModesKiosk",
+      "size": [
+        29,
+        20,
+        3
+      ],
+      "pos": [
+        -44,
+        12,
+        -8
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "ModesBorder",
+      "size": [
+        29.5,
+        21,
+        1
+      ],
+      "pos": [
+        -44,
+        12,
+        -9.7
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "ModesHeader",
+      "size": [
+        31,
+        6,
+        4
+      ],
+      "pos": [
+        -44,
+        25,
+        -8
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "ModesFoot",
+      "size": [
+        34,
+        2,
+        12
+      ],
+      "pos": [
+        -44,
+        1,
+        -7
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "ModesNeon",
+      "size": [
+        31,
+        0.4,
+        12.3
+      ],
+      "pos": [
+        -44,
+        2.1,
+        -7
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "ModesPillar",
+      "size": [
+        2.5,
+        26,
+        4
+      ],
+      "pos": [
+        -60,
+        13,
+        -9
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "ModesPillar",
+      "size": [
+        2.5,
+        26,
+        4
+      ],
+      "pos": [
+        -28,
+        13,
+        -9
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "ShopKiosk",
+      "size": [
+        29,
+        20,
+        3
+      ],
+      "pos": [
+        44,
+        12,
+        -8
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "ShopBorder",
+      "size": [
+        29.5,
+        21,
+        1
+      ],
+      "pos": [
+        44,
+        12,
+        -9.7
+      ],
+      "color": "#ffc928",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "ShopHeader",
+      "size": [
+        31,
+        6,
+        4
+      ],
+      "pos": [
+        44,
+        25,
+        -8
+      ],
+      "color": "#ffc928",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "ShopFoot",
+      "size": [
+        34,
+        2,
+        12
+      ],
+      "pos": [
+        44,
+        1,
+        -7
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "ShopNeon",
+      "size": [
+        31,
+        0.4,
+        12.3
+      ],
+      "pos": [
+        44,
+        2.1,
+        -7
+      ],
+      "color": "#ffc928",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "ShopPillar",
+      "size": [
+        2.5,
+        26,
+        4
+      ],
+      "pos": [
+        28,
+        13,
+        -9
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "ShopPillar",
+      "size": [
+        2.5,
+        26,
+        4
+      ],
+      "pos": [
+        60,
+        13,
+        -9
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "DisplayPaddle",
+      "size": [
+        5,
+        6,
+        1
+      ],
+      "pos": [
+        35,
+        16,
+        -5.9
+      ],
+      "color": "#ff304b",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "DisplayGrip",
+      "size": [
+        1.1,
+        4,
+        1
+      ],
+      "pos": [
+        35,
+        11.8,
+        -5.9
+      ],
+      "color": "#e9bb7e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "DisplayBall",
+      "size": [
+        2.5,
+        2.5,
+        2.5
+      ],
+      "pos": [
+        35,
+        6,
+        -5.9
+      ],
+      "color": "#ffc928",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "DisplayPaddle",
+      "size": [
+        5,
+        6,
+        1
+      ],
+      "pos": [
+        44,
+        16,
+        -5.9
+      ],
+      "color": "#087bff",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "DisplayGrip",
+      "size": [
+        1.1,
+        4,
+        1
+      ],
+      "pos": [
+        44,
+        11.8,
+        -5.9
+      ],
+      "color": "#e9bb7e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "DisplayBall",
+      "size": [
+        2.5,
+        2.5,
+        2.5
+      ],
+      "pos": [
+        44,
+        6,
+        -5.9
+      ],
+      "color": "#d9e4fa",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "DisplayPaddle",
+      "size": [
+        5,
+        6,
+        1
+      ],
+      "pos": [
+        53,
+        16,
+        -5.9
+      ],
+      "color": "#762bff",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "DisplayGrip",
+      "size": [
+        1.1,
+        4,
+        1
+      ],
+      "pos": [
+        53,
+        11.8,
+        -5.9
+      ],
+      "color": "#e9bb7e",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "DisplayBall",
+      "size": [
+        2.5,
+        2.5,
+        2.5
+      ],
+      "pos": [
+        53,
+        6,
+        -5.9
+      ],
+      "color": "#ffc928",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "ShopShelf",
+      "size": [
+        27,
+        0.5,
+        3
+      ],
+      "pos": [
+        44,
+        8,
+        -5.5
+      ],
+      "color": "#ffc928",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideWalk",
+      "size": [
+        25,
+        0.25,
+        20
+      ],
+      "pos": [
+        -55,
+        0.5,
+        35
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideStep",
+      "size": [
+        25,
+        1,
+        3
+      ],
+      "pos": [
+        -55,
+        0.5,
+        48
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideStep",
+      "size": [
+        25,
+        2,
+        3
+      ],
+      "pos": [
+        -55,
+        1.0,
+        51
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideStep",
+      "size": [
+        25,
+        3,
+        3
+      ],
+      "pos": [
+        -55,
+        1.5,
+        54
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Banner",
+      "size": [
+        16,
+        14,
+        1
+      ],
+      "pos": [
+        -55,
+        14,
+        55
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideWalk",
+      "size": [
+        25,
+        0.25,
+        20
+      ],
+      "pos": [
+        55,
+        0.5,
+        35
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideStep",
+      "size": [
+        25,
+        1,
+        3
+      ],
+      "pos": [
+        55,
+        0.5,
+        48
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideStep",
+      "size": [
+        25,
+        2,
+        3
+      ],
+      "pos": [
+        55,
+        1.0,
+        51
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideStep",
+      "size": [
+        25,
+        3,
+        3
+      ],
+      "pos": [
+        55,
+        1.5,
+        54
+      ],
+      "color": "#d9e4fa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Banner",
+      "size": [
+        16,
+        14,
+        1
+      ],
+      "pos": [
+        55,
+        14,
+        55
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TrainingSign",
+      "size": [
+        23,
+        10,
+        3
+      ],
+      "pos": [
+        -53,
+        8,
+        18
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SeasonSign",
+      "size": [
+        23,
+        10,
+        3
+      ],
+      "pos": [
+        53,
+        8,
+        18
+      ],
+      "color": "#762bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideBoundary",
+      "size": [
+        3,
+        7,
+        138
+      ],
+      "pos": [
+        -74,
+        3.5,
+        0
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideBoundary",
+      "size": [
+        3,
+        7,
+        138
+      ],
+      "pos": [
+        74,
+        3.5,
+        0
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Boundary",
+      "size": [
+        154,
+        3,
+        3
+      ],
+      "pos": [
+        0,
+        1.5,
+        -71
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Boundary",
+      "size": [
+        154,
+        3,
+        3
+      ],
+      "pos": [
+        0,
+        1.5,
+        71
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    }
+  ],
+  "Spawns": [
+    [
+      0,
+      4,
+      36
+    ]
+  ],
+  "KillY": -18
+}

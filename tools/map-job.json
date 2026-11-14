@@ -1,0 +1,4 @@
+{
+  "code": "import bpy; bpy.app.driver_namespace['pb_build_map']('Arena')",
+  "user_prompt": "se conecte ao blender e ao roblox studio e faça o jogo seguindo o prompt abaixo"
+}

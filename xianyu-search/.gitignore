@@ -1,0 +1,10 @@
+.venv/
+.browser-profile/
+.reference-profile/
+__pycache__/
+.env
+.bridge-key
+extension/config.js
+recommendations.json
+
+node_modules/

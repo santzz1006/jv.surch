@@ -1,0 +1,988 @@
+{
+  "Id": "Treino",
+  "Name": "Centro de Treinamento",
+  "Parts": [
+    {
+      "name": "Floor",
+      "size": [
+        112,
+        2,
+        104
+      ],
+      "pos": [
+        0,
+        -1,
+        0
+      ],
+      "color": "#d5e7ef",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideWall",
+      "size": [
+        2,
+        15,
+        108
+      ],
+      "pos": [
+        -57,
+        6.5,
+        0
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideWall",
+      "size": [
+        2,
+        15,
+        108
+      ],
+      "pos": [
+        57,
+        6.5,
+        0
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "EndWall",
+      "size": [
+        116,
+        15,
+        2
+      ],
+      "pos": [
+        0,
+        6.5,
+        -53
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "EndWall",
+      "size": [
+        116,
+        15,
+        2
+      ],
+      "pos": [
+        0,
+        6.5,
+        53
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "Lane",
+      "size": [
+        29,
+        0.12,
+        88
+      ],
+      "pos": [
+        -36,
+        0.1,
+        0
+      ],
+      "color": "#278fff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "FiringLine",
+      "size": [
+        29,
+        0.16,
+        0.8
+      ],
+      "pos": [
+        -36,
+        0.2,
+        -27
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "TargetBase",
+      "size": [
+        8,
+        1,
+        6
+      ],
+      "pos": [
+        -36,
+        0.5,
+        -10
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetPost",
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "pos": [
+        -36,
+        3,
+        -10
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetRing",
+      "size": [
+        6,
+        6,
+        1
+      ],
+      "pos": [
+        -36,
+        6,
+        -10
+      ],
+      "color": "#e8f4ff",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetBullseye",
+      "size": [
+        3,
+        3,
+        1.2
+      ],
+      "pos": [
+        -36,
+        6,
+        -10.1
+      ],
+      "color": "#ff5266",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "TargetBase",
+      "size": [
+        8,
+        1,
+        6
+      ],
+      "pos": [
+        -36,
+        0.5,
+        14
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetPost",
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "pos": [
+        -36,
+        3,
+        14
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetRing",
+      "size": [
+        6,
+        6,
+        1
+      ],
+      "pos": [
+        -36,
+        6,
+        14
+      ],
+      "color": "#e8f4ff",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetBullseye",
+      "size": [
+        3,
+        3,
+        1.2
+      ],
+      "pos": [
+        -36,
+        6,
+        13.9
+      ],
+      "color": "#ff5266",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "TargetBase",
+      "size": [
+        8,
+        1,
+        6
+      ],
+      "pos": [
+        -36,
+        0.5,
+        36
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetPost",
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "pos": [
+        -36,
+        3,
+        36
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetRing",
+      "size": [
+        6,
+        6,
+        1
+      ],
+      "pos": [
+        -36,
+        6,
+        36
+      ],
+      "color": "#e8f4ff",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetBullseye",
+      "size": [
+        3,
+        3,
+        1.2
+      ],
+      "pos": [
+        -36,
+        6,
+        35.9
+      ],
+      "color": "#ff5266",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Lane",
+      "size": [
+        29,
+        0.12,
+        88
+      ],
+      "pos": [
+        0,
+        0.1,
+        0
+      ],
+      "color": "#edf8ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "FiringLine",
+      "size": [
+        29,
+        0.16,
+        0.8
+      ],
+      "pos": [
+        0,
+        0.2,
+        -27
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "TargetBase",
+      "size": [
+        8,
+        1,
+        6
+      ],
+      "pos": [
+        0,
+        0.5,
+        -10
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetPost",
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "pos": [
+        0,
+        3,
+        -10
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetRing",
+      "size": [
+        6,
+        6,
+        1
+      ],
+      "pos": [
+        0,
+        6,
+        -10
+      ],
+      "color": "#e8f4ff",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetBullseye",
+      "size": [
+        3,
+        3,
+        1.2
+      ],
+      "pos": [
+        0,
+        6,
+        -10.1
+      ],
+      "color": "#278fff",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "TargetBase",
+      "size": [
+        8,
+        1,
+        6
+      ],
+      "pos": [
+        0,
+        0.5,
+        14
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetPost",
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "pos": [
+        0,
+        3,
+        14
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetRing",
+      "size": [
+        6,
+        6,
+        1
+      ],
+      "pos": [
+        0,
+        6,
+        14
+      ],
+      "color": "#e8f4ff",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetBullseye",
+      "size": [
+        3,
+        3,
+        1.2
+      ],
+      "pos": [
+        0,
+        6,
+        13.9
+      ],
+      "color": "#278fff",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "TargetBase",
+      "size": [
+        8,
+        1,
+        6
+      ],
+      "pos": [
+        0,
+        0.5,
+        36
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetPost",
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "pos": [
+        0,
+        3,
+        36
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetRing",
+      "size": [
+        6,
+        6,
+        1
+      ],
+      "pos": [
+        0,
+        6,
+        36
+      ],
+      "color": "#e8f4ff",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetBullseye",
+      "size": [
+        3,
+        3,
+        1.2
+      ],
+      "pos": [
+        0,
+        6,
+        35.9
+      ],
+      "color": "#278fff",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Lane",
+      "size": [
+        29,
+        0.12,
+        88
+      ],
+      "pos": [
+        36,
+        0.1,
+        0
+      ],
+      "color": "#ff5266",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "FiringLine",
+      "size": [
+        29,
+        0.16,
+        0.8
+      ],
+      "pos": [
+        36,
+        0.2,
+        -27
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "TargetBase",
+      "size": [
+        8,
+        1,
+        6
+      ],
+      "pos": [
+        36,
+        0.5,
+        -10
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetPost",
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "pos": [
+        36,
+        3,
+        -10
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetRing",
+      "size": [
+        6,
+        6,
+        1
+      ],
+      "pos": [
+        36,
+        6,
+        -10
+      ],
+      "color": "#e8f4ff",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetBullseye",
+      "size": [
+        3,
+        3,
+        1.2
+      ],
+      "pos": [
+        36,
+        6,
+        -10.1
+      ],
+      "color": "#278fff",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "TargetBase",
+      "size": [
+        8,
+        1,
+        6
+      ],
+      "pos": [
+        36,
+        0.5,
+        14
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetPost",
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "pos": [
+        36,
+        3,
+        14
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetRing",
+      "size": [
+        6,
+        6,
+        1
+      ],
+      "pos": [
+        36,
+        6,
+        14
+      ],
+      "color": "#e8f4ff",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetBullseye",
+      "size": [
+        3,
+        3,
+        1.2
+      ],
+      "pos": [
+        36,
+        6,
+        13.9
+      ],
+      "color": "#278fff",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "TargetBase",
+      "size": [
+        8,
+        1,
+        6
+      ],
+      "pos": [
+        36,
+        0.5,
+        36
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetPost",
+      "size": [
+        1,
+        6,
+        1
+      ],
+      "pos": [
+        36,
+        3,
+        36
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetRing",
+      "size": [
+        6,
+        6,
+        1
+      ],
+      "pos": [
+        36,
+        6,
+        36
+      ],
+      "color": "#e8f4ff",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TargetBullseye",
+      "size": [
+        3,
+        3,
+        1.2
+      ],
+      "pos": [
+        36,
+        6,
+        35.9
+      ],
+      "color": "#278fff",
+      "shape": "Ball",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Divider",
+      "size": [
+        2,
+        5,
+        60
+      ],
+      "pos": [
+        -18,
+        2.5,
+        6
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "RicochetPanel",
+      "size": [
+        2,
+        10,
+        12
+      ],
+      "pos": [
+        -18,
+        5,
+        -20
+      ],
+      "color": "#e8f4ff",
+      "shape": "Box",
+      "yaw": 30,
+      "decor": false
+    },
+    {
+      "name": "Divider",
+      "size": [
+        2,
+        5,
+        60
+      ],
+      "pos": [
+        18,
+        2.5,
+        6
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "RicochetPanel",
+      "size": [
+        2,
+        10,
+        12
+      ],
+      "pos": [
+        18,
+        5,
+        -20
+      ],
+      "color": "#e8f4ff",
+      "shape": "Box",
+      "yaw": -30,
+      "decor": false
+    },
+    {
+      "name": "MovementPlatform",
+      "size": [
+        22,
+        4,
+        14
+      ],
+      "pos": [
+        36,
+        2,
+        32
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "MovementRamp",
+      "size": [
+        12,
+        4,
+        15
+      ],
+      "pos": [
+        36,
+        2,
+        18
+      ],
+      "color": "#278fff",
+      "shape": "Wedge",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "JumpBlock",
+      "size": [
+        8,
+        2,
+        8
+      ],
+      "pos": [
+        29,
+        1,
+        0
+      ],
+      "color": "#ff5266",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SlideGate",
+      "size": [
+        20,
+        1,
+        2
+      ],
+      "pos": [
+        36,
+        4,
+        -15
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SlideGatePost",
+      "size": [
+        1.5,
+        4,
+        2
+      ],
+      "pos": [
+        26,
+        2,
+        -15
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SlideGatePost",
+      "size": [
+        1.5,
+        4,
+        2
+      ],
+      "pos": [
+        46,
+        2,
+        -15
+      ],
+      "color": "#182c4b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    }
+  ],
+  "Spawns": [
+    [
+      0,
+      4,
+      -32
+    ],
+    [
+      0,
+      4,
+      32
+    ]
+  ],
+  "KillY": -18
+}

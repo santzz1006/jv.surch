@@ -1,0 +1,4 @@
+{
+  "user_prompt": "crie o lob no blender e faça um campo de treino",
+  "code": "import bpy; bpy.app.driver_namespace['pb_build_map']('Lobby'); bpy.app.driver_namespace['pb_build_map']('Treino')"
+}

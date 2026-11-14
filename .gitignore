@@ -1,0 +1,24 @@
+# Ambientes virtuais e dependências
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Perfis e cache de navegador
+.browser-profile/
+.reference-profile/
+Crashpad/
+GPUPersistentCache/
+
+# Segredos locais
+.bridge-key
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini

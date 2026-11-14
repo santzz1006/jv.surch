@@ -1,0 +1,870 @@
+{
+  "Id": "Arena",
+  "Name": "Arena",
+  "Theme": "white",
+  "Parts": [
+    {
+      "name": "Court",
+      "size": [
+        88,
+        2,
+        76
+      ],
+      "pos": [
+        0,
+        -1,
+        0
+      ],
+      "color": "#dbe5f3",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideWall",
+      "size": [
+        2,
+        14,
+        80
+      ],
+      "pos": [
+        -45,
+        6,
+        0
+      ],
+      "color": "#f5f7ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SideWall",
+      "size": [
+        2,
+        14,
+        80
+      ],
+      "pos": [
+        45,
+        6,
+        0
+      ],
+      "color": "#f5f7ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "EndWall",
+      "size": [
+        92,
+        14,
+        2
+      ],
+      "pos": [
+        0,
+        6,
+        -39
+      ],
+      "color": "#f5f7ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "EndWall",
+      "size": [
+        92,
+        14,
+        2
+      ],
+      "pos": [
+        0,
+        6,
+        39
+      ],
+      "color": "#f5f7ff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "SpawnStripe",
+      "size": [
+        16,
+        0.12,
+        6
+      ],
+      "pos": [
+        0,
+        0.08,
+        -31
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "SpawnStripe",
+      "size": [
+        16,
+        0.12,
+        6
+      ],
+      "pos": [
+        0,
+        0.08,
+        31
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "Tower-1",
+      "size": [
+        10,
+        12,
+        10
+      ],
+      "pos": [
+        -25,
+        6,
+        -12
+      ],
+      "color": "#f6f7fe",
+      "shape": "Box",
+      "yaw": 180,
+      "decor": false
+    },
+    {
+      "name": "Tower1",
+      "size": [
+        10,
+        12,
+        10
+      ],
+      "pos": [
+        25,
+        6,
+        12
+      ],
+      "color": "#f6f7fe",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "LowCover-1",
+      "size": [
+        14,
+        4,
+        5
+      ],
+      "pos": [
+        -12,
+        2,
+        -20
+      ],
+      "color": "#a6ace7",
+      "shape": "Box",
+      "yaw": 180,
+      "decor": false
+    },
+    {
+      "name": "LowCover1",
+      "size": [
+        14,
+        4,
+        5
+      ],
+      "pos": [
+        12,
+        2,
+        20
+      ],
+      "color": "#a6ace7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "CenterCover-1",
+      "size": [
+        5,
+        8,
+        15
+      ],
+      "pos": [
+        -9,
+        4,
+        0
+      ],
+      "color": "#a98bff",
+      "shape": "Box",
+      "yaw": 180,
+      "decor": false
+    },
+    {
+      "name": "CenterCover1",
+      "size": [
+        5,
+        8,
+        15
+      ],
+      "pos": [
+        9,
+        4,
+        0
+      ],
+      "color": "#a98bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "GiantTable",
+      "size": [
+        16,
+        1.1,
+        9
+      ],
+      "pos": [
+        0,
+        3,
+        0
+      ],
+      "color": "#32bbaa",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TableLine",
+      "size": [
+        0.18,
+        0.06,
+        8.8
+      ],
+      "pos": [
+        0,
+        3.59,
+        0
+      ],
+      "color": "#f4fff7",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "TableLeg",
+      "size": [
+        0.8,
+        3,
+        0.8
+      ],
+      "pos": [
+        -6.5,
+        1.3,
+        -3.2
+      ],
+      "color": "#17263b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TableLeg",
+      "size": [
+        0.8,
+        3,
+        0.8
+      ],
+      "pos": [
+        -6.5,
+        1.3,
+        3.2
+      ],
+      "color": "#17263b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TableLeg",
+      "size": [
+        0.8,
+        3,
+        0.8
+      ],
+      "pos": [
+        6.5,
+        1.3,
+        -3.2
+      ],
+      "color": "#17263b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TableLeg",
+      "size": [
+        0.8,
+        3,
+        0.8
+      ],
+      "pos": [
+        6.5,
+        1.3,
+        3.2
+      ],
+      "color": "#17263b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "TableNet",
+      "size": [
+        0.25,
+        2,
+        9
+      ],
+      "pos": [
+        0,
+        4.5,
+        0
+      ],
+      "color": "#d8fff5",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": false
+    },
+    {
+      "name": "V3_EndTrim",
+      "size": [
+        87,
+        0.45,
+        0.4
+      ],
+      "pos": [
+        0,
+        9,
+        -37.8
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SpawnBoard",
+      "size": [
+        13,
+        3,
+        0.4
+      ],
+      "pos": [
+        0,
+        6,
+        -37.6
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        -35,
+        7,
+        -38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        -35,
+        14.5,
+        -38
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        35,
+        7,
+        -38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        35,
+        14.5,
+        -38
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        -43,
+        10,
+        -19
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        43,
+        10,
+        -19
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_EndTrim",
+      "size": [
+        87,
+        0.45,
+        0.4
+      ],
+      "pos": [
+        0,
+        9,
+        37.8
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SpawnBoard",
+      "size": [
+        13,
+        3,
+        0.4
+      ],
+      "pos": [
+        0,
+        6,
+        37.6
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        -35,
+        7,
+        38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        -35,
+        14.5,
+        38
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_WallButtress",
+      "size": [
+        3,
+        15,
+        3
+      ],
+      "pos": [
+        35,
+        7,
+        38
+      ],
+      "color": "#b5c6df",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_Cap",
+      "size": [
+        3.5,
+        0.6,
+        3.5
+      ],
+      "pos": [
+        35,
+        14.5,
+        38
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        -43,
+        10,
+        19
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_SideTrim",
+      "size": [
+        0.4,
+        0.5,
+        32
+      ],
+      "pos": [
+        43,
+        10,
+        19
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_LightHousing",
+      "size": [
+        1.5,
+        4,
+        6
+      ],
+      "pos": [
+        -42,
+        11,
+        -25
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_StadiumLight",
+      "size": [
+        0.3,
+        2.6,
+        4.5
+      ],
+      "pos": [
+        -40.949999999999996,
+        11,
+        -25
+      ],
+      "color": "#fff4ce",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_LightHousing",
+      "size": [
+        1.5,
+        4,
+        6
+      ],
+      "pos": [
+        -42,
+        11,
+        0
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_StadiumLight",
+      "size": [
+        0.3,
+        2.6,
+        4.5
+      ],
+      "pos": [
+        -40.949999999999996,
+        11,
+        0
+      ],
+      "color": "#fff4ce",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_LightHousing",
+      "size": [
+        1.5,
+        4,
+        6
+      ],
+      "pos": [
+        -42,
+        11,
+        25
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_StadiumLight",
+      "size": [
+        0.3,
+        2.6,
+        4.5
+      ],
+      "pos": [
+        -40.949999999999996,
+        11,
+        25
+      ],
+      "color": "#fff4ce",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_LightHousing",
+      "size": [
+        1.5,
+        4,
+        6
+      ],
+      "pos": [
+        42,
+        11,
+        -25
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_StadiumLight",
+      "size": [
+        0.3,
+        2.6,
+        4.5
+      ],
+      "pos": [
+        40.949999999999996,
+        11,
+        -25
+      ],
+      "color": "#fff4ce",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_LightHousing",
+      "size": [
+        1.5,
+        4,
+        6
+      ],
+      "pos": [
+        42,
+        11,
+        0
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_StadiumLight",
+      "size": [
+        0.3,
+        2.6,
+        4.5
+      ],
+      "pos": [
+        40.949999999999996,
+        11,
+        0
+      ],
+      "color": "#fff4ce",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_LightHousing",
+      "size": [
+        1.5,
+        4,
+        6
+      ],
+      "pos": [
+        42,
+        11,
+        25
+      ],
+      "color": "#18213d",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_StadiumLight",
+      "size": [
+        0.3,
+        2.6,
+        4.5
+      ],
+      "pos": [
+        40.949999999999996,
+        11,
+        25
+      ],
+      "color": "#fff4ce",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_TowerBand",
+      "size": [
+        10.4,
+        1,
+        10.4
+      ],
+      "pos": [
+        -25,
+        9,
+        -12
+      ],
+      "color": "#087bff",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    },
+    {
+      "name": "V3_TowerBand",
+      "size": [
+        10.4,
+        1,
+        10.4
+      ],
+      "pos": [
+        25,
+        9,
+        12
+      ],
+      "color": "#ff304b",
+      "shape": "Box",
+      "yaw": 0,
+      "decor": true
+    }
+  ],
+  "Spawns": [
+    [
+      0,
+      4,
+      -28
+    ],
+    [
+      0,
+      4,
+      28
+    ]
+  ],
+  "KillY": -18
+}

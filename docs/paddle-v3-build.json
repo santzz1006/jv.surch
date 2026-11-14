@@ -1,0 +1,15 @@
+{
+  "meta": null,
+  "content": [
+    {
+      "type": "text",
+      "text": "Code executed successfully: 18:17:20 | INFO: Starting glTF 2.0 export\n18:17:21 | INFO: Extracting primitive: OuterRim\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: MaplePly\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: RimLip\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: FrontRubber\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: BackRubber\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: WoodHandle\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: HandleInlay\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: HandleButt\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: Neck\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Finished glTF 2.0 export in 2.9663774967193604 s\n\n\nFBX export starting... 'C:\\\\Users\\\\neila\\\\OneDrive\\\\Desktop\\\\roblox\\\\assets\\\\models\\\\v3\\\\Classic.fbx'\nexport finished in 0.5042 sec.\nInfo: Saved as \"Classic.blend\"\nPADDLE_V3_READY Classic\n",
+      "annotations": null,
+      "meta": null
+    }
+  ],
+  "structuredContent": {
+    "result": "Code executed successfully: 18:17:20 | INFO: Starting glTF 2.0 export\n18:17:21 | INFO: Extracting primitive: OuterRim\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: MaplePly\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: RimLip\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: FrontRubber\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: BackRubber\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: WoodHandle\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: HandleInlay\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: HandleButt\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Extracting primitive: Neck\n18:17:23 | INFO: Primitives created: 1\n18:17:23 | INFO: Finished glTF 2.0 export in 2.9663774967193604 s\n\n\nFBX export starting... 'C:\\\\Users\\\\neila\\\\OneDrive\\\\Desktop\\\\roblox\\\\assets\\\\models\\\\v3\\\\Classic.fbx'\nexport finished in 0.5042 sec.\nInfo: Saved as \"Classic.blend\"\nPADDLE_V3_READY Classic\n"
+  },
+  "isError": false
+}

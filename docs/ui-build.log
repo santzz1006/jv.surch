@@ -1,0 +1,139 @@
+2026-11-12 17:42:56,849 - BlenderMCPServer - INFO - BlenderMCP server starting up
+2026-11-12 17:42:56,897 - BlenderMCPServer - WARNING - MCP for Blender addon not found in any Blender addons folder. Run `uvx mcp-for-blender install-addon` to install it.
+2026-11-12 17:42:56,916 - blender-mcp-telemetry - WARNING - Telemetry disabled via environment variable
+2026-11-12 17:42:57,001 - BlenderMCPServer - INFO - Connected to Blender at localhost:9877
+2026-11-12 17:42:57,003 - BlenderMCPServer - INFO - Created new persistent connection to Blender
+2026-11-12 17:42:57,003 - BlenderMCPServer - INFO - Sending command: get_addon_info with params: None
+2026-11-12 17:42:57,003 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:42:58,812 - BlenderMCPServer - INFO - Received complete response (465 bytes)
+2026-11-12 17:42:58,812 - BlenderMCPServer - INFO - Received 465 bytes of data
+2026-11-12 17:42:58,813 - BlenderMCPServer - INFO - Response parsed, status: success
+2026-11-12 17:42:58,813 - BlenderMCPServer - INFO - Blender addon up to date (protocol 15, addon [1, 8], Blender 5.0.1)
+2026-11-12 17:42:58,813 - BlenderMCPServer - INFO - Successfully connected to Blender on startup
+2026-11-12 17:42:58,939 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:42:58,941 - BlenderMCPServer - INFO - MCP client mcp 0.1.0: extensions=[], apps=False, openai_forms=False
+2026-11-12 17:42:58,961 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "exec(compile(open('C:/Users/neila/OneDrive/Desktop/roblox/tools/blender_ui.py',encoding='utf-8').read(),'blender_ui.py','exec'))"}
+2026-11-12 17:42:58,961 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:43:04,927 - BlenderMCPServer - INFO - Received complete response (65 bytes)
+2026-11-12 17:43:04,928 - BlenderMCPServer - INFO - Received 65 bytes of data
+2026-11-12 17:43:04,928 - BlenderMCPServer - INFO - Response parsed, status: success
+2026-11-12 17:43:04,928 - BlenderMCPServer - INFO - Sending command: get_telemetry_consent with params: None
+2026-11-12 17:43:04,928 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:43:05,142 - BlenderMCPServer - INFO - Received complete response (51 bytes)
+2026-11-12 17:43:05,142 - BlenderMCPServer - INFO - Received 51 bytes of data
+2026-11-12 17:43:05,142 - BlenderMCPServer - INFO - Response parsed, status: success
+2026-11-12 17:43:05,172 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-11-12 17:43:05,191 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:43:05,192 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy;bpy.app.driver_namespace['pb_ui_render']('Panel')"}
+2026-11-12 17:43:05,193 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:44:02,187 - BlenderMCPServer - INFO - Received complete response (81 bytes)
+2026-11-12 17:44:02,188 - BlenderMCPServer - INFO - Received 81 bytes of data
+2026-11-12 17:44:02,188 - BlenderMCPServer - INFO - Response parsed, status: success
+Panel
+2026-11-12 17:44:02,411 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:44:02,415 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy;bpy.app.driver_namespace['pb_ui_render']('Button')"}
+2026-11-12 17:44:02,416 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:44:15,800 - BlenderMCPServer - INFO - Received complete response (82 bytes)
+2026-11-12 17:44:15,800 - BlenderMCPServer - INFO - Received 82 bytes of data
+2026-11-12 17:44:15,800 - BlenderMCPServer - INFO - Response parsed, status: success
+Button
+2026-11-12 17:44:15,820 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:44:15,821 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy;bpy.app.driver_namespace['pb_ui_render']('Slot')"}
+2026-11-12 17:44:15,822 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:44:21,141 - BlenderMCPServer - INFO - Received complete response (80 bytes)
+2026-11-12 17:44:21,142 - BlenderMCPServer - INFO - Received 80 bytes of data
+2026-11-12 17:44:21,142 - BlenderMCPServer - INFO - Response parsed, status: success
+Slot
+2026-11-12 17:44:21,160 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:44:21,161 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy;bpy.app.driver_namespace['pb_ui_render']('Health')"}
+2026-11-12 17:44:21,161 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:44:23,442 - BlenderMCPServer - INFO - Received complete response (82 bytes)
+2026-11-12 17:44:23,442 - BlenderMCPServer - INFO - Received 82 bytes of data
+2026-11-12 17:44:23,442 - BlenderMCPServer - INFO - Response parsed, status: success
+Health
+2026-11-12 17:44:23,457 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:44:23,459 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy;bpy.app.driver_namespace['pb_ui_render']('Score')"}
+2026-11-12 17:44:23,461 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:44:26,972 - BlenderMCPServer - INFO - Received complete response (81 bytes)
+2026-11-12 17:44:26,973 - BlenderMCPServer - INFO - Received 81 bytes of data
+2026-11-12 17:44:26,973 - BlenderMCPServer - INFO - Response parsed, status: success
+Score
+2026-11-12 17:44:26,995 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:44:26,996 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy;bpy.app.driver_namespace['pb_ui_render']('MapCard')"}
+2026-11-12 17:44:26,997 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:44:33,180 - BlenderMCPServer - INFO - Received complete response (83 bytes)
+2026-11-12 17:44:33,180 - BlenderMCPServer - INFO - Received 83 bytes of data
+2026-11-12 17:44:33,180 - BlenderMCPServer - INFO - Response parsed, status: success
+MapCard
+2026-11-12 17:44:33,200 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:44:33,200 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy;bpy.app.driver_namespace['pb_ui_render']('Heart')"}
+2026-11-12 17:44:33,201 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:44:38,873 - BlenderMCPServer - INFO - Received complete response (81 bytes)
+2026-11-12 17:44:38,873 - BlenderMCPServer - INFO - Received 81 bytes of data
+2026-11-12 17:44:38,873 - BlenderMCPServer - INFO - Response parsed, status: success
+Heart
+2026-11-12 17:44:38,898 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:44:38,899 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy;bpy.app.driver_namespace['pb_ui_render']('Crosshair')"}
+2026-11-12 17:44:38,900 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:44:42,871 - BlenderMCPServer - INFO - Received complete response (85 bytes)
+2026-11-12 17:44:42,872 - BlenderMCPServer - INFO - Received 85 bytes of data
+2026-11-12 17:44:42,872 - BlenderMCPServer - INFO - Response parsed, status: success
+Crosshair
+2026-11-12 17:44:42,889 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:44:42,891 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy;bpy.app.driver_namespace['pb_ui_render']('Paddle')"}
+2026-11-12 17:44:42,892 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:44:47,116 - BlenderMCPServer - INFO - Received complete response (82 bytes)
+2026-11-12 17:44:47,116 - BlenderMCPServer - INFO - Received 82 bytes of data
+2026-11-12 17:44:47,117 - BlenderMCPServer - INFO - Response parsed, status: success
+Paddle
+2026-11-12 17:44:47,133 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:44:47,134 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy;bpy.app.driver_namespace['pb_ui_render']('Balls')"}
+2026-11-12 17:44:47,134 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:44:51,595 - BlenderMCPServer - INFO - Received complete response (81 bytes)
+2026-11-12 17:44:51,595 - BlenderMCPServer - INFO - Received 81 bytes of data
+2026-11-12 17:44:51,595 - BlenderMCPServer - INFO - Response parsed, status: success
+Balls
+2026-11-12 17:44:51,611 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:44:51,612 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy;bpy.app.driver_namespace['pb_ui_render']('Shield')"}
+2026-11-12 17:44:51,613 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:44:56,337 - BlenderMCPServer - INFO - Received complete response (82 bytes)
+2026-11-12 17:44:56,337 - BlenderMCPServer - INFO - Received 82 bytes of data
+2026-11-12 17:44:56,337 - BlenderMCPServer - INFO - Response parsed, status: success
+Shield
+2026-11-12 17:44:56,352 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:44:56,353 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy;bpy.app.driver_namespace['pb_ui_render']('Sprint')"}
+2026-11-12 17:44:56,353 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:45:00,479 - BlenderMCPServer - INFO - Received complete response (82 bytes)
+2026-11-12 17:45:00,479 - BlenderMCPServer - INFO - Received 82 bytes of data
+2026-11-12 17:45:00,479 - BlenderMCPServer - INFO - Response parsed, status: success
+2026-11-12 17:45:00,497 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+Sprint
+2026-11-12 17:45:00,499 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy;bpy.app.driver_namespace['pb_ui_render']('Reload')"}
+2026-11-12 17:45:00,499 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:45:04,487 - BlenderMCPServer - INFO - Received complete response (82 bytes)
+2026-11-12 17:45:04,488 - BlenderMCPServer - INFO - Received 82 bytes of data
+2026-11-12 17:45:04,488 - BlenderMCPServer - INFO - Response parsed, status: success
+Reload
+2026-11-12 17:45:04,511 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:45:04,513 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy;bpy.app.driver_namespace['pb_ui_render']('Crate')"}
+2026-11-12 17:45:04,513 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:45:09,580 - BlenderMCPServer - INFO - Received complete response (81 bytes)
+2026-11-12 17:45:09,580 - BlenderMCPServer - INFO - Received 81 bytes of data
+2026-11-12 17:45:09,581 - BlenderMCPServer - INFO - Response parsed, status: success
+Crate
+2026-11-12 17:45:09,598 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:45:09,598 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy;bpy.app.driver_namespace['pb_ui_render']('Trophy')"}
+2026-11-12 17:45:09,599 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:45:13,687 - BlenderMCPServer - INFO - Received complete response (82 bytes)
+2026-11-12 17:45:13,687 - BlenderMCPServer - INFO - Received 82 bytes of data
+2026-11-12 17:45:13,687 - BlenderMCPServer - INFO - Response parsed, status: success
+Trophy
+2026-11-12 17:45:13,699 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-11-12 17:45:13,700 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': "import bpy;bpy.app.driver_namespace['pb_ui_render']('Star')"}
+2026-11-12 17:45:13,700 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-11-12 17:45:17,616 - BlenderMCPServer - INFO - Received complete response (80 bytes)
+2026-11-12 17:45:17,617 - BlenderMCPServer - INFO - Received 80 bytes of data
+2026-11-12 17:45:17,617 - BlenderMCPServer - INFO - Response parsed, status: success
+Star
+2026-11-12 17:45:17,730 - BlenderMCPServer - INFO - Disconnecting from Blender on shutdown
+2026-11-12 17:45:17,730 - BlenderMCPServer - INFO - BlenderMCP server shut down

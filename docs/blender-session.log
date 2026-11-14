@@ -1,0 +1,469 @@
+BlenderMCP addon registered
+Server thread started
+BlenderMCP server started on localhost:9877
+09:42.343  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Paddle.png'
+15:37.921  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Arena.png'
+15:46.828  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Ponte.png'
+15:52.125  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Westown.png'
+15:57.390  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Cemiterio.png'
+16:02.828  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Backrooms.png'
+16:07.609  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Campo.png'
+16:12.953  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Xadrez.png'
+16:17.375  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Portao.png'
+16:25.140  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Parquinho.png'
+16:33.531  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Experimento.png'
+41:09.593  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Lobby.png'
+41:23.250  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Treino.png'
+48:47.375  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v2\Panel.png'
+49:01.984  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v2\Button.png'
+49:07.375  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v2\Slot.png'
+49:09.687  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v2\Health.png'
+49:13.203  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v2\Score.png'
+49:19.406  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v2\MapCard.png'
+49:25.109  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v2\Heart.png'
+49:29.109  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v2\Crosshair.png'
+49:33.265  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v2\Paddle.png'
+49:37.843  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v2\Balls.png'
+49:42.578  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v2\Shield.png'
+49:46.703  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v2\Sprint.png'
+49:50.562  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v2\Reload.png'
+49:55.812  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v2\Crate.png'
+49:59.828  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v2\Trophy.png'
+50:03.828  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v2\Star.png'
+01:22:34.765  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\weapon-icons\Classic.png'
+05:44:09.953  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Panel.png'
+05:44:16.015  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Button.png'
+05:44:21.140  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Slot.png'
+05:44:23.375  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Health.png'
+05:44:26.781  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\ScoreBlue.png'
+05:44:30.265  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\ScoreRed.png'
+BlenderMCP: localhost:9877 is already in use; auto-start skipped.
+Connected to client: ('127.0.0.1', 60817)
+Client handler started
+Client disconnected
+Client handler stopped
+Connected to client: ('127.0.0.1', 59915)
+Client handler started
+Queued command: get_addon_info
+Executing handler for get_addon_info
+Handler execution complete
+Queued command: get_addon_info
+Executing handler for get_addon_info
+Handler execution complete
+Queued command: get_polyhaven_status
+Queued command: get_sketchfab_status
+Executing handler for get_sketchfab_status
+Handler execution complete
+Queued command: get_polypizza_status
+Executing handler for get_polypizza_status
+Handler execution complete
+Queued command: get_hunyuan3d_status
+Executing handler for get_hunyuan3d_status
+Handler execution complete
+Queued command: get_hyper3d_status
+Executing handler for get_hyper3d_status
+Handler execution complete
+Queued command: get_meshy_status
+Executing handler for get_meshy_status
+Handler execution complete
+Queued command: get_tripo_status
+Executing handler for get_tripo_status
+Handler execution complete
+Queued command: get_telemetry_consent
+Executing handler for get_telemetry_consent
+Handler execution complete
+Client disconnected
+Client handler stopped
+Connected to client: ('127.0.0.1', 56396)
+Client handler started
+Queued command: get_addon_info
+Executing handler for get_addon_info
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: get_telemetry_consent
+Executing handler for get_telemetry_consent
+Handler execution complete
+Client disconnected
+Client handler stopped
+Connected to client: ('127.0.0.1', 61646)
+Client handler started
+Queued command: get_addon_info
+Executing handler for get_addon_info
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: get_telemetry_consent
+Executing handler for get_telemetry_consent
+Handler execution complete
+Client disconnected
+Client handler stopped
+Connected to client: ('127.0.0.1', 58719)
+Client handler started
+Queued command: get_addon_info
+Executing handler for get_addon_info
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Error in handler: {"exception_type": "ReferenceError", "message": "StructRNA of type Object has been removed", "traceback": "Traceback (most recent call last):\n  File \"C:/Users/neila/.codex/tools/blender-mcp/Lib/site-packages/blender_mcp/bundled/addon.py\", line 2387, in execute_code\n    exec(code, namespace)\n  File \"<string>\", line 1, in <module>\n  File \"blender_assets.py\", line 45, in build_map\n  File \"blender_assets.py\", line 45, in <listcomp>\nReferenceError: StructRNA of type Object has been removed\n"}
+Client disconnected
+Client handler stopped
+Connected to client: ('127.0.0.1', 58720)
+Client handler started
+Queued command: get_telemetry_consent
+Executing handler for get_telemetry_consent
+Handler execution complete
+Client disconnected
+Client handler stopped
+Connected to client: ('127.0.0.1', 55887)
+Client handler started
+Queued command: get_addon_info
+Executing handler for get_addon_info
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: get_telemetry_consent
+Executing handler for get_telemetry_consent
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Client disconnected
+Client handler stopped
+Connected to client: ('127.0.0.1', 63304)
+Client handler started
+Queued command: get_addon_info
+Executing handler for get_addon_info
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: get_telemetry_consent
+Executing handler for get_telemetry_consent
+Handler execution complete
+Client disconnected
+Client handler stopped
+Connected to client: ('127.0.0.1', 50765)
+Client handler started
+Queued command: get_addon_info
+Executing handler for get_addon_info
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: get_telemetry_consent
+Executing handler for get_telemetry_consent
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Client disconnected
+Client handler stopped
+Connected to client: ('127.0.0.1', 59752)
+Client handler started
+Queued command: get_addon_info
+Executing handler for get_addon_info
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: get_telemetry_consent
+Executing handler for get_telemetry_consent
+Handler execution complete
+Client disconnected
+Client handler stopped
+Connected to client: ('127.0.0.1', 59795)
+Client handler started
+Queued command: get_addon_info
+Executing handler for get_addon_info
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: get_telemetry_consent
+Executing handler for get_telemetry_consent
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code05:44:36.781  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\MapCard.png'
+05:44:41.421  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Heart.png'
+05:44:44.750  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Crosshair.png'
+05:44:48.843  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Paddle.png'
+05:44:53.578  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Balls.png'
+05:44:58.406  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Shield.png'
+05:45:02.406  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Sprint.png'
+05:45:06.468  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Reload.png'
+05:45:10.843  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Crate.png'
+05:45:14.843  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Trophy.png'
+05:45:19.015  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Star.png'
+05:45:23.218  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Play.png'
+05:45:27.265  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Shop.png'
+05:45:31.796  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Inventory.png'
+05:45:36.437  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Settings.png'
+05:45:40.515  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Exit.png'
+05:45:44.437  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Hourglass.png'
+05:45:49.968  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Tasks.png'
+05:45:54.015  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Chart.png'
+05:45:58.687  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Coin.png'
+05:46:02.890  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\ui\v3\Key.png'
+05:46:11.796  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\weapon-icons\Classic.png'
+05:46:16.640  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\weapon-icons\LongSmash.png'
+05:46:21.968  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\weapon-icons\TripleServe.png'
+05:46:27.406  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\weapon-icons\RallyRapid.png'
+05:46:36.625  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\weapon-icons\SpinMaster.png'
+05:46:42.078  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\weapon-icons\Homing.png'
+05:46:50.578  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\weapon-icons\MegaSmash.png'
+05:47:04.484  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\weapon-icons\Melee.png'
+05:50:21.093  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Lobby.png'
+06:06:01.703  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Arena.png'
+06:06:14.375  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Ponte.png'
+06:06:24.734  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Westown.png'
+06:06:34.765  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Cemiterio.png'
+06:06:43.203  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Backrooms.png'
+06:06:52.031  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Campo.png'
+06:07:03.015  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Xadrez.png'
+06:07:13.093  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Portao.png'
+06:07:22.078  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Parquinho.png'
+06:07:29.421  render           | Saved: 'C:\Users\neila\OneDrive\Desktop\roblox\assets\thumbnails\Experimento.png'
+18:28:45.093  blend            | Saved session recovery to "C:\Users\neila\AppData\Local\Temp\quit.blend"
+
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Client disconnected
+Client handler stopped
+Connected to client: ('127.0.0.1', 60501)
+Client handler started
+Queued command: get_addon_info
+Executing handler for get_addon_info
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: get_telemetry_consent
+Executing handler for get_telemetry_consent
+Handler execution complete
+Client disconnected
+Client handler stopped
+Connected to client: ('127.0.0.1', 61237)
+Client handler started
+Queued command: get_addon_info
+Executing handler for get_addon_info
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: get_telemetry_consent
+Executing handler for get_telemetry_consent
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Queued command: execute_code
+Executing handler for execute_code
+Handler execution complete
+Client disconnected
+Client handler stopped
+
+Blender quit

@@ -1,0 +1,286 @@
+{
+  "source": "https://h3xsearch.com",
+  "captured_at": "2026-11-13T14:44:12.166861+00:00",
+  "files": [
+    {
+      "url": "https://h3xsearch.com/",
+      "status": "200",
+      "content_type": "text/html",
+      "path": "site\\index.html",
+      "bytes": 11976,
+      "sha256": "155edfff69a8b3376cf2a14f2c1149e700ee5d93d671a63bd320fb026f772d51"
+    },
+    {
+      "url": "https://h3xsearch.com/api/config",
+      "status": "200",
+      "content_type": "application/json; charset=utf-8",
+      "path": "site\\api\\config",
+      "bytes": 256,
+      "sha256": "04f8ca16cfa60e3aaefc335ed79904108abd6b0f7bd439ce853f1c5d210cf99c"
+    },
+    {
+      "url": "https://h3xsearch.com/en/",
+      "status": "200",
+      "content_type": "text/html",
+      "path": "site\\en\\index.html",
+      "bytes": 11743,
+      "sha256": "a04407ce03188b3c749ea2c057fd030229a49b6b781df866157863f4e916007f"
+    },
+    {
+      "url": "https://h3xsearch.com/zh/",
+      "status": "200",
+      "content_type": "text/html",
+      "path": "site\\zh\\index.html",
+      "bytes": 10963,
+      "sha256": "a85bd423db02c25847a0b3e0de0e74306513c31bb29bb8e3b242fa2b1e29ddca"
+    },
+    {
+      "url": "https://h3xsearch.com/favicon.svg",
+      "status": "200",
+      "content_type": "image/svg+xml",
+      "path": "site\\favicon.svg",
+      "bytes": 461,
+      "sha256": "ace380988df204130d15bdf2ae91cb92eaa5add0178df81c674ef769b6e05716"
+    },
+    {
+      "url": "https://h3xsearch.com/icon-192.png",
+      "status": "200",
+      "content_type": "image/png",
+      "path": "site\\icon-192.png",
+      "bytes": 4888,
+      "sha256": "d6044c42187a4a206aa1ae4d10860384bdc1493b9fe139c70af40ee8b4c776ac"
+    },
+    {
+      "url": "https://h3xsearch.com/apple-touch-icon.png",
+      "status": "200",
+      "content_type": "image/png",
+      "path": "site\\apple-touch-icon.png",
+      "bytes": 4723,
+      "sha256": "a68b9010211670a0b7e637f15682ecf241008e6c9c92e5acacdae20b09c96b56"
+    },
+    {
+      "url": "https://h3xsearch.com/site.webmanifest",
+      "status": "200",
+      "content_type": "application/manifest+json",
+      "path": "site\\site.webmanifest",
+      "bytes": 529,
+      "sha256": "d58cc684a922ba9c21e7244150e610ae119d2c7c096d0b811cfc741ed3ab9e1e"
+    },
+    {
+      "url": "https://h3xsearch.com/og.png",
+      "status": "200",
+      "content_type": "image/png",
+      "path": "site\\og.png",
+      "bytes": 50775,
+      "sha256": "5bc628879c2679b9801c4314aa60bc1e58b105134e60ce0dd317aa069c4610d9"
+    },
+    {
+      "url": "https://h3xsearch.com/assets/bricolage-grotesque-latin-opsz-normal-Cre6nC2_.woff2",
+      "status": "200",
+      "content_type": "font/woff2",
+      "path": "site\\assets\\bricolage-grotesque-latin-opsz-normal-Cre6nC2_.woff2",
+      "bytes": 76888,
+      "sha256": "a79fdb52d4a5c76552452f69202add96e287401fff03d3e8c0e38b4dcb5a99cd"
+    },
+    {
+      "url": "https://h3xsearch.com/assets/instrument-sans-latin-wght-normal-BbzFLZTg.woff2",
+      "status": "200",
+      "content_type": "font/woff2",
+      "path": "site\\assets\\instrument-sans-latin-wght-normal-BbzFLZTg.woff2",
+      "bytes": 30092,
+      "sha256": "2ee17598a98d8a59e4df8152d015bec9ab8e4d5672cc0ab42bef806b568e3971"
+    },
+    {
+      "url": "https://h3xsearch.com/assets/pre-e1fae683ba.js",
+      "status": "200",
+      "content_type": "text/javascript",
+      "path": "site\\assets\\pre-e1fae683ba.js",
+      "bytes": 2005,
+      "sha256": "e1fae683baac45a51a09822369473a3615c5edaa0243078c2efb2df1bca4d0ba"
+    },
+    {
+      "url": "https://h3xsearch.com/assets/index-BYw7rSLp.css",
+      "status": "200",
+      "content_type": "text/css",
+      "path": "site\\assets\\index-BYw7rSLp.css",
+      "bytes": 19091,
+      "sha256": "5a09995a205fa5381d999013a1da26730547731b517273df955ea08f6b839bf6"
+    },
+    {
+      "url": "https://h3xsearch.com/assets/site-0654e38aa0.css",
+      "status": "200",
+      "content_type": "text/css",
+      "path": "site\\assets\\site-0654e38aa0.css",
+      "bytes": 6312,
+      "sha256": "0654e38aa0127538ad4286e35e8f80041e3818fadbcb53020bef4c29d31200d1"
+    },
+    {
+      "url": "https://h3xsearch.com/assets/index-SN2rHd-V.js",
+      "status": "200",
+      "content_type": "text/javascript",
+      "path": "site\\assets\\index-SN2rHd-V.js",
+      "bytes": 187110,
+      "sha256": "414a18d3cf0610f9a3fc742334918484252f6d0616fad1884774f518b8c97f62"
+    },
+    {
+      "url": "https://h3xsearch.com/brand/h3xcn-logo.webp",
+      "status": "200",
+      "content_type": "image/webp",
+      "path": "site\\brand\\h3xcn-logo.webp",
+      "bytes": 150160,
+      "sha256": "a748a22123ae91186a5e6edfd7e756c50524078cabeef69af955eff26cd7cc16"
+    },
+    {
+      "url": "https://h3xsearch.com/sobre/",
+      "status": "200",
+      "content_type": "text/html",
+      "path": "site\\sobre\\index.html",
+      "bytes": 12627,
+      "sha256": "e2ee636e8ef796a052705670c9467750f98c8ffd954bf9651da53d37452a166e"
+    },
+    {
+      "url": "https://h3xsearch.com/como-comprar-no-xianyu/",
+      "status": "200",
+      "content_type": "text/html",
+      "path": "site\\como-comprar-no-xianyu\\index.html",
+      "bytes": 19473,
+      "sha256": "c2ce5199e251475aef416c8a7f9e133dbbd7779c111eb6b9e11654e229950203"
+    },
+    {
+      "url": "https://h3xsearch.com/perguntas-frequentes/",
+      "status": "200",
+      "content_type": "text/html",
+      "path": "site\\perguntas-frequentes\\index.html",
+      "bytes": 20213,
+      "sha256": "2d14c56b256b6a75b21608aff109d7f1449b7bb7b47bf41108f43bf693354e79"
+    },
+    {
+      "url": "https://h3xsearch.com/como-funciona/",
+      "status": "200",
+      "content_type": "text/html",
+      "path": "site\\como-funciona\\index.html",
+      "bytes": 13959,
+      "sha256": "4543254cbb72078e733d5714f4109c930bd876b24e7cf02087a7d9061ecb5311"
+    },
+    {
+      "url": "https://h3xsearch.com/o-que-e-xianyu/",
+      "status": "200",
+      "content_type": "text/html",
+      "path": "site\\o-que-e-xianyu\\index.html",
+      "bytes": 13791,
+      "sha256": "edc1b1ccc4caa403412a43083b2610cff730061e85b2f425c536d369955f74b5"
+    },
+    {
+      "url": "https://h3xsearch.com/como-buscar-no-xianyu/",
+      "status": "200",
+      "content_type": "text/html",
+      "path": "site\\como-buscar-no-xianyu\\index.html",
+      "bytes": 19247,
+      "sha256": "742c884ab03a0a92c5baf5801e529cb052e48eb69d4b8c939fb4b82846a671ae"
+    },
+    {
+      "url": "https://h3xsearch.com/privacidade/",
+      "status": "200",
+      "content_type": "text/html",
+      "path": "site\\privacidade\\index.html",
+      "bytes": 13531,
+      "sha256": "135daf0ede14f2b7ff144051b83804d1b5e1410bc7c131a7168bd4f17be6072b"
+    },
+    {
+      "url": "https://h3xsearch.com/en/about/",
+      "status": "200",
+      "content_type": "text/html",
+      "path": "site\\en\\about\\index.html",
+      "bytes": 12118,
+      "sha256": "3861eb247de338f0e8c646d918fbe1fa1fe4ab2d22450244756764c07b518f7e"
+    },
+    {
+      "url": "https://h3xsearch.com/en/how-to-buy-from-xianyu/",
+      "status": "200",
+      "content_type": "text/html",
+      "path": "site\\en\\how-to-buy-from-xianyu\\index.html",
+      "bytes": 18072,
+      "sha256": "ece72c21ef0fae896ee059725459316a72cdcfefda1c2e37dccb8a4f7c312b14"
+    },
+    {
+      "url": "https://h3xsearch.com/en/faq/",
+      "status": "200",
+      "content_type": "text/html",
+      "path": "site\\en\\faq\\index.html",
+      "bytes": 18136,
+      "sha256": "cc61d4edf1333c463f019ca9b2a564f1db13e34372c461baff0d5de8b9a319be"
+    },
+    {
+      "url": "https://h3xsearch.com/en/how-it-works/",
+      "status": "200",
+      "content_type": "text/html",
+      "path": "site\\en\\how-it-works\\index.html",
+      "bytes": 13160,
+      "sha256": "787fdbe3c64526c9bf06fd91621c0510dc47bda696c6e4fa1ead9f8450e36980"
+    },
+    {
+      "url": "https://h3xsearch.com/en/what-is-xianyu/",
+      "status": "200",
+      "content_type": "text/html",
+      "path": "site\\en\\what-is-xianyu\\index.html",
+      "bytes": 13141,
+      "sha256": "caa6ad33f3b7b6f09c639f7353ce58e2ced05e06d362c7c0d2bc3fcc7cfe07ff"
+    },
+    {
+      "url": "https://h3xsearch.com/en/search-tips/",
+      "status": "200",
+      "content_type": "text/html",
+      "path": "site\\en\\search-tips\\index.html",
+      "bytes": 17721,
+      "sha256": "154210a348206dfacaf182835813a33f0def082285853a2ec80826cbbb3af380"
+    },
+    {
+      "url": "https://h3xsearch.com/en/privacy/",
+      "status": "200",
+      "content_type": "text/html",
+      "path": "site\\en\\privacy\\index.html",
+      "bytes": 12817,
+      "sha256": "77aeca03deece109bedd4cf3c349f6f297f8ac32a7b8d705d83c91775f4955cc"
+    },
+    {
+      "url": "https://h3xsearch.com/icon-512.png",
+      "status": "200",
+      "content_type": "image/png",
+      "path": "site\\icon-512.png",
+      "bytes": 13906,
+      "sha256": "6168d12ac145d9fcbde892b93685e53c391dcd82ee877482b6c295d21885a6ed"
+    },
+    {
+      "url": "https://h3xsearch.com/assets/bricolage-grotesque-vietnamese-opsz-normal-D9N6E8K1.woff2",
+      "status": "200",
+      "content_type": "font/woff2",
+      "path": "site\\assets\\bricolage-grotesque-vietnamese-opsz-normal-D9N6E8K1.woff2",
+      "bytes": 12984,
+      "sha256": "b50a9d90a5264f20d1e45be0b948fe947ddb3644557f1e85ef5d3bd06427c944"
+    },
+    {
+      "url": "https://h3xsearch.com/assets/bricolage-grotesque-latin-ext-opsz-normal-IcJDqblK.woff2",
+      "status": "200",
+      "content_type": "font/woff2",
+      "path": "site\\assets\\bricolage-grotesque-latin-ext-opsz-normal-IcJDqblK.woff2",
+      "bytes": 30736,
+      "sha256": "776f6dcaf03636cd69a5802c94808cc8896c0a66c8e9ce0fe147231b6ee01957"
+    },
+    {
+      "url": "https://h3xsearch.com/assets/instrument-sans-latin-ext-wght-normal-B5bTHO_g.woff2",
+      "status": "200",
+      "content_type": "font/woff2",
+      "path": "site\\assets\\instrument-sans-latin-ext-wght-normal-B5bTHO_g.woff2",
+      "bytes": 11144,
+      "sha256": "c4fcfea41f2c1cfeea9211fa43679845454a1d0e0d7e95e069c7e73c4ae302d2"
+    },
+    {
+      "url": "https://h3xsearch.com/brand/h3xcn-logo.png",
+      "status": "200",
+      "content_type": "image/png",
+      "path": "site\\brand\\h3xcn-logo.png",
+      "bytes": 26288,
+      "sha256": "d078bb37b18c830e9e9f892983e9181ac6b003cd7698cff7bbfa17feb3ee9690"
+    }
+  ]
+}

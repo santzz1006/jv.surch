@@ -1,0 +1,68 @@
+{
+  "Arena": {
+    "meshes": 11,
+    "triangles": 2160,
+    "maxMeshTriangles": 432,
+    "bytes": 157240
+  },
+  "Backrooms": {
+    "meshes": 8,
+    "triangles": 2052,
+    "maxMeshTriangles": 648,
+    "bytes": 150388
+  },
+  "Campo": {
+    "meshes": 11,
+    "triangles": 2104,
+    "maxMeshTriangles": 432,
+    "bytes": 152156
+  },
+  "Cemiterio": {
+    "meshes": 7,
+    "triangles": 7548,
+    "maxMeshTriangles": 5280,
+    "bytes": 550764
+  },
+  "Experimento": {
+    "meshes": 8,
+    "triangles": 2668,
+    "maxMeshTriangles": 1320,
+    "bytes": 196196
+  },
+  "Paddle": {
+    "meshes": 10,
+    "triangles": 3048,
+    "maxMeshTriangles": 764,
+    "bytes": 200848
+  },
+  "Parquinho": {
+    "meshes": 12,
+    "triangles": 2968,
+    "maxMeshTriangles": 864,
+    "bytes": 215172
+  },
+  "Ponte": {
+    "meshes": 8,
+    "triangles": 1456,
+    "maxMeshTriangles": 432,
+    "bytes": 106536
+  },
+  "Portao": {
+    "meshes": 8,
+    "triangles": 1456,
+    "maxMeshTriangles": 432,
+    "bytes": 106584
+  },
+  "Westown": {
+    "meshes": 11,
+    "triangles": 2592,
+    "maxMeshTriangles": 432,
+    "bytes": 190348
+  },
+  "Xadrez": {
+    "meshes": 9,
+    "triangles": 10276,
+    "maxMeshTriangles": 3456,
+    "bytes": 731096
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "user_prompt": "o modelo da raquete ta muito feio",
+  "code": "exec(compile(open('C:/Users/neila/OneDrive/Desktop/roblox/tools/blender_paddles_v3.py',encoding='utf-8').read(),'blender_paddles_v3.py','exec')); bpy.app.driver_namespace['pb_paddle_v3']('Classic')"
+}

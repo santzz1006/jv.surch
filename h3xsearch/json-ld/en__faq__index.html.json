@@ -1,0 +1,176 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://h3xsearch.com/en/faq/#page",
+        "url": "https://h3xsearch.com/en/faq/",
+        "name": "FAQ · H3X Search",
+        "description": "Straight answers about H3X Search: do you need a Chinese account? Is it free? Is the price in reais final? How do you buy through Hubbuy?",
+        "inLanguage": "en",
+        "dateModified": "2026-11-13",
+        "isPartOf": {
+          "@id": "https://h3xsearch.com/#website"
+        },
+        "publisher": {
+          "@id": "https://h3xsearch.com/#org"
+        },
+        "breadcrumb": {
+          "@id": "https://h3xsearch.com/en/faq/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://h3xsearch.com/en/faq/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://h3xsearch.com/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "FAQ",
+            "item": "https://h3xsearch.com/en/faq/"
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://h3xsearch.com/#website",
+        "name": "H3X Search",
+        "url": "https://h3xsearch.com/"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://h3xsearch.com/#org",
+        "name": "H3xCN",
+        "url": "https://h3xsearch.com/sobre/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://h3xsearch.com/brand/h3xcn-logo.png",
+          "width": 192,
+          "height": 192
+        },
+        "sameAs": [
+          "https://discord.gg/h3xcn"
+        ],
+        "description": "Comunidade brasileira no Discord sobre compras da China; faz o H3X Search."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://h3xsearch.com/en/faq/#faq",
+        "inLanguage": "en",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is H3X Search?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A free website that searches listings on Xianyu (also called Goofish), Alibaba's second-hand marketplace, and shows them in English or Portuguese with prices in Brazilian reais. It is made by H3xCN, a Brazilian community on Discord."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need a Xianyu account or a Chinese phone number?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. You search on H3X Search without signing up. To buy, you use Hubbuy, the purchasing agent that deals with the seller in China."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why not search on Xianyu's own website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Xianyu's web search stopped returning results for visitors from Brazil, and the app normally requires a Chinese account. That is why H3X Search exists."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is H3X Search free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. No subscription, no sign-up, no fees. The Hubbuy links carry H3xCN's invite code (a referral, or ambassador, link); H3X Search adds nothing to what you pay there. Details on the About page."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does H3X Search sell the products?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The site sells nothing, takes no payments and holds no stock. Listings belong to Xianyu sellers; buying and shipping are handled by Hubbuy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I buy something I found?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Click Buy on Hubbuy on the listing. It opens the same item on Hubbuy, a purchasing agent: you pay there, Hubbuy buys from the seller, receives the item at its warehouse in China and ships it to you. Full walkthrough: How to buy from Xianyu."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the price in reais the final price?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. It is an estimate of the item price, converted from yuan (CNY) at the day's rate. It leaves out shipping inside China (if any), agent fees, international shipping and import taxes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I turn on “Translate search to Chinese”?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For model names and codes (“rtx 3060”, “ddr5 6800mhz”) leave it off: the search goes out exactly as typed, which is how sellers write them. For everyday words (“sneakers”, “jacket”) turn it on so the search goes out in Chinese. More in Search tips."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why did my search return nothing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use fewer words, try the model name, flip the translation toggle, or type the Chinese term (for example 显卡 for graphics card). Long, very specific searches often come back empty."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are the items new or used?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Xianyu is mostly a person-to-person second-hand market, though new items show up too. The condition is whatever the seller describes, so check the photos and text before buying."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the site affiliated with Xianyu, Goofish or Alibaba?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. H3X Search is independent and is not affiliated with or endorsed by Xianyu, Goofish or Alibaba."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which languages does it support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Portuguese (default), English and Simplified Chinese. Listing titles are translated into the language you pick."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens to my searches?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The search term is used to run the search and translate the results, and your IP is turned into a keyed hash for rate limiting. There are no accounts or profiles. See the privacy note."
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

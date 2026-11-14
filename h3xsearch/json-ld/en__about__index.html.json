@@ -1,0 +1,65 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://h3xsearch.com/en/about/#page",
+        "url": "https://h3xsearch.com/en/about/",
+        "name": "About H3X Search and the H3xCN community · Disclosure",
+        "description": "Who makes H3X Search, why it exists, how it is funded and what H3xCN's invite code in the Hubbuy links means.",
+        "inLanguage": "en",
+        "dateModified": "2026-11-13",
+        "isPartOf": {
+          "@id": "https://h3xsearch.com/#website"
+        },
+        "publisher": {
+          "@id": "https://h3xsearch.com/#org"
+        },
+        "breadcrumb": {
+          "@id": "https://h3xsearch.com/en/about/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://h3xsearch.com/en/about/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://h3xsearch.com/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About and disclosure",
+            "item": "https://h3xsearch.com/en/about/"
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://h3xsearch.com/#website",
+        "name": "H3X Search",
+        "url": "https://h3xsearch.com/"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://h3xsearch.com/#org",
+        "name": "H3xCN",
+        "url": "https://h3xsearch.com/sobre/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://h3xsearch.com/brand/h3xcn-logo.png",
+          "width": 192,
+          "height": 192
+        },
+        "sameAs": [
+          "https://discord.gg/h3xcn"
+        ],
+        "description": "Comunidade brasileira no Discord sobre compras da China; faz o H3X Search."
+      }
+    ]
+  }
+]

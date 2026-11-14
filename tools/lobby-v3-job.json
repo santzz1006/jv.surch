@@ -1,0 +1,1 @@
+{"user_prompt":"crie o lob no blender, melhorar os mapas seguindo o prompt que mandei","code":"exec(compile(open('C:/Users/neila/OneDrive/Desktop/roblox/tools/blender_assets.py',encoding='utf-8').read(),'blender_assets.py','exec')); bpy.app.driver_namespace['pb_build_map']('Lobby')"}

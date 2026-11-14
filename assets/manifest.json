@@ -1,0 +1,53 @@
+{
+  "models": {
+    "HUD": "70839853380284",
+    "Paddle": "88538550614637",
+    "Arena": "85442707000825",
+    "Ponte": "82353793880062",
+    "Westown": "74470633207596",
+    "Cemiterio": "126430197664111",
+    "Backrooms": "81330836248095",
+    "Campo": "106992138345417",
+    "Xadrez": "98745040969136",
+    "Portao": "85184452664730",
+    "Parquinho": "88974062037499",
+    "Experimento": "131430114995894"
+  },
+  "thumbnails": {
+    "Arena": "89713517741301",
+    "Backrooms": "125787360902141",
+    "Campo": "93144960408438",
+    "Cemiterio": "83906787639931",
+    "Experimento": "96203937628512",
+    "Parquinho": "90511663595209",
+    "Ponte": "72773753394594",
+    "Portao": "139573922469635",
+    "Westown": "96004332502232",
+    "Xadrez": "92439941803222"
+  },
+  "operations": {
+    "Paddle": "765559c7-dbb1-456a-a40d-c820d2142e1b",
+    "Arena": "fb60a83b-5464-4ccd-82df-e88040eaa352",
+    "Ponte": "8d64a8d4-452e-4518-b66a-01573920cea4",
+    "Westown": "95663200-9912-49d0-9483-a16dd8003e2d",
+    "Cemiterio": "3663f657-b51a-4124-9eb0-4ab66b24892f",
+    "Backrooms": "e162b8d3-d0ba-4680-9d61-e318bc41be2d",
+    "Campo": "edcba624-2226-4a16-91a6-f45f07fbf428",
+    "Xadrez": "9968e7a7-9d94-4196-8ecf-b7d8f2b3e6f4",
+    "Portao": "5cd6fbdd-7e16-4929-a5f4-d03bd1ff050b",
+    "Parquinho": "b0ffb075-9ccc-4f27-acce-bc3546a2ceed",
+    "Experimento": "2a845751-1a5a-4711-8e97-e9cce0531bcf"
+  },
+  "thumbnailOperations": {
+    "Arena": "de74cbb7-07ac-456f-9ce5-e5ce51c70d50",
+    "Backrooms": "5c19294a-1707-4851-b8b6-0bf230ba2e0e",
+    "Campo": "f44e1479-75a4-4452-9edb-1dc4b551e1c3",
+    "Cemiterio": "a8e80819-74a1-41e5-9131-6d1e345e1b99",
+    "Experimento": "3cc5770e-8d54-49df-b029-de4dc079e449",
+    "Parquinho": "23054540-b465-4823-9d1f-ebe3fbc681c8",
+    "Ponte": "193a2033-c77c-4e3b-8fde-77547c2af83f",
+    "Portao": "defe6182-e08f-4675-8fb3-8850ef700ee4",
+    "Westown": "199da0ab-be42-4e36-a0ea-922ae186a4e2",
+    "Xadrez": "2698b4db-e8a6-44c7-8b54-2ea58805996a"
+  }
+}
