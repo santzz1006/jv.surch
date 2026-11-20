@@ -5,6 +5,8 @@ import catalog
 import re
 from category_design import DESIGNS
 from legal_pages import PRIVACY_UI, FOOTER_LINKS, build_legal
+from social_meta import social_meta, SITE, PUBLIC_URL
+from extension_page import build_extension_page
 ROOT=Path(__file__).parent
 PUBLIC=ROOT/'public'
 ICONS={'Tecnologia':'tech','Moda e esporte':'fashion','Serviços e colecionáveis':'services','Cuidados':'care','Casa':'home','Arte e presentes':'gifts','Dia a dia':'daily','Lazer':'gaming','Mobilidade e imóveis':'mobility','Ferramentas e campo':'tools'}
@@ -51,9 +53,12 @@ def hero(category=None):
 
 PROMOS='<div class="mini-banners"><a href="__BASE__categoria/moda/" class="mini-banner"><div><h2>Roupas e tênis.<br>Do seu jeito.</h2><span>Explorar moda</span></div><img src="__BASE__assets/category-moda.png" alt="" loading="lazy"></a><a href="__BASE__categoria/computadores/" class="mini-banner"><div><h2>Seu próximo<br>setup.</h2><span>Ver computadores</span></div><img src="__BASE__assets/category-computadores.png" alt="" loading="lazy"></a></div>'
 def render(title,view,base,category=None):
+    url=PUBLIC_URL+'categoria/'+category['id']+'/' if category else (PUBLIC_URL+'produto.html' if view=='product' else SITE)
+    template=re.sub(r'<meta name="description"[^>]*>', '', TEMPLATE)
+    template=template.replace('</head>',social_meta(title+' · Goofish Br',url)+'</head>')
     note=DESIGNS[category['id']][2] if category else 'Guarde para ver depois.'
     secondary='Seus achados de '+category['label'].lower()+', prontos para compartilhar.' if category else 'Escolha o produto. Envie para seu agente.'
-    return TEMPLATE.replace('__TITLE__',escape(title)).replace('__HERO__',hero(category)).replace('__PROMOS__','' if category else PROMOS).replace('__NOTE__',escape(note,quote=True)).replace('__SECONDARY__',escape(secondary)).replace('__CATEGORY__',category['id'] if category else '').replace('__VIEW__',view).replace('__BASE__',base)
+    return template.replace('__TITLE__',escape(title)).replace('__HERO__',hero(category)).replace('__PROMOS__','' if category else PROMOS).replace('__NOTE__',escape(note,quote=True)).replace('__SECONDARY__',escape(secondary)).replace('__CATEGORY__',category['id'] if category else '').replace('__VIEW__',view).replace('__BASE__',base)
 def build():
     # Page generation does not rewrite or shrink the existing product catalog.
     (PUBLIC/'index.html').write_text(render('Seus próximos achados','home','./'),encoding='utf-8')
@@ -62,5 +67,11 @@ def build():
         folder=PUBLIC/'categoria'/c['id'];folder.mkdir(parents=True,exist_ok=True)
         (folder/'index.html').write_text(render(c['label'],'category','../../',c),encoding='utf-8')
     build_legal(PUBLIC)
+    build_extension_page(PUBLIC)
+    root=ROOT.parent/'index.html'
+    entry=root.read_text(encoding='utf-8')
+    entry=re.sub(r'\n?<!-- social-preview -->.*?<!-- /social-preview -->\n?', '', entry, flags=re.S)
+    entry=entry.replace('</head>','<!-- social-preview -->\n'+social_meta()+'\n<!-- /social-preview -->\n</head>')
+    root.write_text(entry,encoding='utf-8')
     print('29 categorias com banners exclusivos, termos e privacidade gerados.')
 if __name__=='__main__':build()

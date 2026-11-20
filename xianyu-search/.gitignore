@@ -7,4 +7,7 @@ __pycache__/
 extension/config.js
 recommendations.json
 
+# Pacote de referência de terceiros: somente análise local
+references/evo-original/
+
 node_modules/
