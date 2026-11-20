@@ -1,34 +1,28 @@
-# Goofish Br — Seus achados 1.0.0
+# Goofish Br — Seus achados 1.1.0
 
-Extensão independente para Chrome e navegadores Chromium. Esta é a versão de uso pessoal: não precisa do servidor local nem da extensão de coleta antiga.
+## Instalação
 
-## Instalar
+Extraia o ZIP em uma pasta permanente. Abra chrome://extensions, ative Modo do desenvolvedor, escolha Carregar sem compactação e selecione a pasta com manifest.json. Para atualizar, substitua os arquivos na mesma pasta e clique Recarregar. Fixe a extensão no Chrome. O conector de coleta anterior pode continuar instalado.
 
-1. Extraia o ZIP em uma pasta permanente.
-2. Abra `chrome://extensions` e ative **Modo do desenvolvedor**.
-3. Clique em **Carregar sem compactação** e selecione a pasta que contém `manifest.json`.
-4. Fixe **Goofish Br — Seus achados** no menu de extensões.
+## Uso local
 
-Não é necessário desinstalar o conector de coleta. São extensões diferentes; o conector antigo continua responsável pelas consultas autenticadas da API local.
+Busca no catálogo Goofish Br ou abertura da pesquisa original; captura explícita de anúncios visíveis; pastas, filtro, ordenação, lojas salvas e cópia para agente. O painel completo acrescenta backup/importação, cotação diária opcional, propostas de agentes e códigos de encomendas.
 
-## Usar
+## Recursos online preparados
 
-- **Buscar:** pesquise no catálogo público Goofish Br, em português, ou abra a busca do Goofish original. A origem pode pedir login.
-- **Salvar anúncio aberto:** abra um anúncio no Goofish e clique no botão. Título, descrição, fotos grandes visíveis, preço e nome visível do vendedor são salvos localmente.
-- **Pastas:** digite uma pasta antes de salvar ou use **Mover** em um anúncio. Filtre por pasta ou texto e ordene por preço.
-- **Copiar para agente:** copia as informações e o link original. Cole onde preferir; a extensão não envia mensagens.
-- **Cotação:** em Ajustes, informe quantos reais equivalem a 1 yuan. A conversão é estimada, manual e não inclui despesas de importação.
-- **Preços na aba:** em Ajustes, ative os rótulos em reais na aba do Goofish. Recarregar a página remove os rótulos. Ative novamente para usar outra cotação.
-- **Atualizar anúncio:** salve novamente o anúncio aberto para atualizar os dados e registrar uma mudança de preço. Não há monitoramento automático em segundo plano.
-- **Fornecedores:** cadastre os links das suas lojas. Não é uma lista de fornecedores verificados.
-- **Backup:** exporta a coleção e a cotação para um arquivo local. Esta versão ainda não importa backups.
+Abra o painel pelo popup e conecte sua própria API Cloudflare. O guia está no projeto em cloudflare/LEIA-ME.md e no site, na página da extensão.
 
-## Limites reais desta versão
+- IA: análise de anúncio, tradução, dúvidas, rascunho em chinês, descrição de foto para pesquisa e análise de QC com referência opcional.
+- Alertas: preço, preço desejado e venda confirmada; cron a cada seis horas, dez anúncios por execução. Requer fonte de preços acessível.
+- Nuvem: sincronização manual protegida contra conflitos entre dispositivos.
+- Coleções: link por pasta, atualização após sincronizar, colaboração por código separado e revogação.
 
-O catálogo público funciona sem servidor no computador. Os anúncios novos lidos pela extensão precisam estar visíveis no Goofish; login e verificações continuam sujeitos às regras da origem. A extensão não traduz automaticamente textos recém-capturados, não possui IA, planos pagos, sincronização em nuvem, consulta de QC, conversão de links afiliados ou monitoramento automático de disponibilidade. Os serviços privados da EVO não fazem parte do pacote baixado e não são reutilizados.
+## Limites
 
-Fotos que ainda não carregaram ou não foram mostradas na galeria podem não ser capturadas. Os seletores foram testados com páginas de teste; mudanças no Goofish podem exigir atualização. Não foi realizada instalação nem validação com uma sessão real do navegador nesta entrega.
+Não é uma reprodução integral da EVO. IA e nuvem aguardam a criação/configuração da conta Cloudflare. A sessão do Goofish não é transferida automaticamente. Se a origem exigir login ou não expuser dados verificáveis, a consulta remota depende de coletor próprio. O contrato está no guia; um navegador remoto autenticado não foi implementado neste pacote.
 
-Coleção da extensão e favoritos do site são separados. Dados e permissões estão descritos em `privacy.html`. Não há leitura de cookies, senhas, mensagens ou pedidos, nem envio de capturas para terceiros. As imagens são carregadas de suas URLs originais.
+Não há importação automática de pedidos ou álbuns privados dos agentes, rastreio por API, envio de mensagens, banco privado de fornecedores, cotação automática entre agentes ou índice visual de todo o Goofish. A busca por foto gera termos para pesquisar. IA pode errar. As coleções da extensão e do site são separadas. Nenhuma API, chave ou código de afiliado da EVO é reutilizado.
 
-Contato: jv.busca@gmail.com.
+Testes automatizados cobrem DOM, persistência, banco SQLite e API; o Worker passou pelo empacotamento Wrangler. A instalação no seu Chrome, a IA remota e a leitura na sessão real ainda precisam de validação.
+
+Consulte privacy.html. Contato: jv.busca@gmail.com.

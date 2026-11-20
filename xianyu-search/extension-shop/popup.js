@@ -1,5 +1,5 @@
 'use strict';
-const $=id=>document.getElementById(id);let state={items:[],suppliers:[],rate:null};
+const $=id=>document.getElementById(id);let state={items:[],suppliers:[],parcels:[],offers:[],rate:null};
 const node=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
 function status(text){$('status').textContent=text;}
 async function persist(){await chrome.storage.local.set({goofishBr:state});}
@@ -26,4 +26,6 @@ $('rate-form').onsubmit=e=>{e.preventDefault();action(async()=>{state.rate=GB.ra
 $('prices').onclick=()=>action(async()=>{if(!state.rate)throw new Error('Salve uma cotação primeiro.');const tab=await currentTab();const [r]=await chrome.scripting.executeScript({target:{tabId:tab.id},func:addGoofishPrices,args:[state.rate]});status((r?.result||0)+' preços identificados. Novos cartões serão convertidos nesta aba.');});
 $('supplier-form').onsubmit=e=>{e.preventDefault();action(async()=>{const url=GB.safeUrl($('supplier-url').value),name=$('supplier-name').value.trim();if(!url||!name)throw new Error('Informe o nome e um link https válido.');state.suppliers=[{name:name.slice(0,100),url},...state.suppliers.filter(s=>s.url!==url)].slice(0,500);await persist();$('supplier-form').reset();render();status('Loja salva.');});};
 $('export').onclick=()=>action(()=>{const blob=new Blob([JSON.stringify({version:1,...state},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=link('Backup',url);a.download='goofish-br-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);status('Backup preparado. Guarde-o em um lugar seguro.');});
-action(async()=>{const data=await chrome.storage.local.get('goofishBr'),s=data.goofishBr;if(s){state.items=(Array.isArray(s.items)?s.items:[]).flatMap(i=>{try{return [{...GB.normalize(i),folder:String(i.folder||'Meus achados').slice(0,60),savedAt:i.savedAt,checkedAt:i.checkedAt,previousPrice:typeof i.previousPrice==='number'?i.previousPrice:null}];}catch{return [];}}).slice(0,1000);state.suppliers=(Array.isArray(s.suppliers)?s.suppliers:[]).filter(x=>GB.safeUrl(x.url)).slice(0,500);try{state.rate=GB.rate(s.rate);}catch{}}$('rate').value=state.rate||'';render();});
+action(async()=>{const data=await chrome.storage.local.get('goofishBr'),s=data.goofishBr;if(s){state.parcels=Array.isArray(s.parcels)?s.parcels:[];state.offers=Array.isArray(s.offers)?s.offers:[];state.items=(Array.isArray(s.items)?s.items:[]).flatMap(i=>{try{return [{...GB.normalize(i),folder:String(i.folder||'Meus achados').slice(0,60),savedAt:i.savedAt,checkedAt:i.checkedAt,previousPrice:typeof i.previousPrice==='number'?i.previousPrice:null}];}catch{return [];}}).slice(0,1000);state.suppliers=(Array.isArray(s.suppliers)?s.suppliers:[]).filter(x=>GB.safeUrl(x.url)).slice(0,500);try{state.rate=GB.rate(s.rate);}catch{}}$('rate').value=state.rate||'';render();});
+
+$('dashboard').onclick=()=>chrome.tabs.create({url:chrome.runtime.getURL('dashboard.html')});

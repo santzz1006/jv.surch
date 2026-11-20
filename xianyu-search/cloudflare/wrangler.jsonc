@@ -1,0 +1,15 @@
+{
+  "name": "goofish-br-api",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-11-20",
+  "workers_dev": true,
+  "ai": {"binding":"AI"},
+  "d1_databases": [{"binding":"DB","database_name":"goofish-br","database_id":"SUBSTITUA_PELO_ID_DO_D1","migrations_dir":"migrations"}],
+  "triggers": {"crons":["0 */6 * * *"]},
+  "vars": {
+    "TEXT_MODEL":"@cf/meta/llama-3.1-8b-instruct-fp8-fast",
+    "VISION_MODEL":"@cf/meta/llama-3.2-11b-vision-instruct",
+    "AI_DAILY_REQUESTS":"40",
+    "ALERT_BATCH":"10"
+  }
+}
