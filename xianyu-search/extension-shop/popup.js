@@ -19,7 +19,7 @@ function render(){
   $('supplier-list').replaceChildren();for(const supplier of state.suppliers){const card=node('article');card.className='card';card.append(link(supplier.name,supplier.url),button('Remover',async()=>{state.suppliers=state.suppliers.filter(s=>s.url!==supplier.url);await persist();render();}));$('supplier-list').append(card);}
 }
 document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tab]').forEach(n=>{const active=n===b;n.setAttribute('aria-pressed',String(active));$(n.dataset.tab).hidden=!active;});});
-$('search').onsubmit=e=>{e.preventDefault();action(()=>chrome.tabs.create({url:GB.searchUrl($('query').value,$('source').value)}));};
+$('search').onsubmit=e=>{e.preventDefault();action(()=>chrome.tabs.create({url:$('source').value==='catalog'?chrome.runtime.getURL('dashboard.html')+'?q='+encodeURIComponent($('query').value)+'#explore':GB.searchUrl($('query').value,'goofish')}));};
 $('capture').onclick=()=>action(async()=>{$('capture').disabled=true;try{await capture();}finally{$('capture').disabled=false;}});
 for(const id of ['filter','folder-filter','sort'])$(id).addEventListener(id==='filter'?'input':'change',render);
 $('rate-form').onsubmit=e=>{e.preventDefault();action(async()=>{state.rate=GB.rate($('rate').value);await persist();render();status('Cotação salva.');});};

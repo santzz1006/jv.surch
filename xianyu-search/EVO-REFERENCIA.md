@@ -21,9 +21,9 @@ O pacote cliente referencia serviços de autenticação, armazenamento remoto, c
 
 ## Implementação própria
 
-Código: `extension-shop/`. Pacote atual: `public/downloads/goofish-br-extensao-1.1.0.zip`. Backend: `cloudflare/`. Guia público: `public/extensao.html` e `public/cloudflare.html`.
+Código: `extension-shop/`. Pacote atual: `public/downloads/goofish-br-extensao-1.2.0.zip`. Backend: `cloudflare/`. Guia público: `public/extensao.html` e `public/cloudflare.html`.
 
-| Recurso | Versão Goofish Br 1.1.0 |
+| Recurso | Versão Goofish Br 1.2.0 |
 |---|---|
 | Busca | Catálogo Goofish Br ou abertura da busca original |
 | CNY para BRL | Cotação manual ou consulta diária opcional; rótulos na aba |
@@ -32,10 +32,10 @@ Código: `extension-shop/`. Pacote atual: `public/downloads/goofish-br-extensao-
 | Fornecedores | Cadastro pessoal de links; até 500 lojas |
 | Envio para agente | Cópia de texto e link; envio manual pelo usuário |
 | Variação de preço | Captura manual ou cron remoto preparado; requer fonte acessível |
-| IA e tradução | Código pronto para Workers AI; conta e ativação pendentes |
-| QC | Análise de fotos enviadas pelo usuário; referência opcional; sem importação de pedidos |
-| Busca por imagem | IA gera termos para pesquisa; não é índice visual do marketplace |
-| Mensagem ao vendedor | Rascunho traduzido, sem envio ou chat integrado |
+| IA | Removida conforme solicitado; traduções já presentes no catálogo são preservadas |
+| QC | Integração de IA removida; sem acesso aos álbuns privados dos agentes |
+| Busca por imagem | Integração dependente de IA removida |
+| Mensagem ao vendedor | Sem acesso ao chat privado nem envio integrado |
 | Rastreio | Códigos, notas e links manuais; sem consulta automática à transportadora |
 | Comparação de agentes | Soma produto/frete das propostas cadastradas; sem cotação automática |
 | Sincronização remota | API pessoal com chave e proteção contra conflitos; aguarda Cloudflare |
@@ -48,7 +48,7 @@ Esta é uma extensão independente, não uma cópia integral funcional da EVO. I
 
 `node --test test_extension_shop.cjs test_dashboard.cjs test_shop.cjs test_extension.cjs cloudflare/test/worker.test.mjs`
 
-Os testes exercitam DOM, URLs, persistência, cópia, IA simulada, notificações, API com SQLite real, autenticação, limites, sincronização, conflitos, compartilhamento, colaboração e exclusão. O Wrangler empacotou o Worker e aplicou a migração ao D1 local. Não houve implantação na Cloudflare, chamada real de IA ou instalação da nova extensão no navegador do usuário.
+Os testes exercitam DOM, URLs, persistência, cópia, notificações, API com SQLite real, autenticação, limites, sincronização, conflitos, compartilhamento, colaboração e exclusão. O Wrangler empacotou o Worker e aplicou a migração ao D1 local. Não houve implantação na Cloudflare ou instalação da nova extensão no navegador do usuário.
 
 Uma consulta HTTP pública ao anúncio real `1085868013932` retornou HTML sem dados estruturados verificáveis para o adaptador. O adaptador recusou o conteúdo, preservando a distinção entre falha de coleta e produto vendido. Isso confirma a necessidade de validar uma fonte acessível/coletor para alertas reais; não demonstra que a sessão autenticada esteja indisponível.
 

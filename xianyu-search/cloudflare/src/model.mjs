@@ -19,3 +19,16 @@ export async function readProduct(env,id,fetcher=fetch){
  if(env.PRODUCT_SOURCE_URL){const base=https(env.PRODUCT_SOURCE_URL);if(!base)throw new ApiError(503,'Endereço do coletor inválido.');const r=await fetcher(base.replace(/\/$/,'')+'/products/'+id,{headers:env.PRODUCT_SOURCE_TOKEN?{Authorization:'Bearer '+env.PRODUCT_SOURCE_TOKEN}:{},redirect:'error',signal:AbortSignal.timeout(15000)});if(!r.ok)throw new ApiError(503,'O coletor não conseguiu consultar o anúncio.');const raw=await r.json();if(String(raw.id)!==id||!raw.observedAt||Date.now()-Date.parse(raw.observedAt)>86400000||!Number.isFinite(Date.parse(raw.observedAt))||Date.parse(raw.observedAt)>Date.now()+60000)throw new ApiError(503,'O coletor retornou dados antigos ou de outro anúncio.');return {...item(raw),availability:['sold','available'].includes(raw.availability)?raw.availability:'unknown'};}
  const r=await fetcher('https://www.goofish.com/item?id='+id,{redirect:'error',signal:AbortSignal.timeout(15000)});if(!r.ok)throw new ApiError(503,'Anúncio indisponível para consulta pública.');const html=await r.text();if(html.length>2000000)throw new ApiError(503,'Página da origem muito grande.');return productFromHtml(html,id);
 }
+
+export async function liveSearch(env,input,fetcher=fetch){
+ const q=text(input.q,120),page=Number(input.page||1);
+ const min=input.min===''||input.min==null?null:Number(input.min),max=input.max===''||input.max==null?null:Number(input.max);
+ if(!q||!Number.isInteger(page)||page<1||page>20||[min,max].some(n=>n!==null&&(!Number.isFinite(n)||n<0))||min!==null&&max!==null&&min>max)throw new ApiError(400,'Confira o termo, a página e os limites de preço.');
+ const base=https(env.SEARCH_SOURCE_URL);if(!base)throw new ApiError(503,'A busca ao vivo ainda não tem uma fonte própria configurada. A pesquisa no catálogo funciona sem login.');
+ const url=new URL(base.replace(/\/$/,'')+'/search');url.searchParams.set('q',q);url.searchParams.set('page',String(page));url.searchParams.set('limit','48');if(min!==null)url.searchParams.set('min',String(min));if(max!==null)url.searchParams.set('max',String(max));
+ const r=await fetcher(url.href,{headers:env.SEARCH_SOURCE_TOKEN?{Authorization:'Bearer '+env.SEARCH_SOURCE_TOKEN}:{},redirect:'error',signal:AbortSignal.timeout(25000)});
+ if(!r.ok)throw new ApiError(503,'A fonte de busca não está disponível. Use o catálogo enquanto isso.');const data=await r.json();
+ if(!Array.isArray(data.items))throw new ApiError(503,'A fonte não retornou uma lista de anúncios válida.');
+ const items=data.items.slice(0,48).map(raw=>({...item(raw),titleOriginal:text(raw.titleOriginal||raw.title,500),description:text(raw.description,4000),categories:Array.isArray(raw.categories)?raw.categories.slice(0,6).map(c=>text(c,40)):[],sellerCredit:text(raw.sellerCredit,120),area:text(raw.area,100)}));
+ return {items,page,hasMore:Boolean(data.hasMore),note:'Anúncios da fonte configurada pelo proprietário; confira a disponibilidade na origem.'};
+}

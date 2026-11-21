@@ -1,28 +1,25 @@
-# Goofish Br — Seus achados 1.1.0
+# Goofish Br 1.2.0
 
-## Instalação
+Extraia o ZIP em uma pasta permanente. Em chrome://extensions, ative Modo do desenvolvedor e escolha Carregar sem compactação. Selecione a pasta com manifest.json. Para atualizar, substitua os arquivos na mesma pasta e clique Recarregar.
 
-Extraia o ZIP em uma pasta permanente. Abra chrome://extensions, ative Modo do desenvolvedor, escolha Carregar sem compactação e selecione a pasta com manifest.json. Para atualizar, substitua os arquivos na mesma pasta e clique Recarregar. Fixe a extensão no Chrome. O conector de coleta anterior pode continuar instalado.
+## Explorar sem login
 
-## Uso local
+Clique em Explorar produtos. A extensão contém 4.720 anúncios do catálogo Goofish Br: pesquisa, categorias, preços mínimo/máximo, ordenação e filtros por cor/condição citadas no texto. Não precisa de conta chinesa nem servidor local. Fotos carregam das URLs de origem. O catálogo tem uma data de captura e não garante disponibilidade atual.
 
-Busca no catálogo Goofish Br ou abertura da pesquisa original; captura explícita de anúncios visíveis; pastas, filtro, ordenação, lojas salvas e cópia para agente. O painel completo acrescenta backup/importação, cotação diária opcional, propostas de agentes e códigos de encomendas.
+Abra um produto para ver a galeria, o texto original, as informações disponíveis do vendedor e preços em yuan/reais. Salve em pastas, copie para seu agente ou abra um link direto. Os formatos de Hubbuy, Superbuy, CSSBuy, Fansbuy e USFans não incluem afiliados. Aceitação do produto e valores finais dependem do agente.
 
-## Recursos online preparados
+O conversor reconhece links completos de Goofish, Taobao, Tmall, Weidian e 1688, além de alguns links de agentes. Não resolve encurtadores automaticamente nem transforma IDs Goofish em IDs Taobao.
 
-Abra o painel pelo popup e conecte sua própria API Cloudflare. O guia está no projeto em cloudflare/LEIA-ME.md e no site, na página da extensão.
+## Outras funções
 
-- IA: análise de anúncio, tradução, dúvidas, rascunho em chinês, descrição de foto para pesquisa e análise de QC com referência opcional.
-- Alertas: preço, preço desejado e venda confirmada; cron a cada seis horas, dez anúncios por execução. Requer fonte de preços acessível.
-- Nuvem: sincronização manual protegida contra conflitos entre dispositivos.
-- Coleções: link por pasta, atualização após sincronizar, colaboração por código separado e revogação.
+Captura explícita do anúncio aberto; fornecedores salvos; backup/importação; cotação manual ou consulta diária opcional; propostas dos agentes; códigos e links de encomendas. A fonte Junegull e os banners usam a identidade do Goofish Br.
 
-## Limites
+Nuvem, coleções compartilhadas, colaboração, alertas e busca ao vivo dependem da sua API Cloudflare. A busca ao vivo e os alertas reais também precisam de uma fonte de anúncios acessível. Guia: cloudflare/LEIA-ME.md no projeto, ou a página de configuração no site da extensão.
 
-Não é uma reprodução integral da EVO. IA e nuvem aguardam a criação/configuração da conta Cloudflare. A sessão do Goofish não é transferida automaticamente. Se a origem exigir login ou não expuser dados verificáveis, a consulta remota depende de coletor próprio. O contrato está no guia; um navegador remoto autenticado não foi implementado neste pacote.
+## O que não está incluído
 
-Não há importação automática de pedidos ou álbuns privados dos agentes, rastreio por API, envio de mensagens, banco privado de fornecedores, cotação automática entre agentes ou índice visual de todo o Goofish. A busca por foto gera termos para pesquisar. IA pode errar. As coleções da extensão e do site são separadas. Nenhuma API, chave ou código de afiliado da EVO é reutilizado.
+Integrações de IA foram retiradas. O pacote não inclui APIs privadas, credenciais, planos ou banco de fornecedores da EVO. O servidor autenticado Goofish, chat de vendedores, rastreio por API e importação de pedidos privados não estão implementados. Não é uma cópia integral funcional da EVO.
 
-Testes automatizados cobrem DOM, persistência, banco SQLite e API; o Worker passou pelo empacotamento Wrangler. A instalação no seu Chrome, a IA remota e a leitura na sessão real ainda precisam de validação.
+As rotas de busca da EVO e do H3X responderam 401 sem autenticação. O catálogo local é uma busca sem login; não equivale a consultar todos os anúncios do Goofish em tempo real.
 
 Consulte privacy.html. Contato: jv.busca@gmail.com.

@@ -4,7 +4,7 @@ A EVO usa uma página da Chrome Web Store. Para oferecer a mesma instalação pe
 
 ## Preparado neste projeto
 
-- ZIP instalável: `public/downloads/goofish-br-extensao-1.1.0.zip`, com manifesto na raiz.
+- ZIP instalável: `public/downloads/goofish-br-extensao-1.2.0.zip`, com manifesto na raiz.
 - Manifest V3, código JavaScript empacotado localmente, ícones 16/48/128 e permissões opcionais para nuvem, cotação e notificações.
 - Aviso de privacidade público: `https://santzz1006.github.io/jv.surch/xianyu-search/public/privacidade-extensao.html`.
 - Guia de instalação e limitações: `public/extensao.html`.
@@ -26,7 +26,7 @@ A EVO usa uma página da Chrome Web Store. Para oferecer a mesma instalação pe
 
 **Resumo:** Organize anúncios do Goofish, veja preços em reais e prepare seus achados para conversar com seu agente.
 
-**Descrição:** Salve anúncios visíveis, organize em pastas, registre lojas, compare propostas informadas pelos agentes e copie informações com o link original. A extensão oferece conversão manual e consulta opcional de cotação. No painel completo, uma API Cloudflare configurada pelo usuário habilita IA, sincronização e compartilhamento. Alertas de preço dependem de uma fonte acessível. IA pode errar. A extensão não realiza compras, não envia mensagens e não garante acesso sem login ao Goofish. Projeto independente, sem vínculo oficial com Goofish/Xianyu ou EVO Society.
+**Descrição:** Salve anúncios visíveis, organize em pastas, registre lojas, compare propostas informadas pelos agentes e copie informações com o link original. A extensão oferece conversão manual e consulta opcional de cotação. No painel completo, uma API Cloudflare configurada pelo usuário habilita busca ao vivo com fonte própria, sincronização e compartilhamento. Alertas de preço dependem de uma fonte acessível. A extensão não realiza compras, não envia mensagens e não garante acesso sem login ao Goofish. Projeto independente, sem vínculo oficial com Goofish/Xianyu ou EVO Society.
 
 ## Finalidade e permissões
 
@@ -41,7 +41,7 @@ Finalidade única proposta: organizar a descoberta e avaliação de anúncios pa
 | domínio workers.dev, opcional | Conectar somente a API escolhida pelo usuário |
 | open.er-api.com, opcional | Consultar cotação quando o usuário solicitar |
 
-O pacote não lê cookies, histórico, senhas, mensagens ou pedidos. O painel envia texto/fotos à IA somente quando solicitado e coleção à nuvem quando sincronizada. Não há código remoto executável, anúncios ou afiliados embutidos. Essas informações devem ser conferidas no formulário real; não marque declarações incompatíveis com a versão enviada.
+O pacote não lê cookies, histórico, senhas, mensagens ou pedidos. O painel envia termos à fonte de busca ao vivo quando solicitado e coleção à nuvem quando sincronizada. Não há código remoto executável, anúncios ou afiliados embutidos. Essas informações devem ser conferidas no formulário real; não marque declarações incompatíveis com a versão enviada.
 
 ## Fontes oficiais
 
