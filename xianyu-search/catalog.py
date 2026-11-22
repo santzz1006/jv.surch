@@ -199,7 +199,13 @@ def export():
     featured=list(dict.fromkeys(x for row in itertools.zip_longest(*candidates) for x in row if x))[:60]
     payload={'schemaVersion':2,'updatedAt':stamp(),'source':'Goofish','coverage':'partial','categories':categories,'items':list(products.values()),'featuredIds':featured}
     path=target/'products.json';tmp=path.with_suffix(f'.{os.getpid()}.{threading.get_ident()}.tmp')
-    tmp.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8');tmp.replace(path)
+    if path.exists():
+        previous=json.loads(path.read_text(encoding='utf-8'))
+        if previous.get('imports'):
+            from import_evo_catalog import merge
+            payload,_=merge(payload,[i for i in previous['items'] if i.get('catalogSource')=='evo-public'],payload['updatedAt'])
+            payload['imports']=previous['imports']
+    tmp.write_text(json.dumps(payload,ensure_ascii=False,separators=(',',':')),encoding='utf-8');tmp.replace(path)
     return payload
 
 def save_live(items):

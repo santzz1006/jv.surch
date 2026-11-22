@@ -1,25 +1,24 @@
-# Goofish Br 1.2.0
+# Goofish Br 1.3.0
 
-Extraia o ZIP em uma pasta permanente. Em chrome://extensions, ative Modo do desenvolvedor e escolha Carregar sem compactação. Selecione a pasta com manifest.json. Para atualizar, substitua os arquivos na mesma pasta e clique Recarregar.
+## Instalação e atualização
+Extraia o ZIP em uma pasta permanente. Em chrome://extensions, ative o modo do desenvolvedor e use Carregar sem compactação. Para atualizar uma instalação existente, substitua os arquivos dessa pasta e clique em Recarregar. Confira a versão 1.3.0 e recarregue a aba do Goofish.
 
-## Explorar sem login
+## Pesquisa no próprio painel
+Clique no ícone da extensão, digite sua busca e escolha Buscar produtos. Os resultados, filtros, fotos, detalhes e favoritos ficam dentro do painel, sem abrir uma nova aba. Links de agentes e da origem abrem outra aba somente ao clicar neles.
 
-Clique em Explorar produtos. A extensão contém 4.720 anúncios do catálogo Goofish Br: pesquisa, categorias, preços mínimo/máximo, ordenação e filtros por cor/condição citadas no texto. Não precisa de conta chinesa nem servidor local. Fotos carregam das URLs de origem. O catálogo tem uma data de captura e não garante disponibilidade atual.
+O pacote contém 46.011 anúncios pesquisáveis sem login. Preços são capturas anteriores; confirme disponibilidade, estado e custo final na origem. Novos anúncios importados preservam o título original quando não há tradução disponível. A fonte fornece uma foto por registro; galerias maiores já existentes foram preservadas.
 
-Abra um produto para ver a galeria, o texto original, as informações disponíveis do vendedor e preços em yuan/reais. Salve em pastas, copie para seu agente ou abra um link direto. Os formatos de Hubbuy, Superbuy, CSSBuy, Fansbuy e USFans não incluem afiliados. Aceitação do produto e valores finais dependem do agente.
+## Atalho no Goofish
+A extensão exibe lupa, favoritos e ferramentas no canto superior direito de goofish.com e www.goofish.com. A lupa abre um painel sobre a página. Desative em Ajustes → Mostrar pesquisa rápida no Goofish. Não é necessário manter uma aba extra aberta para pesquisar o catálogo.
 
-O conversor reconhece links completos de Goofish, Taobao, Tmall, Weidian e 1688, além de alguns links de agentes. Não resolve encurtadores automaticamente nem transforma IDs Goofish em IDs Taobao.
+A extensão não salva nem distribui uma sessão compartilhada, não lê cookies, senhas, mensagens ou pedidos, não remove verificações e não altera o login da página. A função de sessão no site oficial ficou para uma etapa futura, conforme solicitado.
 
-## Outras funções
+## Funções
+Filtros, paginação, galeria, favoritos e pastas; captura explícita do anúncio aberto; lojas favoritas; preços em yuan e reais; cotação manual ou consulta opcional; links e conversor para agentes; propostas e encomendas manuais; backup e importação. As buscas são locais e não enviam seus termos a terceiros. Fotos são carregadas da origem.
 
-Captura explícita do anúncio aberto; fornecedores salvos; backup/importação; cotação manual ou consulta diária opcional; propostas dos agentes; códigos e links de encomendas. A fonte Junegull e os banners usam a identidade do Goofish Br.
+Sincronização, compartilhamento, colaboração e alertas precisam da API Cloudflare configurada pelo proprietário. Busca ao vivo e acompanhamento de preços precisam de uma fonte acessível. A instalação da extensão não ativa esses serviços automaticamente. Não há integração com IA.
 
-Nuvem, coleções compartilhadas, colaboração, alertas e busca ao vivo dependem da sua API Cloudflare. A busca ao vivo e os alertas reais também precisam de uma fonte de anúncios acessível. Guia: cloudflare/LEIA-ME.md no projeto, ou a página de configuração no site da extensão.
+## Permissões
+activeTab e scripting: captura e exibição de preços após um clique explícito. storage: coleção e preferências. alarms: consulta de alertas habilitados. Hosts goofish.com e www.goofish.com: atalho de pesquisa e captura. Notificações, API própria workers.dev e cotação são opcionais. Nenhuma permissão de cookies ou acesso geral a todos os sites é solicitada.
 
-## O que não está incluído
-
-Integrações de IA foram retiradas. O pacote não inclui APIs privadas, credenciais, planos ou banco de fornecedores da EVO. O servidor autenticado Goofish, chat de vendedores, rastreio por API e importação de pedidos privados não estão implementados. Não é uma cópia integral funcional da EVO.
-
-As rotas de busca da EVO e do H3X responderam 401 sem autenticação. O catálogo local é uma busca sem login; não equivale a consultar todos os anúncios do Goofish em tempo real.
-
-Consulte privacy.html. Contato: jv.busca@gmail.com.
+Contato: jv.busca@gmail.com. Projeto independente, sem vínculo oficial com Goofish/Xianyu.

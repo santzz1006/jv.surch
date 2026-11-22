@@ -41,6 +41,8 @@ TEMPLATE=TEMPLATE.replace('</footer>',FOOTER_LINKS+'</footer>').replace('</body>
 for char,path in ARROWS.items():TEMPLATE=TEMPLATE.replace(char,svg(path))
 TEMPLATE=TEMPLATE.replace('✦ ','')
 
+TEMPLATE=TEMPLATE.replace('<script defer src="__BASE__shop.js?v=15">', '<script defer src="__BASE__catalog-loader.js?v=13"></script><script defer src="__BASE__shop.js?v=16">')
+
 def hero(category=None):
     if category:
         title,description,note,color=DESIGNS[category['id']]

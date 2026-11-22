@@ -4,9 +4,7 @@ A pesquisa dos 4.720 anúncios empacotados na extensão funciona sem login e sem
 
 ## O que precisa existir para busca ao vivo
 
-A extensão EVO usa um catálogo para visitantes e uma API privada autenticada para busca ao vivo. A chamada sem sessão à rota /api/xianyu-buscar retornou HTTP 401. Seu código cliente documenta o uso do provedor UnitBytes, cobrado por resultado. Baixar a extensão não transfere o serviço, a conta ou a API paga.
 
-Esta versão inclui /api/search, preparado para consultar uma fonte própria que você configurar. Sem essa fonte, retorna indisponibilidade explícita; não chama EVO ou H3X, não contorna login e não apresenta o catálogo como consulta ao vivo.
 
 ## Publicar sua API gratuita
 
@@ -113,11 +111,9 @@ Ative notificações no Chrome para receber os eventos. A coleta agendada fica n
 
 Confira primeiro a coleção remota. Enviar a coleção deste Chrome grava anúncios, lojas, propostas, encomendas e cotação no D1. Usar a coleção da nuvem substitui a local: faça backup antes. Revisões desatualizadas geram 409 para evitar sobrescrita silenciosa.
 
-Compartilhe uma pasta como cópia fixa ou atualização após sincronizar. O código de colaboração permite acrescentar anúncios, mas não dá acesso ao restante da coleção. Revogar invalida link e código. Os dados de uma pasta compartilhada ficam disponíveis a quem receber o link.
 
 ## Limites funcionais
 
-A versão não inclui envio de mensagens a vendedores, importação de pedidos ou álbuns privados, rastreio por API, banco privado de fornecedores nem cotação automática dos agentes. A comparação usa os valores cadastrados por você; o rastreio organiza códigos, notas e links. Recursos da EVO que exigem IA foram retirados conforme solicitado.
 
 ## Verificar e atualizar
 

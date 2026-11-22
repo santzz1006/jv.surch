@@ -1,10 +1,11 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),{JSDOM}=require('jsdom'),fs=require('node:fs');
-const data=JSON.parse(fs.readFileSync('public/data/products.json','utf8'));
+function fixture(url){const rel=url.split('/data/')[1];return JSON.parse(fs.readFileSync('public/data/'+rel,'utf8'));}
+const data=JSON.parse(fs.readFileSync('public/data/catalog-index.json','utf8'));
 async function setup(path='public/index.html',query=''){
   const errors=[];const dom=new JSDOM(fs.readFileSync(path,'utf8'),{url:'http://127.0.0.1:8081/'+query,runScripts:'outside-only'}),w=dom.window;
   w.matchMedia=()=>({matches:true});w.HTMLElement.prototype.scrollIntoView=()=>{};
-  w.fetch=async path=>({ok:true,json:async()=>path==='/data/products.json'?data:path==='/data/rate.json'?{rate:.8,updatedAt:'2026-11-14T00:00:00Z'}:path==='/api/health'?{bridge:{connected:false}}:{collection:{running:false,errors:[]}}});
-  w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;};w.addEventListener('error',e=>errors.push(e.message));w.eval(fs.readFileSync('public/privacy.js','utf8'));w.eval(fs.readFileSync('public/shop.js','utf8'));await new Promise(r=>setTimeout(r,30));return {dom,w,d:w.document,errors};
+  w.fetch=async path=>({ok:true,json:async()=>path.includes('/data/')?fixture(path):path==='/data/rate.json'?{rate:.8,updatedAt:'2026-11-14T00:00:00Z'}:path==='/api/health'?{bridge:{connected:false}}:{collection:{running:false,errors:[]}}});
+  w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;};w.addEventListener('error',e=>errors.push(e.message));w.eval(fs.readFileSync('public/privacy.js','utf8'));w.eval(fs.readFileSync('public/catalog-loader.js','utf8'));w.eval(fs.readFileSync('public/shop.js','utf8'));await new Promise(r=>setTimeout(r,30));return {dom,w,d:w.document,errors};
 }
 test('home displays diverse real products and valid category links',async()=>{const {dom,d,errors}=await setup();assert.equal(d.querySelectorAll('#categories a').length,29);assert.equal(d.querySelectorAll('#grid .product-cell').length,20);assert.equal(d.querySelectorAll('#grid .inline-banner').length,1);assert.deepEqual(errors,[]);assert.ok(d.querySelector('#grid .product-price').textContent.includes('R$'));dom.window.close();});
 test('every category has a real static HTML page',()=>{for(const c of data.categories){const file='public/categoria/'+c.id+'/index.html';assert.ok(fs.existsSync(file));assert.ok(fs.readFileSync(file,'utf8').includes('data-category="'+c.id+'"'));}});
@@ -44,10 +45,10 @@ test('legal pages contain real contact and preference controls without claiming 
 test('GitHub Pages uses the repository subpath and avoids unavailable live API',async()=>{
  const dom=new JSDOM(fs.readFileSync('public/index.html','utf8'),{url:'https://santzz1006.github.io/jv.surch/xianyu-search/public/',runScripts:'outside-only'}),w=dom.window,calls=[];
  w.matchMedia=()=>({matches:true});w.HTMLElement.prototype.scrollIntoView=()=>{};
- w.fetch=async url=>{calls.push(url);return {ok:true,json:async()=>url.endsWith('products.json')?data:{rate:.8,updatedAt:'2026-11-14'}};};
- w.eval(fs.readFileSync('public/privacy.js','utf8'));w.eval(fs.readFileSync('public/shop.js','utf8'));await new Promise(r=>setTimeout(r,30));
- assert.ok(calls.includes('/jv.surch/xianyu-search/public/data/products.json'));
+ w.fetch=async url=>{calls.push(url);return {ok:true,json:async()=>url.includes('/data/')?fixture(url):{rate:.8,updatedAt:'2026-11-14'}};};
+ w.eval(fs.readFileSync('public/privacy.js','utf8'));w.eval(fs.readFileSync('public/catalog-loader.js','utf8'));w.eval(fs.readFileSync('public/shop.js','utf8'));await new Promise(r=>setTimeout(r,30));
+ assert.ok(calls.includes('/jv.surch/xianyu-search/public/data/catalog-index.json'));
  assert.ok(w.document.querySelector('.product-photo').href.startsWith('https://santzz1006.github.io/jv.surch/xianyu-search/public/produto.html'));
  w.document.querySelector('#query').value='zzzz-sem-produto';w.document.querySelector('#search-form').dispatchEvent(new w.Event('submit',{cancelable:true}));
- assert.match(w.document.querySelector('#status').textContent,/indisponível nesta versão/);assert.equal(calls.some(u=>u.includes('/api/')),false);dom.window.close();
+ await new Promise(r=>setTimeout(r,30));assert.match(w.document.querySelector('#status').textContent,/indisponível nesta versão/);assert.equal(calls.some(u=>u.includes('/api/')),false);dom.window.close();
 });

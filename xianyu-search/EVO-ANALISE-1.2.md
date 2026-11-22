@@ -43,3 +43,6 @@ Inventário completo do pacote distribuído: 429 arquivos. Lista e hashes em EVO
 ## Arquivos de integração relevantes
 
 manifest.json: permissões, mundos de execução e recursos públicos. background.js: despacho, autenticação e chamadas remotas. content.js: telas injetadas, filtros e leitura do DOM. popup.js: conta, planos e configuração. conversor.js: reconhecimento de plataformas e formatos dos agentes. goofish-anuncio.js: detalhe móvel/desktop e fallback remoto. pastas.js: organização de coleção. Nenhuma chave ou token é reproduzido neste relatório.
+
+## Correção após inspeção do catálogo público
+A busca ao vivo continua autenticada. O acervo é outra rota: o cliente usa a configuração pública anônima para chamar buscar_catalogo_xianyu no Supabase. Com termo vazio, retornou 75.292 registros declarados. Foram coletados 41.292 IDs únicos; no deslocamento 41.292 o servidor passou a responder HTTP 500 / 57014 (statement timeout), também com limite 72. O lote confirmado foi importado, adicionando 41.291 produtos e preservando um duplicado. Total local: 46.011. O restante não foi obtido. Evidências e checkpoints locais em references/evo-original/catalog-pages; relatório sem credenciais em EVO-IMPORTACAO.json. Nenhuma chamada ao banco original é distribuída na extensão.
