@@ -17,7 +17,7 @@ def build():
     print(dest)
     cloud=ROOT/'cloudflare'
     cloud_dest=dest.parent/f'goofish-br-cloudflare-{version}.zip'
-    cloud_files=['package.json','package-lock.json','wrangler.jsonc','LEIA-ME.md','.gitignore','migrations/0001_initial.sql','src/model.mjs','src/worker.mjs','test/worker.test.mjs']
+    cloud_files=['package.json','package-lock.json','wrangler.jsonc','LEIA-ME.md','.gitignore','migrations/0001_initial.sql','migrations/0002_search_catalog.sql','src/catalog.mjs','src/model.mjs','src/worker.mjs','test/worker.test.mjs']
     with ZipFile(cloud_dest,'w',ZIP_DEFLATED) as archive:
         for filename in cloud_files:
             archive.write(cloud/filename,filename)

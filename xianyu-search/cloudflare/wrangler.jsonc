@@ -7,7 +7,7 @@
     {
       "binding": "DB",
       "database_name": "goofish-br",
-      "database_id": "SUBSTITUA_PELO_ID_DO_D1",
+      "database_id": "592f0115-26b0-491b-8ab2-75753db29514",
       "migrations_dir": "migrations"
     }
   ],
@@ -18,5 +18,6 @@
   },
   "vars": {
     "ALERT_BATCH": "10"
-  }
+  },
+  "account_id": "66bab5c7c933d6802c2d527bc84a0532"
 }

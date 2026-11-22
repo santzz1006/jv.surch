@@ -1,6 +1,14 @@
-# Goofish Br 1.2 — busca, sincronização e alertas na Cloudflare
+# Goofish Br 1.3.2 — busca, sincronização e alertas na Cloudflare
 
-A pesquisa dos 4.720 anúncios empacotados na extensão funciona sem login e sem Cloudflare. Para novas consultas ao vivo, sincronização entre dispositivos, coleções compartilhadas e alertas, publique a API abaixo. Não há integração com IA nesta versão.
+A pesquisa dos 46.011 anúncios empacotados na extensão funciona sem login e sem Cloudflare. Para novas consultas ao vivo, sincronização entre dispositivos, coleções compartilhadas e alertas, publique a API abaixo. Não há integração com IA nesta versão.
+
+## Catálogo compartilhado automático
+
+Cada POST /api/search autenticado salva os anúncios retornados pela fonte antes de responder. IDs existentes são atualizados; uma falha na fonte preserva os dados anteriores. Somente campos públicos dos anúncios são persistidos, sem cookies, chave de acesso ou histórico pessoal de consultas.
+
+GET /api/catalog/search?q=TERMO&page=1 é público, com 48 resultados por página. A extensão combina até 48 resultados recentes por termo com seu catálogo local e continua funcionando se a API estiver indisponível. Não entrega a chave administrativa aos visitantes. Os 46.011 anúncios empacotados continuam locais; esta tabela armazena os novos resultados da fonte ao vivo.
+
+As rotas privadas de sincronização e busca ao vivo continuam protegidas. Para oferecer busca ao vivo a visitantes, ainda é necessário conectar o coletor e criar controle de acesso/limites de uso independente da chave administrativa.
 
 ## O que precisa existir para busca ao vivo
 
@@ -36,7 +44,7 @@ npx wrangler secret put API_TOKEN
 
 A API representa um espaço pessoal. Use a mesma URL/chave somente nos seus dispositivos. Não distribua essa chave aos visitantes: isso daria acesso à mesma coleção. Um serviço público com contas separadas exige autenticação e isolamento por usuário adicionais.
 
-Não foi criada uma conta nem ativado plano pago nesta entrega. O código e a migração foram testados localmente; a implantação real depende de sua conta. Franquias gratuitas têm limites: confira https://developers.cloudflare.com/workers/platform/limits/ e https://developers.cloudflare.com/d1/platform/limits/ .
+API implantada em https://goofish-br-api.neilan-sttephan1.workers.dev com D1 e as duas migrações. Nenhum plano pago foi ativado. A busca ao vivo ainda depende da configuração de SEARCH_SOURCE_URL e de um coletor autenticado; a sessão Goofish não está hospedada neste Worker. Franquias gratuitas têm limites: confira https://developers.cloudflare.com/workers/platform/limits/ e https://developers.cloudflare.com/d1/platform/limits/ .
 
 ## Conectar sua fonte de busca
 

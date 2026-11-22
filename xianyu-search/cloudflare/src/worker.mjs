@@ -1,3 +1,4 @@
+import {saveSearchResults,searchCatalog} from './catalog.mjs';
 import {ApiError,text,https,item,collection,changes,readProduct,liveSearch} from './model.mjs';
 const json=(data,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
 const hash=async value=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value)))).map(n=>n.toString(16).padStart(2,'0')).join('');
@@ -22,9 +23,10 @@ async function publicShare(request,env,id,html=false){const share=await env.DB.p
 }
 async function route(request,env){const url=new URL(request.url),p=url.pathname;
  if(p==='/health'&&request.method==='GET')return json({ok:true,service:'Goofish Br',version:'1.3.1',database:Boolean(env.DB),productSource:env.PRODUCT_SOURCE_URL?'configured':'public-html'});
+ if(p==='/api/catalog/search'&&request.method==='GET'){const response=json(await searchCatalog(env,url));response.headers.set('Access-Control-Allow-Origin','*');response.headers.set('Cache-Control','public, max-age=30');return response;}
  const shareMatch=p.match(/^\/(api\/shares|s)\/([a-f0-9]{32})$/);if(shareMatch)return publicShare(request,env,shareMatch[2],shareMatch[1]==='s');
  await authenticated(request,env);if(!env.DB)throw new ApiError(503,'Configure o banco D1.');
- if(p==='/api/search'&&request.method==='POST')return json(await liveSearch(env,await body(request,10000)));
+ if(p==='/api/search'&&request.method==='POST'){const result=await liveSearch(env,await body(request,10000));const saved=await saveSearchResults(env,result.items);return json({...result,catalogSaved:saved});}
  if(p==='/api/sync'&&request.method==='GET')return json(await getCollection(env));
  if(p==='/api/sync'&&request.method==='PUT'){const b=await body(request);return json(await saveCollection(env,b.data,b.revision));}
  if(p==='/api/watches'&&request.method==='GET')return json((await env.DB.prepare('SELECT * FROM watches ORDER BY last_checked DESC').all()).results.map(w=>({...w,payload:JSON.parse(w.payload)})));
