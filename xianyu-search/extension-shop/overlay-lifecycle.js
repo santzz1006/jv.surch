@@ -1,12 +1,12 @@
 'use strict';
-const GB_GOOFISH_ORIGINS=['https://www.goofish.com/*','https://goofish.com/*'];
+const GB_GOOFISH_ORIGINS=['https://www.goofish.com/*','https://goofish.com/*','https://santzz1006.github.io/jv.surch/*'];
 const gbInjecting=new Map();
 async function ensureGoofishPanel(tabId){
  if(gbInjecting.has(tabId))return gbInjecting.get(tabId);
  const task=(async()=>{
   try{
    const tab=await chrome.tabs.get(tabId);
-   if(!/^https:\/\/(www\.)?goofish\.com\//.test(tab.url||'')||tab.discarded)return;
+   if(!(/^https:\/\/(www\.)?goofish\.com\//.test(tab.url||'')||/^https:\/\/santzz1006\.github\.io\/jv\.surch(?:\/|$)/.test(tab.url||''))||tab.discarded)return;
    await chrome.scripting.executeScript({target:{tabId},files:['overlay.js']});
   }catch{/* A tab can close, navigate or lose host permission during installation. */}
  })();gbInjecting.set(tabId,task);

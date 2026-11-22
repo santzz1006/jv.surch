@@ -8,7 +8,7 @@ from pathlib import Path
 from playwright.async_api import async_playwright, expect
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = Path(tempfile.gettempdir()) / 'goofish-br-1.3.1-qa'
+OUT = Path(tempfile.gettempdir()) / 'goofish-br-1.3.3-qa'
 
 
 async def main():
@@ -99,7 +99,9 @@ async def main():
             await expect(page.locator('#gb-quick-host')).to_be_visible()
             await worker.evaluate('() => Promise.all([ensureOpenGoofishPanels(),ensureOpenGoofishPanels()])')
             await expect(page.locator('#gb-quick-host')).to_have_count(1)
-            report = {'nativePopup': width, 'searchInsidePopup': True, 'existingTabAfterDisableEnable': True,
+            await page.goto('https://santzz1006.github.io/jv.surch/xianyu-search/public/')
+            await expect(page.locator('#gb-quick-host')).to_have_count(1)
+            report = {'websiteOverlay': True, 'nativePopup': width, 'searchInsidePopup': True, 'existingTabAfterDisableEnable': True,
                       'noPageReload': True, 'embedded320': True, 'activationToggle': True, 'noDuplicateToolbar': True}
             (OUT / 'result.json').write_text(json.dumps(report, indent=2), encoding='utf-8')
             print(json.dumps(report), flush=True)

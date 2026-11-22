@@ -1,12 +1,12 @@
-# Goofish Br 1.3.2
+# Goofish Br 1.3.3
 
 ## Instalação e atualização
-Extraia o ZIP em uma pasta permanente. Em chrome://extensions, ative o modo do desenvolvedor e use Carregar sem compactação. Para atualizar uma instalação existente, substitua os arquivos dessa pasta e clique em Recarregar. Confira a versão 1.3.2 e recarregue a aba do Goofish.
+Extraia o ZIP em uma pasta permanente. Em chrome://extensions, ative o modo do desenvolvedor e use Carregar sem compactação. Para atualizar uma instalação existente, substitua os arquivos dessa pasta e clique em Recarregar. Confira a versão 1.3.3 e recarregue a aba do Goofish.
 
 ## Pesquisa no próprio painel
 Clique no ícone da extensão, digite sua busca e escolha Buscar produtos. Os resultados, filtros, fotos, detalhes e favoritos ficam dentro do painel, sem abrir uma nova aba. Links de agentes e da origem abrem outra aba somente ao clicar neles.
 
-O pacote contém 46.011 anúncios pesquisáveis sem login. Preços são capturas anteriores; confirme disponibilidade, estado e custo final na origem. Novos anúncios importados preservam o título original quando não há tradução disponível. A fonte fornece uma foto por registro; galerias maiores já existentes foram preservadas.
+O pacote contém 65.174 anúncios pesquisáveis sem login. Preços são capturas anteriores; confirme disponibilidade, estado e custo final na origem. Novos anúncios importados preservam o título original quando não há tradução disponível. A fonte fornece uma foto por registro; galerias maiores já existentes foram preservadas.
 
 ## Atalho no Goofish
 A extensão exibe lupa, favoritos e ferramentas no canto superior direito de goofish.com e www.goofish.com. A lupa abre um painel sobre a página. Desative em Ajustes → Mostrar pesquisa rápida no Goofish. Não é necessário manter uma aba extra aberta para pesquisar o catálogo.
@@ -23,5 +23,13 @@ activeTab e scripting: captura e exibição de preços após um clique explícit
 
 Contato: jv.busca@gmail.com. Projeto independente, sem vínculo oficial com Goofish/Xianyu.
 
-## Correção 1.3.2
+## Correção 1.3.3
 O popup do ícone mantém largura de 460 px; o painel embutido continua adaptável à tela. Ao instalar, recarregar ou reativar a extensão, os atalhos são inseridos nas abas do Goofish já abertas. A preferência de ocultar os atalhos é respeitada. Não aparecem em chrome://extensions ou em sites fora do Goofish.
+
+## Novidades 1.3.3
+
+Painel com ícones ilustrados e layout adaptado a 320 px. A lupa funciona também no site Goofish Br. Substitua os arquivos da instalação anterior e clique em Recarregar em chrome://extensions; confira as novas permissões para a API e o site.
+
+Os alertas do painel ficam neste navegador e acompanham mudanças confirmadas no catálogo compartilhado. Salve um produto, abra Alertas, escolha o anúncio e o preço desejado e ative as notificações. O Chrome consulta o catálogo a cada 30 minutos enquanto estiver aberto. Sem observação nova, o último preço é preservado. Não é uma consulta contínua ao Goofish.
+
+A busca ao vivo usa a API na Cloudflare, mas a origem recusou o navegador remoto antes do login. Não há sessão remota autenticada, QR ou chat ativo nesta versão. O catálogo continua disponível sem login.

@@ -1,0 +1,14 @@
+'use strict';
+(function(root){
+ const BASE='https://goofish-br-api.neilan-sttephan1.workers.dev';
+ async function state(){const s=await chrome.storage.local.get('gbLocalAlerts');return s.gbLocalAlerts||{watches:[],events:[],enabled:false};}
+ async function write(s){await chrome.storage.local.set({gbLocalAlerts:s});return s;}
+ async function add(item,target){if(!/^\d+$/.test(item.id))throw Error('Anúncio inválido.');if(target!==null&&(!Number.isFinite(target)||target<0))throw Error('Preço desejado inválido.');const s=await state();if(s.watches.length>=100&&!s.watches.some(w=>w.id===item.id))throw Error('Limite de 100 acompanhamentos.');s.watches=[{id:item.id,payload:item,price:item.priceCny,target,last_checked:null},...s.watches.filter(w=>w.id!==item.id)];return write(s);}
+ async function remove(id){const s=await state();s.watches=s.watches.filter(w=>w.id!==id);return write(s);}
+ async function check(){const s=await state();if(!s.watches.length)return {checked:0,failed:0};const r=await fetch(BASE+'/api/catalog/products?ids='+s.watches.map(w=>w.id).join(','),{credentials:'omit',signal:AbortSignal.timeout(15000)});if(!r.ok)throw Error('Não foi possível consultar os alertas. Tente novamente.');const data=await r.json(),byId=new Map(data.items.map(i=>[i.id,i]));const newEvents=[];let checked=0,failed=0;for(const w of s.watches){w.last_checked=new Date().toISOString();const fresh=byId.get(w.id);if(!fresh){w.error='Aguardando uma nova consulta deste anúncio à origem.';failed++;continue;}checked++;w.last_checked=new Date().toISOString();w.error=null;if(fresh.priceCny!==null&&w.price!==null&&fresh.priceCny!==w.price)newEvents.push({item_id:w.id,message:w.payload.title+': preço observado mudou de ¥ '+w.price+' para ¥ '+fresh.priceCny,created_at:w.last_checked});if(w.target!==null&&fresh.priceCny!==null&&fresh.priceCny<=w.target&&(w.price===null||w.price>w.target))newEvents.push({item_id:w.id,message:'Preço desejado encontrado: ¥ '+fresh.priceCny,created_at:w.last_checked});if(fresh.priceCny!==null)w.price=fresh.priceCny;w.observedAt=fresh.observedAt;}
+ // Preserve watches edited while the network request was in flight.
+ const current=await state();const original=new Map(s.watches.map(w=>[w.id,w]));current.watches=current.watches.map(w=>{const updated=original.get(w.id);return updated&&updated.target===w.target?updated:w});current.events=[...newEvents,...current.events].slice(0,200);await write(current);
+ if(current.enabled&&newEvents.length&&await chrome.permissions.contains({permissions:['notifications']}))await chrome.notifications.create('gb-local-alerts',{type:'basic',iconUrl:'icons/128.png',title:'Goofish Br · Atualização de preços',message:newEvents.length===1?newEvents[0].message:newEvents.length+' mudanças observadas no catálogo.'});return {checked,failed};
+ }
+ root.GBAlerts={state,write,add,remove,check:()=>root.navigator?.locks?root.navigator.locks.request('gb-price-alerts',check):check()};
+})(globalThis);

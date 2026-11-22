@@ -29,3 +29,14 @@ test('live results persist publicly, deduplicate and exclude private fields',asy
  assert.equal((await worker.fetch(req('/api/catalog/search?page=-1','GET',undefined,''),env)).status,400);
  assert.equal((await worker.fetch(req('/api/catalog/search','POST',{items:[sample]},''),env)).status,401);
 });
+
+test('public live search saves products, limits usage and exposes errors to website without credentials',async t=>{
+ const {env,db}=setup(t,{SEARCH_SOURCE_URL:'https://own.example'});const old=globalThis.fetch;t.after(()=>{globalThis.fetch=old});globalThis.fetch=async()=>Response.json({items:[sample]});
+ let r=await worker.fetch(req('/api/live/search?q=notebook','GET',undefined,''),env);assert.equal(r.status,200);assert.equal(r.headers.get('Access-Control-Allow-Origin'),'*');assert.equal((await r.json()).catalogSaved,1);
+ db.prepare('UPDATE usage SET count=100').run();r=await worker.fetch(req('/api/live/search?q=notebook','GET',undefined,''),env);assert.equal(r.status,429);
+ delete env.SEARCH_SOURCE_URL;r=await worker.fetch(req('/api/live/search?q=notebook','GET',undefined,''),env);assert.equal(r.status,503);assert.equal(r.headers.get('Access-Control-Allow-Origin'),'*');
+});
+
+test('public product lookup validates IDs and returns only persisted public fields',async t=>{
+ const {env}=setup(t);let r=await worker.fetch(req('/api/catalog/products?ids=123,456','GET',undefined,''),env);assert.equal(r.status,200);assert.deepEqual((await r.json()).items,[]);r=await worker.fetch(req('/api/catalog/products?ids=123%27','GET',undefined,''),env);assert.equal(r.status,400);assert.equal(r.headers.get('Access-Control-Allow-Origin'),'*');
+});

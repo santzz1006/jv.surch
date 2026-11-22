@@ -11,3 +11,8 @@ recommendations.json
 references/evo-original/
 
 node_modules/
+
+# Generated PDF previews and local delivery copies
+/tmp/pdfs/
+/output/pdf/
+/public/data/*.tmp

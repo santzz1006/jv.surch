@@ -3,6 +3,7 @@ import copy
 import json
 import math
 import re
+import time
 from collections import Counter
 from pathlib import Path
 from urllib.parse import urlparse
@@ -135,6 +136,13 @@ def run(allow_partial=False):
             if item:
                 rows.setdefault(item['id'], item)
         offset += len(page)
+    for path in sorted(cache.glob('term-*.json')):
+        page = json.loads(path.read_text(encoding='utf-8'))
+        pages += 1
+        for raw in page:
+            item = normalize(raw, progress['updatedAt'])
+            if item:
+                rows.setdefault(item['id'], item)
     target = ROOT / 'public/data/products.json'
     original = json.loads(target.read_text(encoding='utf-8'))
     backup = cache / 'goofish-br-before-import.json'
@@ -152,7 +160,15 @@ def run(allow_partial=False):
     merged['imports'] = {**merged.get('imports', {}), 'evoPublic': report}
     temp = target.with_suffix('.tmp')
     temp.write_text(json.dumps(merged, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
-    temp.replace(target)
+    for attempt in range(15):
+        try:
+            temp.replace(target)
+            break
+        except PermissionError:
+            if attempt == 14:
+                raise
+            time.sleep(1)
+
     (ROOT / 'EVO-IMPORTACAO.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
     print(json.dumps(stats), flush=True)
 

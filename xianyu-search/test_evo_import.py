@@ -49,7 +49,9 @@ class PublicCatalogueTests(unittest.TestCase):
         report = json.loads((ROOT / 'EVO-IMPORTACAO.json').read_text(encoding='utf-8'))
         self.assertEqual(len(ids), report['total'])
         self.assertFalse(report['complete'])  # The upstream timed out; do not claim a full export.
-        self.assertEqual(report['publicRowsImported'], 41292)
+        self.assertGreaterEqual(report['publicRowsImported'], 41292)
+        imported_ids={i['id'] for i in data['items'] if i.get('catalogSource')=='evo-public'}
+        self.assertGreaterEqual(len(imported_ids), report['publicRowsImported']-1)
 
 
 if __name__ == '__main__':

@@ -1,12 +1,12 @@
-# JV Busca — busca hospedada no Cloudflare
+# Goofish Br — busca hospedada no Cloudflare
 
-Documento de implementação • 14/11/2026
+Documento de implementação • atualizado em 22/11/2026
 
 ## Resultado esperado e situação atual
 
-O visitante abre a JV Busca, pesquisa em português e recebe anúncios salvos. Quando faltarem resultados, a API consulta o Goofish usando uma sessão do proprietário em um navegador remoto. Os novos anúncios são normalizados, traduzidos e salvos para as próximas buscas. O computador do proprietário pode ficar desligado após a implantação.
+O visitante abre a Goofish Br, pesquisa em português e recebe anúncios salvos. Quando faltarem resultados, a API consulta o Goofish usando uma sessão do proprietário em um navegador remoto. Os novos anúncios são normalizados, traduzidos e salvos para as próximas buscas. O computador do proprietário pode ficar desligado após a implantação.
 
-Este documento especifica a migração. **A implantação remota ainda não foi executada nem validada com o Goofish.** Hoje, a busca adicional usa `server.py`, `bridge.py` e a extensão instalada no Chrome local. Publicar somente a pasta `public/` disponibiliza o catálogo, mas não transfere a sessão nem publica a API Python.
+Worker e D1 foram implantados em https://goofish-br-api.neilan-sttephan1.workers.dev. **O teste real do navegador remoto foi recusado pelo Goofish antes do login (acesso inválido / use navegador normal). Não existe sessão autenticada nem QR remoto válido.** A arquitetura abaixo continua sendo a proposta para a parte de coleta. Hoje, a busca adicional usa `server.py`, `bridge.py` e a extensão instalada no Chrome local. Publicar somente a pasta `public/` disponibiliza o catálogo, mas não transfere a sessão nem publica a API Python.
 
 O Cloudflare oferece Browser Run, anteriormente chamado Browser Rendering. Ele executa um Chrome remoto; isso não significa que o Goofish aceitará automaticamente a sessão ou o IP do servidor. A primeira etapa precisa validar esse acesso com a conta do proprietário.
 

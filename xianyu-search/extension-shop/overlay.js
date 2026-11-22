@@ -1,6 +1,6 @@
 'use strict';
 (()=>{
- const version='1.3.1',previous=globalThis.__gbQuickPanel;
+ const version='1.3.3',previous=globalThis.__gbQuickPanel;
  if(previous?.version===version&&previous.host.isConnected){previous.refresh();return;}
  previous?.dispose();document.getElementById('gb-quick-host')?.remove();
  const host=document.createElement('div');host.id='gb-quick-host';

@@ -22,7 +22,21 @@ async function publicShare(request,env,id,html=false){const share=await env.DB.p
  const cards=items.map(i=>`<article>${i.images[0]?`<img src="${escape(i.images[0])}" alt="" loading="lazy" referrerpolicy="no-referrer">`:''}<h2>${escape(i.title)}</h2><p>${i.priceCny===null?'Preço não informado':'¥ '+i.priceCny}</p><a href="${escape(i.url)}" rel="noopener noreferrer">Ver no Goofish</a></article>`).join('');return new Response(`<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escape(share.folder)} · Goofish Br</title><style>body{font:16px system-ui;background:#fffdee;margin:0;color:#171710}header{padding:30px;background:#ffe615}main{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;padding:24px}article{background:white;border:1px solid #ddd;border-radius:20px;padding:16px}img{width:100%;height:210px;object-fit:cover;border-radius:14px}h2{font-size:17px}a{color:inherit}</style><header><strong>GOOFISH BR</strong><h1>${escape(share.folder)}</h1><p>Coleção compartilhada. Confira preços e disponibilidade na origem.</p></header><main>${cards||'<p>Nenhum anúncio nesta coleção.</p>'}</main></html>`,{headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store','Content-Security-Policy':"default-src 'none'; img-src https:; style-src 'unsafe-inline'; base-uri 'none'; frame-ancestors 'none'",'Referrer-Policy':'no-referrer'}});
 }
 async function route(request,env){const url=new URL(request.url),p=url.pathname;
- if(p==='/health'&&request.method==='GET')return json({ok:true,service:'Goofish Br',version:'1.3.1',database:Boolean(env.DB),productSource:env.PRODUCT_SOURCE_URL?'configured':'public-html'});
+ if(p==='/health'&&request.method==='GET')return json({ok:true,service:'Goofish Br',version:'1.3.3',database:Boolean(env.DB),liveSearch:Boolean(env.SEARCH_SOURCE_URL),productSource:env.PRODUCT_SOURCE_URL?'configured':'public-html'});
+ if(p==='/api/catalog/products'&&request.method==='GET'){
+  const ids=[...new Set((url.searchParams.get('ids')||'').split(','))];if(ids.length>100||!ids.every(id=>/^\d{1,30}$/.test(id)))throw new ApiError(400,'Informe até 100 IDs válidos.');
+  const rows=await env.DB.prepare('SELECT payload,updated_at FROM catalog_products WHERE id IN ('+ids.map(()=>'?').join(',')+')').bind(...ids).all();
+  const response=json({items:rows.results.map(r=>({...JSON.parse(r.payload),observedAt:r.updated_at}))});response.headers.set('Access-Control-Allow-Origin','*');return response;
+ }
+ if(p==='/api/live/search'&&request.method==='GET'){
+  if(!env.SEARCH_SOURCE_URL)throw new ApiError(503,'A sessão remota do Goofish ainda não está disponível. O catálogo salvo continua funcionando.');
+  const q=text(url.searchParams.get('q'),120);if(!q)throw new ApiError(400,'Digite um termo para pesquisar.');
+  const day='public-search:'+new Date().toISOString().slice(0,10);
+  const allowance=await env.DB.prepare('INSERT INTO usage(day,count) VALUES(?,1) ON CONFLICT(day) DO UPDATE SET count=count+1 WHERE count<100 RETURNING count').bind(day).first();
+  if(!allowance)throw new ApiError(429,'O limite diário da busca ao vivo foi atingido. Use o catálogo salvo.');
+  const result=await liveSearch(env,{q,page:url.searchParams.get('page')||1,min:url.searchParams.get('min')||'',max:url.searchParams.get('max')||''});
+  const saved=await saveSearchResults(env,result.items);return json({...result,catalogSaved:saved});
+ }
  if(p==='/api/catalog/search'&&request.method==='GET'){const response=json(await searchCatalog(env,url));response.headers.set('Access-Control-Allow-Origin','*');response.headers.set('Cache-Control','public, max-age=30');return response;}
  const shareMatch=p.match(/^\/(api\/shares|s)\/([a-f0-9]{32})$/);if(shareMatch)return publicShare(request,env,shareMatch[2],shareMatch[1]==='s');
  await authenticated(request,env);if(!env.DB)throw new ApiError(503,'Configure o banco D1.');
@@ -41,6 +55,6 @@ async function route(request,env){const url=new URL(request.url),p=url.pathname;
  throw new ApiError(404,'Rota não encontrada.');
 }
 export default {
- async fetch(request,env){try{if(Number(request.headers.get('Content-Length'))>1600000)throw new ApiError(413,'Envio muito grande.');return await route(request,env);}catch(e){return json({error:e.status?e.message:'Falha interna. Confira a configuração e as migrações do Worker.'},e.status||500);}},
+ async fetch(request,env){try{if(Number(request.headers.get('Content-Length'))>1600000)throw new ApiError(413,'Envio muito grande.');const response=await route(request,env);if(new URL(request.url).pathname.startsWith('/api/live/'))response.headers.set('Access-Control-Allow-Origin','*');return response;}catch(e){const response=json({error:e.status?e.message:'Falha interna. Confira a configuração e as migrações do Worker.'},e.status||500);if(/^\/api\/(live|catalog)\//.test(new URL(request.url).pathname))response.headers.set('Access-Control-Allow-Origin','*');return response;}},
  async scheduled(controller,env,ctx){ctx.waitUntil(checkWatches(env));}
 };

@@ -1,14 +1,14 @@
-# Goofish Br 1.3.2 — busca, sincronização e alertas na Cloudflare
+# Goofish Br 1.3.3 — busca, sincronização e alertas na Cloudflare
 
-A pesquisa dos 46.011 anúncios empacotados na extensão funciona sem login e sem Cloudflare. Para novas consultas ao vivo, sincronização entre dispositivos, coleções compartilhadas e alertas, publique a API abaixo. Não há integração com IA nesta versão.
+A pesquisa dos 65.174 anúncios empacotados na extensão funciona sem login e sem Cloudflare. Para novas consultas ao vivo, sincronização entre dispositivos, coleções compartilhadas e alertas, publique a API abaixo. Não há integração com IA nesta versão.
 
 ## Catálogo compartilhado automático
 
 Cada POST /api/search autenticado salva os anúncios retornados pela fonte antes de responder. IDs existentes são atualizados; uma falha na fonte preserva os dados anteriores. Somente campos públicos dos anúncios são persistidos, sem cookies, chave de acesso ou histórico pessoal de consultas.
 
-GET /api/catalog/search?q=TERMO&page=1 é público, com 48 resultados por página. A extensão combina até 48 resultados recentes por termo com seu catálogo local e continua funcionando se a API estiver indisponível. Não entrega a chave administrativa aos visitantes. Os 46.011 anúncios empacotados continuam locais; esta tabela armazena os novos resultados da fonte ao vivo.
+GET /api/catalog/search?q=TERMO&page=1 é público, com 48 resultados por página. A extensão combina até 48 resultados recentes por termo com seu catálogo local e continua funcionando se a API estiver indisponível. Não entrega a chave administrativa aos visitantes. Os 65.174 anúncios empacotados continuam locais; esta tabela armazena os novos resultados da fonte ao vivo.
 
-As rotas privadas de sincronização e busca ao vivo continuam protegidas. Para oferecer busca ao vivo a visitantes, ainda é necessário conectar o coletor e criar controle de acesso/limites de uso independente da chave administrativa.
+As rotas privadas de sincronização e busca ao vivo continuam protegidas. GET /api/live/search permite consultas públicas com limite global de 100 tentativas/dia e salva resultados. Ainda é necessário conectar o coletor. Sem SEARCH_SOURCE_URL, retorna 503 sem consumir cota. A API nunca entrega a chave administrativa aos visitantes. GET /api/catalog/products?ids=ID1,ID2 consulta até 100 IDs para alertas locais da extensão.
 
 ## O que precisa existir para busca ao vivo
 
@@ -82,9 +82,9 @@ O Worker consulta GET /search?q=TERMO&page=1&limit=48&min=0&max=1000 nessa base.
 
 Esse é um contrato para um serviço que você controla, não a URL de uma API que já esteja ativa. Se usar provedor comercial, a conta e as condições dele são separadas. Não há chave de provedor incluída. Para manter custo zero, não contrate nem habilite cobrança sem avaliar a franquia e seus limites.
 
-## Alertas de preço e venda
+## Alertas privados da API de preço e venda
 
-Cadastre anúncios no painel Alertas. O cron consulta até dez anúncios a cada seis horas, priorizando os menos recentemente consultados. Limite de cem acompanhamentos. Mudanças de preço, preço desejado e venda confirmada geram eventos. Erros preservam o último preço/estado conhecido. Fora de estoque ou bloqueio não são tratados como venda.
+Esta API privada mantém o agendamento para integrações do proprietário via POST /api/watches. O painel da extensão 1.3.3 usa acompanhamentos locais sobre o catálogo compartilhado. O cron consulta até dez anúncios a cada seis horas, priorizando os menos recentemente consultados. Limite de cem acompanhamentos. Mudanças de preço, preço desejado e venda confirmada geram eventos. Erros preservam o último preço/estado conhecido. Fora de estoque ou bloqueio não são tratados como venda.
 
 Por padrão, a consulta tenta dados estruturados públicos da página Goofish. Um teste real retornou HTML sem esses dados; não há confirmação de que esse caminho seja suficiente. Quando precisar de coletor autenticado, configure:
 
@@ -113,7 +113,7 @@ Estados: available, sold ou unknown. Use sold somente com confirmação da orige
 
 O coletor autenticado não está incluído no pacote. Publicar o Worker não transfere sua sessão Chrome. A arquitetura de um navegador remoto está em IMPLEMENTACAO-CLOUDFLARE.md, no repositório principal; exige implantação e validação próprias.
 
-Ative notificações no Chrome para receber os eventos. A coleta agendada fica na Cloudflare com o PC desligado, mas as notificações visuais precisam do Chrome funcionando. Histórico: 500 eventos no servidor, cem recentes no painel. Consultas manuais têm intervalo mínimo de quinze minutos.
+A coleta privada agendada fica na Cloudflare com o PC desligado e depende de uma fonte acessível. Histórico: 500 eventos no servidor. Consultas privadas manuais têm intervalo mínimo de quinze minutos. O painel público da extensão não acessa esses eventos administrativos.
 
 ## Sincronizar e compartilhar
 
@@ -137,3 +137,17 @@ Atualize o servidor com npm ci e npm run deploy. Para a extensão, substitua os 
 Apagar dados remotos exclui coleção, acompanhamentos, eventos e compartilhamentos. Desinstalar a extensão não apaga o D1. Backups devem ser apagados separadamente.
 
 Referências: https://developers.cloudflare.com/d1/get-started/ e https://developers.cloudflare.com/workers/configuration/cron-triggers/ .
+
+## Estado da sessão Goofish
+
+Teste real em 22/11/2026: o navegador da Cloudflare recebeu “非法访问 / 请使用正常浏览器访问闲鱼” antes da tela de login. A sessão de teste foi encerrada. Nenhum QR válido, cookie autenticado ou sessão Goofish foi salvo no servidor. Não há chat conectado nem tradutor de conversas ativo. Estas funções dependem primeiro de um acesso aceito pela origem; não escondemos nem contornamos a verificação.
+
+O chat, quando houver uma integração disponível, deve ficar autenticado e restrito ao proprietário. Mensagens sairão da conta conectada; a tradução deve mostrar original e tradução e permitir revisão antes de enviar. Não existe envio de mensagens implementado nesta versão.
+
+A Cloudflare executa a API e o D1 sem seu PC ligado. Os alertas locais verificam o catálogo a cada 30 minutos com Chrome aberto; não prometem observações frescas sem uma fonte Goofish funcionando.
+
+## Teste manual do navegador remoto
+
+Na pasta cloudflare, execute `npx wrangler whoami` para renovar a autorização e depois `node browser-login.mjs start`. Abra o arquivo local privado `.env.browser-login.html`. O link inicial vence em cinco minutos; não o compartilhe. Se o Goofish mostrar a recusa de acesso, encerre com `node browser-login.mjs stop`. Se a página de login aparecer normalmente, o QR deve ser lido diretamente nela pelo proprietário da conta.
+
+Este comando é um diagnóstico de acesso. Não implementa persistência de cookies, coletor, chat ou tradução. Fazer login no painel não configura SEARCH_SOURCE_URL automaticamente. Ainda não é uma implantação em que falta somente escanear o QR.

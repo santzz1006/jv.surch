@@ -7,7 +7,7 @@ from pathlib import Path
 from playwright.async_api import async_playwright, expect
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = Path(tempfile.gettempdir()) / 'goofish-br-1.3-qa'
+OUT = Path(tempfile.gettempdir()) / 'goofish-br-1.3.3-qa'
 
 
 async def main():
@@ -44,6 +44,15 @@ async def main():
             await page.locator('#detail-close').click()
             await page.locator('[data-view=saved]').click()
             await page.wait_for_selector('.saved-card')
+            await page.locator('[data-view=alerts]').click()
+            await page.locator('#target-price').fill('10')
+            await page.locator('#watch-form button').click()
+            await expect(page.locator('#watches .card')).to_have_count(1)
+            await page.locator('#check-alerts').click()
+            await expect(page.locator('#check-alerts')).to_be_enabled()
+            await expect(page.locator('#watches')).to_contain_text('Aguardando uma nova consulta')
+            await page.locator('#watches button').click()
+            await expect(page.locator('#watches .card')).to_have_count(0)
             await page.locator('[data-view=explore]').click()
             assert not errors, errors
             # A deterministic marketplace document tests the injected toolbar and real iframe permissions.
@@ -72,7 +81,7 @@ async def main():
             await frame.locator('[data-view=cloud]').click()
             await frame.locator('#quick-enabled').uncheck()
             await expect(market.locator('#gb-quick-host')).to_be_hidden()
-            result = {'version': '1.3.1', 'products': 46011, 'searchWithoutNewTab': True,
+            result = {'version': json.loads((ROOT/'extension-shop/manifest.json').read_text(encoding='utf-8'))['version'], 'products': len(json.loads((ROOT/'extension-shop/data/catalog.json').read_text(encoding='utf-8'))['items']), 'localAlertsWithoutAdminKey': True, 'searchWithoutNewTab': True,
                       'pagination': True, 'detailsAndSave': True, 'responsive320': True,
                       'realExtensionIframe': True, 'overlayToggle': True, 'pageErrors': errors}
             (OUT / 'result.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
