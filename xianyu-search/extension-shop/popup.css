@@ -1,7 +1,9 @@
 
 /* Compact extension surface for the toolbar popup and Goofish overlay. */
 html{background:#f5f5ee;scrollbar-width:thin;scrollbar-color:#b7b9a9 transparent}
-body.surface-popup{width:460px;max-width:100vw;min-height:560px;font-size:13px;overflow-x:hidden}
+html[data-surface="action"]{width:460px;min-width:460px}
+html[data-surface="embedded"]{width:100%;min-width:0}
+body.surface-popup{width:100%;min-height:560px;font-size:13px;overflow-x:hidden}
 header{padding:13px 18px;gap:8px;position:sticky;top:0;z-index:3;border-bottom:1px solid #e9d330}header a{font-size:27px;gap:9px}header img{width:39px;height:39px}header span{display:none}
 .layout{display:block;margin:0;padding:0 13px 20px;max-width:none}nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:12px 0}nav button{min-width:0;text-align:center;font-size:12px;padding:11px 5px;background:#fff;border:1px solid #e3e4d8;border-radius:15px}nav button[aria-current=page]{background:#1c2118;border-color:#1c2118;color:#ffe615}nav>a{display:none}
 section{border:0;background:transparent;padding:0;border-radius:0}main>section{padding-bottom:15px}h1{font-size:28px}h2{font-size:23px}p{font-size:12px;line-height:1.5}label{font-size:12px;margin:10px 0}input,select,textarea{padding:10px;border-radius:13px;font-size:13px;min-width:0}button,.button{border-radius:14px;font-size:12px;padding:10px 13px;white-space:normal;line-height:1.25}button,input,select,textarea,a{touch-action:manipulation}

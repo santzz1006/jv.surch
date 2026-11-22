@@ -1,6 +1,8 @@
 'use strict';
 (()=>{
- if(document.getElementById('gb-quick-host'))return;
+ const version='1.3.1',previous=globalThis.__gbQuickPanel;
+ if(previous?.version===version&&previous.host.isConnected){previous.refresh();return;}
+ previous?.dispose();document.getElementById('gb-quick-host')?.remove();
  const host=document.createElement('div');host.id='gb-quick-host';
  // Isolate our controls from the marketplace CSS; no login/session data is read.
  const root=host.attachShadow({mode:'closed'}),style=document.createElement('style');
@@ -14,7 +16,10 @@
  const close=document.createElement('button');close.type='button';close.textContent='×';close.style.fontSize='25px';close.setAttribute('aria-label','Fechar painel');close.onclick=()=>{panel.classList.remove('open');active='';};bar.append(close);
  root.append(style,bar,panel);document.documentElement.append(host);
  function enabled(value){host.style.display=value===false?'none':'block';if(value===false){panel.classList.remove('open');active='';}}
- chrome.storage.local.get('gbQuickSearch').then(s=>enabled(s.gbQuickSearch));
- chrome.storage.onChanged.addListener((changes,area)=>{if(area==='local'&&changes.gbQuickSearch)enabled(changes.gbQuickSearch.newValue);});
- document.addEventListener('keydown',e=>{if(e.key==='Escape'){panel.classList.remove('open');active='';}});
+ const refresh=()=>chrome.storage.local.get('gbQuickSearch').then(s=>enabled(s.gbQuickSearch)).catch(()=>{});
+ const onStorage=(changes,area)=>{if(area==='local'&&changes.gbQuickSearch)enabled(changes.gbQuickSearch.newValue);};
+ const onKey=e=>{if(e.key==='Escape'){panel.classList.remove('open');active='';}};
+ chrome.storage.onChanged.addListener(onStorage);document.addEventListener('keydown',onKey);
+ globalThis.__gbQuickPanel={version,host,refresh,dispose(){chrome.storage.onChanged.removeListener(onStorage);document.removeEventListener('keydown',onKey);host.remove();}};
+ refresh();
 })();

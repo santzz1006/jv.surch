@@ -4,7 +4,7 @@ A EVO usa uma página da Chrome Web Store. Para oferecer a mesma instalação pe
 
 ## Preparado neste projeto
 
-- ZIP instalável: `public/downloads/goofish-br-extensao-1.3.0.zip`, com manifesto na raiz.
+- ZIP instalável: `public/downloads/goofish-br-extensao-1.3.1.zip`, com manifesto na raiz.
 - Manifest V3, código JavaScript empacotado localmente, ícones 16/48/128 e permissões opcionais para nuvem, cotação e notificações.
 - Aviso de privacidade público: `https://santzz1006.github.io/jv.surch/xianyu-search/public/privacidade-extensao.html`.
 - Guia de instalação e limitações: `public/extensao.html`.
@@ -49,5 +49,5 @@ O pacote não lê cookies, histórico, senhas, mensagens ou pedidos. O painel en
 - Publicação e revisão: https://developer.chrome.com/docs/webstore/publish
 - Instalação externa no Windows/macOS: https://developer.chrome.com/docs/extensions/how-to/distribute/install-extensions
 
-## Atualização 1.3.0
+## Atualização 1.3.1
 Resultados e detalhes no popup, catálogo de 46.011 anúncios e atalho opcional no Goofish. Declarar os hosts goofish.com/www.goofish.com e o content script de interface; não captura automaticamente anúncios nem cookies. Preparar novas imagens da interface antes da submissão.

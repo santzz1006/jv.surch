@@ -1,7 +1,7 @@
-# Goofish Br 1.3.0
+# Goofish Br 1.3.1
 
 ## Instalação e atualização
-Extraia o ZIP em uma pasta permanente. Em chrome://extensions, ative o modo do desenvolvedor e use Carregar sem compactação. Para atualizar uma instalação existente, substitua os arquivos dessa pasta e clique em Recarregar. Confira a versão 1.3.0 e recarregue a aba do Goofish.
+Extraia o ZIP em uma pasta permanente. Em chrome://extensions, ative o modo do desenvolvedor e use Carregar sem compactação. Para atualizar uma instalação existente, substitua os arquivos dessa pasta e clique em Recarregar. Confira a versão 1.3.1 e recarregue a aba do Goofish.
 
 ## Pesquisa no próprio painel
 Clique no ícone da extensão, digite sua busca e escolha Buscar produtos. Os resultados, filtros, fotos, detalhes e favoritos ficam dentro do painel, sem abrir uma nova aba. Links de agentes e da origem abrem outra aba somente ao clicar neles.
@@ -22,3 +22,6 @@ Sincronização, compartilhamento, colaboração e alertas precisam da API Cloud
 activeTab e scripting: captura e exibição de preços após um clique explícito. storage: coleção e preferências. alarms: consulta de alertas habilitados. Hosts goofish.com e www.goofish.com: atalho de pesquisa e captura. Notificações, API própria workers.dev e cotação são opcionais. Nenhuma permissão de cookies ou acesso geral a todos os sites é solicitada.
 
 Contato: jv.busca@gmail.com. Projeto independente, sem vínculo oficial com Goofish/Xianyu.
+
+## Correção 1.3.1
+O popup do ícone mantém largura de 460 px; o painel embutido continua adaptável à tela. Ao instalar, recarregar ou reativar a extensão, os atalhos são inseridos nas abas do Goofish já abertas. A preferência de ocultar os atalhos é respeitada. Não aparecem em chrome://extensions ou em sites fora do Goofish.

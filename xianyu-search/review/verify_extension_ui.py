@@ -45,9 +45,6 @@ async def main():
             await page.locator('[data-view=saved]').click()
             await page.wait_for_selector('.saved-card')
             await page.locator('[data-view=explore]').click()
-            await page.set_viewport_size({'width': 320, 'height': 660})
-            await page.screenshot(path=str(OUT / 'popup-320.png'))
-            assert await page.evaluate('() => document.documentElement.scrollWidth <= innerWidth'), 'Horizontal overflow'
             assert not errors, errors
             # A deterministic marketplace document tests the injected toolbar and real iframe permissions.
             await context.route('https://www.goofish.com/qa-extension', lambda route: route.fulfill(content_type='text/html', body='<html><body><h1>Marketplace test</h1><div id="login">Login original</div></body></html>'))
@@ -69,10 +66,13 @@ async def main():
             await expect(frame.locator('#browse-submit')).to_be_enabled()
             assert await market.locator('#login').inner_text() == 'Login original'
             await market.screenshot(path=str(OUT / 'overlay-desktop.png'))
+            await market.set_viewport_size({'width':320,'height':700})
+            assert await frame.evaluate('() => document.documentElement.scrollWidth <= innerWidth')
+            await market.screenshot(path=str(OUT / 'popup-320.png'))
             await frame.locator('[data-view=cloud]').click()
             await frame.locator('#quick-enabled').uncheck()
             await expect(market.locator('#gb-quick-host')).to_be_hidden()
-            result = {'version': '1.3.0', 'products': 46011, 'searchWithoutNewTab': True,
+            result = {'version': '1.3.1', 'products': 46011, 'searchWithoutNewTab': True,
                       'pagination': True, 'detailsAndSave': True, 'responsive320': True,
                       'realExtensionIframe': True, 'overlayToggle': True, 'pageErrors': errors}
             (OUT / 'result.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
